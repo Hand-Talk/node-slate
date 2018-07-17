@@ -1,13 +1,10 @@
-title: API Reference
+title: Hand Talk | Documentação
 
 language_tabs:
-  - bash
-  - ruby
-  - python
   - javascript
 
 toc_footers:
-  - <a href='#'>Sign Up for a Developer Key</a>
+  - <a href='https://account.handtalk.me/'>Crie sua conta</a>
   - <a href='https://github.com/tripit/slate'>Documentation Powered by Slate</a>
 
 includes:
