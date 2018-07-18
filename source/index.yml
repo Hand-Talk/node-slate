@@ -1,16 +1,14 @@
 title: Hand Talk | Documentação
 
 language_tabs:
-  - javascript
+  - html
 
 toc_footers:
   - <a href='https://account.handtalk.me/'>Crie sua conta</a>
-  - <a href='https://github.com/tripit/slate'>Documentation Powered by Slate</a>
   - © 2018 Hand Talk
 
 includes:
-  - main
-  - _errors
+  - introduction
 
 search: true
 
