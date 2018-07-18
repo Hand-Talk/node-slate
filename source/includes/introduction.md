@@ -2,7 +2,7 @@
 
 O plugin desenvolvido pela Hand Talk torna os sites acessíveis em língua de sinais. O mesmo conta com duas principais funcionalidades: tradução de texto e tradução de vídeos.
 
-## Tradutor de texto
+## Sobre o Tradutor de texto
 
 O usuário pode habilitar a funcionalidade clicando no ícone que representa a acessibilidade em língua de sinais:
 
@@ -16,7 +16,7 @@ Enquanto a gaveta estiver aberta, os textos e imagens com descrição ficaram cl
 
 ![](http://i65.tinypic.com/20tqql1.jpg)
 
-## Tradutor de vídeos
+## Sobre o Tradutor de vídeos
 
 O plugin oferece um player de vídeo acessível em Libras, que suporta:
 
@@ -25,7 +25,7 @@ O plugin oferece um player de vídeo acessível em Libras, que suporta:
 - [Vimeo](https://vimeo.com/pt-br/)
 - [Sambatech](https://www.sambatech.com.br/)
 
-Também é possível adicionar acessibilidade automaticamente aos embeds do Youtube e player existentes do Videojs, desde que tenham  sempre que uma legenda for encontrada.
+Também é possível adicionar acessibilidade automaticamente aos embeds do Youtube e player existentes do Videojs, desde que tenham sempre que uma legenda for encontrada.
 
 O usuário pode clicar no ícone que representa a acessibilidade em língua de sinais para iniciar o vídeo junto com a tradução do Hugo, ou apenas clicar no botão central para assistir o vídeo sem acessibilidade.
 
@@ -35,7 +35,7 @@ No player acessível você encontra os botões de ativar e desativar tradução 
 
 ![](http://i67.tinypic.com/23qqt4.jpg)
 
-## Tradutor Mobile
+## Sobre o Tradutor Mobile
 
 A funcionalidade de tradução em dispositivos móveis vem habilitada por padrão, mas você pode removê-la definindo o parâmetro `mobileEnabled` como `false` caso necessário.
 

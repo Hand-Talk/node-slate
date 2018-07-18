@@ -8,7 +8,7 @@
 
 ### Exemplos
 
-## Replace automatico de vídeos
+## Replace automático de vídeos
 
 ### Exemplos
 
@@ -18,3 +18,5 @@
 
 ## Legendas
 (boas praticas e exemplos)
+
+## Resolvendo conflitos de estilo (css)
