@@ -81,3 +81,15 @@ Legenda:
 ✖ Não compatível
 
 -- Sistema operacional não suporta o navegador
+
+## Adicionando exceções
+
+## Aumentando o limite de captura de texto
+
+## Tornando iframes acessíveis
+
+## Iframes dinâmicos
+
+## Traduzindo imagens
+
+## Desativando requisições de melhorias do sistema
