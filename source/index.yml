@@ -8,8 +8,8 @@ toc_footers:
   - © 2018 Hand Talk
 
 includes:
-  - install
   - introduction
+  - install
 
 search: true
 
