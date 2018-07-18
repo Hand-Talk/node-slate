@@ -10,6 +10,8 @@ toc_footers:
 includes:
   - introduction
   - install
+  - events
+  - video-translator
 
 search: true
 
