@@ -4,13 +4,13 @@
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>API Reference</title>
+    <title>Hand Talk | Documentação</title>
     <link href="stylesheets/screen.css" rel="stylesheet" type="text/css" media="screen" />
     <link href="stylesheets/print.css" rel="stylesheet" type="text/css" media="print" />
     <link href="stylesheets/highlight-monokai.css" rel="stylesheet" type="text/css" media="screen, print" />
     <script src="javascripts/all.js" type="text/javascript"></script>
   </head>
-  <body class="" data-languages="[&#34;bash&#34;,&#34;ruby&#34;,&#34;python&#34;,&#34;javascript&#34;]">
+  <body class="" data-languages="[&#34;html&#34;]">
     <a href="#" id="nav-button">
       <span> NAV
         <img alt="undefined" class="undefined" src="images/navbar.png"> </span>
@@ -18,212 +18,174 @@
     <div class="tocify-wrapper">
       <img alt="undefined" class="undefined" src="images/logo.png">
       <div class="lang-selector">
-        <a href="#" data-language-name="bash">bash</a>
-        <a href="#" data-language-name="ruby">ruby</a>
-        <a href="#" data-language-name="python">python</a>
-        <a href="#" data-language-name="javascript">javascript</a>
+        <a href="#" data-language-name="html">html</a>
       </div>
       <div class="search">
-        <input type="text" class="search" id="input-search" placeholder="Search"> </div>
+        <input type="text" class="search" id="input-search" placeholder="Pesquisar"> </div>
       <ul class="search-results"></ul>
       <div id="toc"> </div>
       <ul class="toc-footer">
         <li>
-          <a href='#'>Sign Up for a Developer Key</a>
+          <a href='https://account.handtalk.me/'>Crie sua conta</a>
         </li>
-        <li>
-          <a href='https://github.com/tripit/slate'>Documentation Powered by Slate</a>
-        </li>
+        <li>© 2018 Hand Talk</li>
       </ul>
     </div>
     <div class="page-wrapper">
       <div class="dark-box"></div>
       <div class="content">
-        <h1 id="introduction">Introduction</h1>
-        <p>Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.</p>
-        <p>We have language bindings in Shell, Ruby, and Python! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.</p>
-        <p>This example API documentation page was created with
-          <a href="https://github.com/tripit/slate">Slate</a>. Feel free to edit it and use it as a base for your own API&#39;s documentation.</p>
-        <h1 id="authentication">Authentication</h1>
-        <blockquote>
-          <p>To authorize, use this code:</p>
-        </blockquote> <pre class="highlight ruby"><code><span class="hljs-keyword">require</span> <span class="hljs-string">'kittn'</span>
-
-api = Kittn::APIClient.authorize!(<span class="hljs-string">'meowmeowmeow'</span>)</code></pre><pre class="highlight python"><code><span class="hljs-keyword">import</span> kittn
-
-api = kittn.authorize(<span class="hljs-string">'meowmeowmeow'</span>)</code></pre><pre class="highlight bash"><code><span class="hljs-comment"># With shell, you can just pass the correct header with each request</span>
-curl <span class="hljs-string">"api_endpoint_here"</span>
-  -H <span class="hljs-string">"Authorization: meowmeowmeow"</span></code></pre><pre class="highlight javascript"><code><span class="hljs-keyword">const</span> kittn = <span class="hljs-built_in">require</span>(<span class="hljs-string">'kittn'</span>);
-
-<span class="hljs-keyword">let</span> api = kittn.authorize(<span class="hljs-string">'meowmeowmeow'</span>);</code></pre>
-        <blockquote>
-          <p>Make sure to replace <code>meowmeowmeow</code> with your API key.</p>
-        </blockquote>
-        <p>Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our
-          <a href="http://example.com/developers">developer portal</a>.</p>
-        <p>Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:</p>
-        <p><code>Authorization: meowmeowmeow</code></p>
-        <aside class="notice"> You must replace <code>meowmeowmeow</code> with your personal API key. </aside>
-        <h1 id="kittens">Kittens</h1>
-        <h2 id="get-all-kittens">Get All Kittens</h2> <pre class="highlight ruby"><code><span class="hljs-keyword">require</span> <span class="hljs-string">'kittn'</span>
-
-api = Kittn::APIClient.authorize!(<span class="hljs-string">'meowmeowmeow'</span>)
-api.kittens.get</code></pre><pre class="highlight python"><code><span class="hljs-keyword">import</span> kittn
-
-api = kittn.authorize(<span class="hljs-string">'meowmeowmeow'</span>)
-api.kittens.get()</code></pre><pre class="highlight bash"><code>curl <span class="hljs-string">"http://example.com/api/kittens"</span>
-  -H <span class="hljs-string">"Authorization: meowmeowmeow"</span></code></pre><pre class="highlight javascript"><code><span class="hljs-keyword">const</span> kittn = <span class="hljs-built_in">require</span>(<span class="hljs-string">'kittn'</span>);
-
-<span class="hljs-keyword">let</span> api = kittn.authorize(<span class="hljs-string">'meowmeowmeow'</span>);
-<span class="hljs-keyword">let</span> kittens = api.kittens.get();</code></pre>
-        <blockquote>
-          <p>The above command returns JSON structured like this:</p>
-        </blockquote> <pre class="highlight json"><code>[
-  {
-    <span class="hljs-attr">"id"</span>: <span class="hljs-number">1</span>,
-    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Fluffums"</span>,
-    <span class="hljs-attr">"breed"</span>: <span class="hljs-string">"calico"</span>,
-    <span class="hljs-attr">"fluffiness"</span>: <span class="hljs-number">6</span>,
-    <span class="hljs-attr">"cuteness"</span>: <span class="hljs-number">7</span>
-  },
-  {
-    <span class="hljs-attr">"id"</span>: <span class="hljs-number">2</span>,
-    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Max"</span>,
-    <span class="hljs-attr">"breed"</span>: <span class="hljs-string">"unknown"</span>,
-    <span class="hljs-attr">"fluffiness"</span>: <span class="hljs-number">5</span>,
-    <span class="hljs-attr">"cuteness"</span>: <span class="hljs-number">10</span>
-  }
-]</code></pre>
-        <p>This endpoint retrieves all kittens.</p>
-        <h3 id="http-request">HTTP Request</h3>
-        <p><code>GET http://example.com/api/kittens</code></p>
-        <h3 id="query-parameters">Query Parameters</h3>
+        <h1 id="introdu-o">Introdução</h1>
+        <p>O plugin desenvolvido pela Hand Talk torna os sites acessíveis em língua de sinais. O mesmo conta com duas principais funcionalidades: tradução de texto e tradução de vídeos.</p>
+        <h2 id="tradutor-de-texto">Tradutor de texto</h2>
+        <p>O usuário pode habilitar a funcionalidade clicando no ícone que representa a acessibilidade em língua de sinais:</p>
+        <p>
+          <img src="http://i66.tinypic.com/r93878.jpg" alt="">
+        </p>
+        <p>Ao clicar será aberta uma gaveta com o intérprete 3D da Hand Talk, o Hugo.</p>
+        <p>
+          <img src="http://i66.tinypic.com/2ib26w6.jpg" alt="">
+        </p>
+        <p>Enquanto a gaveta estiver aberta os textos e imagens com descrição ficaram clicáveis, ao clicar o Hugo captura o texto e sinaliza sua tradução.</p>
+        <p>
+          <img src="http://i65.tinypic.com/20tqql1.jpg" alt="">
+        </p>
+        <h2 id="tradutor-de-v-deos">Tradutor de vídeos</h2>
+        <p>O plugin oferece um player de vídeo acessível em Libras, que suporta:</p>
+        <ul>
+          <li>HTML5;</li>
+          <li>Youtube;</li>
+          <li>Vimeo;</li>
+        </ul>
+        <p>Também é possível substituir automaticamente os embeds do Youtube e player existentes do Videojs pelo player acessível da HandTalk, sempre que uma legenda for encontrada.</p>
+        <p>O usuário pode clicar no ícone que representa a acessibilidade em língua de sinais para iniciar o vídeo junto com a tradução do Hugo, ou apenas clicar no botão central para assistir o vídeo sem acessibilidade.</p>
+        <p>
+          <img src="http://i67.tinypic.com/szzwpl.jpg" alt="">
+        </p>
+        <p>No player acessível você encontra os botões de ativar e desativar tradução para língua de sinais, assistir em tela cheia, tocar e pausar, ajustar volume e a linha do tempo.</p>
+        <p>
+          <img src="http://i67.tinypic.com/23qqt4.jpg" alt="">
+        </p>
+        <h2 id="tradutor-mobile">Tradutor Mobile</h2>
+        <p>A funcionalidade de tradução em dispositivos móveis vem habilitada por padrão, mas você pode removê-la definindo o parâmetro <code>mobileEnabled</code> como <code>false</code> caso necessário.</p>
+        <p>
+          <img src="http://i68.tinypic.com/nxn794.jpg" alt="">
+        </p>
+        <h2 id="compatibilidade">Compatibilidade</h2>
+        <p>O plugin é compatível com a maioria dos navegadores modernos com suporte a WebGL, tais como, Chrome, Firefox, Edge, Safari e Opera.</p>
+        <p>Abaixo o resultado de testes feitos em sistemas operacionais diferentes usando o plugin em vários navegadores.</p>
         <table>
           <thead>
             <tr>
-              <th>Parameter</th>
-              <th>Default</th>
-              <th>Description</th>
+              <th>Navegador / S.O.</th>
+              <th>Windows</th>
+              <th>MacOs</th>
+              <th>Ubuntu (Linux)</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>include_cats</td>
-              <td>false</td>
-              <td>If set to true, the result will also include cats.</td>
+              <td>Chrome</td>
+              <td>✔</td>
+              <td>✔</td>
+              <td>✔</td>
             </tr>
             <tr>
-              <td>available</td>
-              <td>true</td>
-              <td>If set to false, the result will include kittens that have already been adopted.</td>
+              <td>Firefox</td>
+              <td>✔</td>
+              <td>✔</td>
+              <td>✔</td>
+            </tr>
+            <tr>
+              <td>Safari</td>
+              <td>--</td>
+              <td>✔</td>
+              <td>--</td>
+            </tr>
+            <tr>
+              <td>Opera</td>
+              <td>✔</td>
+              <td>✔</td>
+              <td>✔</td>
+            </tr>
+            <tr>
+              <td>Edge</td>
+              <td>✔</td>
+              <td>--</td>
+              <td>--</td>
+            </tr>
+            <tr>
+              <td>Internet Explorer 11</td>
+              <td>✔</td>
+              <td>--</td>
+              <td>--</td>
+            </tr>
+            <tr>
+              <td>Internet Explorer 10</td>
+              <td>✖</td>
+              <td>--</td>
+              <td>--</td>
+            </tr>
+            <tr>
+              <td>Internet Explorer 9</td>
+              <td>✖</td>
+              <td>--</td>
+              <td>--</td>
             </tr>
           </tbody>
         </table>
-        <aside class="success"> Remember — a happy kitten is an authenticated kitten! </aside>
-        <h2 id="get-a-specific-kitten">Get a Specific Kitten</h2> <pre class="highlight ruby"><code><span class="hljs-keyword">require</span> <span class="hljs-string">'kittn'</span>
-
-api = Kittn::APIClient.authorize!(<span class="hljs-string">'meowmeowmeow'</span>)
-api.kittens.get(<span class="hljs-number">2</span>)</code></pre><pre class="highlight python"><code><span class="hljs-keyword">import</span> kittn
-
-api = kittn.authorize(<span class="hljs-string">'meowmeowmeow'</span>)
-api.kittens.get(<span class="hljs-number">2</span>)</code></pre><pre class="highlight bash"><code>curl <span class="hljs-string">"http://example.com/api/kittens/2"</span>
-  -H <span class="hljs-string">"Authorization: meowmeowmeow"</span></code></pre><pre class="highlight javascript"><code><span class="hljs-keyword">const</span> kittn = <span class="hljs-built_in">require</span>(<span class="hljs-string">'kittn'</span>);
-
-<span class="hljs-keyword">let</span> api = kittn.authorize(<span class="hljs-string">'meowmeowmeow'</span>);
-<span class="hljs-keyword">let</span> max = api.kittens.get(<span class="hljs-number">2</span>);</code></pre>
+        <p>✔ Compatível</p>
+        <p>✖ Não compatível</p>
+        <p>-- Sistema operacional não suporta o navegador</p>
+        <h2 id="instala-o">Instalação</h2>
+        <p>Para a instalação do plugin deve se inserir o script da Hand Talk e instanciar a classe HT passando por argumento um dicionário com o token e demais configurações.</p>
+        <p>No exemplo abaixo utilizamos a última versão do script hospedado em
+          <a href="https://api.handtalk.me/plugin/latest/handtalk.min.js">https://api.handtalk.me/plugin/latest/handtalk.min.js</a>, após inserir o script da Hand Talk instanciamos a classe <code>HT</code> passando por parâmetro um dicionário com o token.</p>
+        <p>Você pode adquirir um token para o seu domínio em
+          <a href="https://account.handtalk.me/">account.handtalk.me</a> ou fale com um dos nossos consultores em
+          <a href="http://handtalk.me/sites">handtalk.me/sites</a>.</p>
         <blockquote>
-          <p>The above command returns JSON structured like this:</p>
-        </blockquote> <pre class="highlight json"><code>{
-  <span class="hljs-attr">"id"</span>: <span class="hljs-number">2</span>,
-  <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Max"</span>,
-  <span class="hljs-attr">"breed"</span>: <span class="hljs-string">"unknown"</span>,
-  <span class="hljs-attr">"fluffiness"</span>: <span class="hljs-number">5</span>,
-  <span class="hljs-attr">"cuteness"</span>: <span class="hljs-number">10</span>
-}</code></pre>
-        <p>This endpoint retrieves a specific kitten.</p>
-        <aside class="warning">Inside HTML code blocks like this one, you can&#39;t use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
-        <h3 id="http-request">HTTP Request</h3>
-        <p><code>GET http://example.com/kittens/&lt;ID&gt;</code></p>
-        <h3 id="url-parameters">URL Parameters</h3>
-        <table>
-          <thead>
-            <tr>
-              <th>Parameter</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>ID</td>
-              <td>The ID of the kitten to retrieve</td>
-            </tr>
-          </tbody>
-        </table>
-        <h1 id="errors">Errors</h1>
-        <aside class="notice">This error section is stored in a separate file in <code>includes/_errors.md</code>. Slate allows you to optionally separate out your docs into many files...just save them to the <code>includes</code> folder and add them to the top of your <code>index.md</code>&#39;s
-          frontmatter. Files are included in the order listed.</aside>
-        <p>The Kittn API uses the following error codes:</p>
-        <table>
-          <thead>
-            <tr>
-              <th>Error Code</th>
-              <th>Meaning</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>400</td>
-              <td>Bad Request -- Your request sucks</td>
-            </tr>
-            <tr>
-              <td>401</td>
-              <td>Unauthorized -- Your API key is wrong</td>
-            </tr>
-            <tr>
-              <td>403</td>
-              <td>Forbidden -- The kitten requested is hidden for administrators only</td>
-            </tr>
-            <tr>
-              <td>404</td>
-              <td>Not Found -- The specified kitten could not be found</td>
-            </tr>
-            <tr>
-              <td>405</td>
-              <td>Method Not Allowed -- You tried to access a kitten with an invalid method</td>
-            </tr>
-            <tr>
-              <td>406</td>
-              <td>Not Acceptable -- You requested a format that isn&#39;t json</td>
-            </tr>
-            <tr>
-              <td>410</td>
-              <td>Gone -- The kitten requested has been removed from our servers</td>
-            </tr>
-            <tr>
-              <td>418</td>
-              <td>I&#39;m a teapot</td>
-            </tr>
-            <tr>
-              <td>429</td>
-              <td>Too Many Requests -- You&#39;re requesting too many kittens! Slow down!</td>
-            </tr>
-            <tr>
-              <td>500</td>
-              <td>Internal Server Error -- We had a problem with our server. Try again later.</td>
-            </tr>
-            <tr>
-              <td>503</td>
-              <td>Service Unavailable -- We&#39;re temporarially offline for maintanance. Please try again later.</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+          <p>Troque
+            <TOKEN> por seu token de acesso</p>
+        </blockquote> <pre class="highlight html"><code>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"http://api.handtalk.me/plugin/latest/handtalk.min.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="actionscript">
+<span class="hljs-keyword">var</span> ht = <span class="hljs-keyword">new</span> HT({
+  token: <span class="hljs-string">"&lt;TOKEN&gt;"</span>,
+});
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></code></pre>
+        <h2 id="exemplo">Exemplo</h2>
+        <blockquote>
+          <p>Troque
+            <TOKEN> por seu token de acesso</p>
+        </blockquote> <pre class="highlight html"><code>
+<span class="hljs-meta">&lt;!DOCTYPE html&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">"pt-br"</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">"UTF-8"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Website<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Hand Talk<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Conte com a ajuda do Hugo, nosso intérprete virtual, para tornar a sua comunicação mais acessível.<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Oferecemos tradução digital para acessibilidade em Libras, a Língua Brasileira de Sinais.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"http://api.handtalk.me/plugin/latest/handtalk.min.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="actionscript">
+    <span class="hljs-keyword">var</span> ht = <span class="hljs-keyword">new</span> HT({
+      token: <span class="hljs-string">"&lt;TOKEN&gt;"</span>,
+    });
+    </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span></code></pre> </div>
       <div class="dark-box">
         <div class="lang-selector">
-          <a href="#" data-language-name="bash">bash</a>
-          <a href="#" data-language-name="ruby">ruby</a>
-          <a href="#" data-language-name="python">python</a>
-          <a href="#" data-language-name="javascript">javascript</a>
+          <a href="#" data-language-name="html">html</a>
         </div>
       </div>
     </div>
