@@ -53,9 +53,9 @@ var ht = new HT({
 
 ## Parâmetros
 
-### Parâmetros para versão Mobile
+### Parâmetros para versão mobile
 
-## Exemplo Avançado
+## Exemplo avançado
 
 ## Compatibilidade
 
