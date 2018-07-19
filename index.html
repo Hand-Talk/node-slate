@@ -11,7 +11,7 @@
     <link href="stylesheets/highlight-monokai.css" rel="stylesheet" type="text/css" media="screen, print" />
     <script src="javascripts/all.js" type="text/javascript"></script>
   </head>
-  <body class="" data-languages="[&#34;html&#34;]">
+  <body class="" data-languages="[&#34;html&#34;,&#34;javascript&#34;]">
     <a href="#" id="nav-button">
       <span> NAV
         <img alt="undefined" class="undefined" src="images/navbar.png"> </span>
@@ -20,6 +20,7 @@
       <img alt="undefined" class="undefined" src="images/logo.png">
       <div class="lang-selector">
         <a href="#" data-language-name="html">html</a>
+        <a href="#" data-language-name="javascript">javascript</a>
       </div>
       <div class="search">
         <input type="text" class="search" id="input-search" placeholder="Pesquisar"> </div>
@@ -37,7 +38,7 @@
       <div class="content">
         <h1 id="introdu-o">Introdução</h1>
         <p>O plugin desenvolvido pela Hand Talk torna os sites acessíveis em língua de sinais. O mesmo conta com duas principais funcionalidades: tradução de texto e tradução de vídeos.</p>
-        <h2 id="tradutor-de-texto">Tradutor de texto</h2>
+        <h2 id="sobre-o-tradutor-de-texto">Sobre o Tradutor de Texto</h2>
         <p>O usuário pode habilitar a funcionalidade clicando no ícone que representa a acessibilidade em língua de sinais:</p>
         <p>
           <img src="http://i66.tinypic.com/r93878.jpg" alt="">
@@ -50,7 +51,7 @@
         <p>
           <img src="http://i65.tinypic.com/20tqql1.jpg" alt="">
         </p>
-        <h2 id="tradutor-de-v-deos">Tradutor de vídeos</h2>
+        <h2 id="sobre-o-tradutor-de-v-deos">Sobre o Tradutor de Vídeos</h2>
         <p>O plugin oferece um player de vídeo acessível em Libras, que suporta:</p>
         <ul>
           <li>
@@ -75,34 +76,22 @@
         <p>
           <img src="http://i67.tinypic.com/23qqt4.jpg" alt="">
         </p>
-        <h2 id="tradutor-mobile">Tradutor Mobile</h2>
+        <h2 id="sobre-o-tradutor-mobile">Sobre o Tradutor Mobile</h2>
         <p>A funcionalidade de tradução em dispositivos móveis vem habilitada por padrão, mas você pode removê-la definindo o parâmetro <code>mobileEnabled</code> como <code>false</code> caso necessário.</p>
         <p>
           <img src="http://i68.tinypic.com/nxn794.jpg" alt="">
         </p>
         <h1 id="instala-o">Instalação</h1>
-        <p>Para a instalação do plugin deve se inserir o script da Hand Talk e instanciar a classe HT passando por argumento um dicionário com o token e demais configurações.</p>
-        <p>No exemplo abaixo utilizamos a última versão do script hospedado em
-          <a href="https://api.handtalk.me/plugin/latest/handtalk.min.js">https://api.handtalk.me/plugin/latest/handtalk.min.js</a>, após inserir o script da Hand Talk instanciamos a classe <code>HT</code> passando por parâmetro um dicionário com o token.</p>
-        <p>Você pode adquirir um token para o seu domínio em
-          <a href="https://account.handtalk.me/">account.handtalk.me</a> ou fale com um dos nossos consultores em
-          <a href="http://handtalk.me/sites">handtalk.me/sites</a>.</p>
-        <h2 id="exemplo">Exemplo</h2>
         <blockquote>
-          <p>Troque
-            <TOKEN> por seu token de acesso</p>
-        </blockquote> <pre class="highlight html"><code>
-<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"http://api.handtalk.me/plugin/latest/handtalk.min.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
-
-<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="actionscript">
-<span class="hljs-keyword">var</span> ht = <span class="hljs-keyword">new</span> HT({
+          <h3 id="exemplo-de-instala-o-br-">Exemplo de Instalação
+            <br />
+          </h3>
+          <p>Troque <code>&lt;TOKEN&gt;</code> por seu token de acesso</p>
+        </blockquote> <pre class="highlight javascript"><code><span class="hljs-keyword">var</span> ht = <span class="hljs-keyword">new</span> HT({
+  <span class="hljs-comment">// Troque por seu token, exemplo:</span>
+  <span class="hljs-comment">// token: "ABCDEFGHIJKLMNOPQRSTUVWXYZ"</span>
   token: <span class="hljs-string">"&lt;TOKEN&gt;"</span>,
-});
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></code></pre>
-        <blockquote>
-          <p>Troque
-            <TOKEN> por seu token de acesso</p>
-        </blockquote> <pre class="highlight html"><code>
+});</code></pre><pre class="highlight html"><code>
 <span class="hljs-meta">&lt;!DOCTYPE html&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">"pt-br"</span>&gt;</span>
 
@@ -117,19 +106,27 @@
     <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Conte com a ajuda do Hugo, nosso intérprete virtual, para tornar a sua comunicação mais acessível.<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Oferecemos tradução digital para acessibilidade em Libras, a Língua Brasileira de Sinais.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 
-    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"http://api.handtalk.me/plugin/latest/handtalk.min.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://api.handtalk.me/plugin/latest/handtalk.min.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
 
     <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="actionscript">
     <span class="hljs-keyword">var</span> ht = <span class="hljs-keyword">new</span> HT({
-      token: <span class="hljs-string">"&lt;TOKEN&gt;"</span>,
+      <span class="hljs-comment">// Troque por seu token, exemplo:</span>
+      <span class="hljs-comment">// token: "ABCDEFGHIJKLMNOPQRSTUVWXYZ"</span>
+      token: <span class="hljs-string">"&lt;TOKEN&gt;"</span>
     });
     </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
 
 <span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span></code></pre>
+        <p>Para a instalação do plugin deve-se inserir o script da Hand Talk e instanciar a classe HT passando por argumento um dicionário com o token e demais configurações.</p>
+        <p>No exemplo de instalação à direita, utilizamos a última versão do script hospedado em
+          <a href="https://api.handtalk.me/plugin/latest/handtalk.min.js">https://api.handtalk.me/plugin/latest/handtalk.min.js</a>, após inserir o script da Hand Talk instanciamos a classe <code>HT</code> passando por parâmetro um dicionário com o token.</p>
+        <p>Você pode adquirir um token para o seu domínio em
+          <a href="https://account.handtalk.me/">account.handtalk.me</a> ou fale com um dos nossos consultores em
+          <a href="http://handtalk.me/sites">handtalk.me/sites</a>.</p>
         <h2 id="par-metros">Parâmetros</h2>
-        <h3 id="par-metros-para-vers-o-mobile">Parâmetros para versão Mobile</h3>
-        <h2 id="exemplo-avan-ado">Exemplo Avançado</h2>
+        <h3 id="par-metros-para-vers-o-mobile">Parâmetros para versão mobile</h3>
+        <h2 id="exemplo-avan-ado">Exemplo avançado</h2>
         <h2 id="compatibilidade">Compatibilidade</h2>
         <p>O plugin é compatível com a maioria dos navegadores modernos com suporte a WebGL, tais como, Chrome, Firefox, Edge, Safari e Opera.</p>
         <p>Abaixo o resultado de testes feitos em sistemas operacionais diferentes usando o plugin em vários navegadores.</p>
@@ -197,10 +194,31 @@
         <p>✔ Compatível</p>
         <p>✖ Não compatível</p>
         <p>-- Sistema operacional não suporta o navegador</p>
+        <h2 id="adicionando-exce-es">Adicionando exceções</h2>
+        <h2 id="aumentando-o-limite-de-captura-de-texto">Aumentando o limite de captura de texto</h2>
+        <h2 id="tornando-iframes-acess-veis">Tornando iframes acessíveis</h2>
+        <h2 id="iframes-din-micos">Iframes dinâmicos</h2>
+        <h2 id="traduzindo-imagens">Traduzindo imagens</h2>
+        <h2 id="desativando-requisi-es-de-melhorias-do-sistema">Desativando requisições de melhorias do sistema</h2>
+        <h1 id="eventos">Eventos</h1>
+        <h2 id="ouvindo-os-eventos">Ouvindo os eventos</h2>
+        <h1 id="tradutor-de-v-deos">Tradutor de vídeos</h1>
+        <h2 id="utilizando-o-player-acess-vel">Utilizando o player acessível</h2>
+        <h3 id="exemplos">Exemplos</h3>
+        <h2 id="utilizando-apenas-o-tradutor-de-v-deos">Utilizando apenas o tradutor de vídeos</h2>
+        <h3 id="exemplos">Exemplos</h3>
+        <h2 id="replace-autom-tico-de-v-deos">Replace automático de vídeos</h2>
+        <h3 id="exemplos">Exemplos</h3>
+        <h2 id="v-deos-din-micos">Vídeos dinâmicos</h2>
+        <h3 id="exemplos">Exemplos</h3>
+        <h2 id="legendas">Legendas</h2>
+        <p>(boas praticas e exemplos)</p>
+        <h2 id="resolvendo-conflitos-de-estilo-css-">Resolvendo conflitos de estilo (css)</h2>
       </div>
       <div class="dark-box">
         <div class="lang-selector">
           <a href="#" data-language-name="html">html</a>
+          <a href="#" data-language-name="javascript">javascript</a>
         </div>
       </div>
     </div>
