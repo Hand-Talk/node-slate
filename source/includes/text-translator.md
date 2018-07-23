@@ -196,7 +196,7 @@ No exemplo ao lado, colocamos na exceção um ID de elemento HTML e uma classe C
 
 **Importante**: Dependendo da linguagem e/ou lógica de programação aplicada no desenvolvimento do website, para possibilitar o pleno funcionamento ou aprimorar os resultados obtidos pelo serviço, pode ser necessária a realização de outras customizações no código da Hand Talk, que deverão ser feitas pelo Cliente.
 
-## Iframes dinâmicos
+## Iframes Dinâmicos
 
 > Exemplo de compatibilidade com iframes dinâmicos
 
