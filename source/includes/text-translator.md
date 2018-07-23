@@ -2,7 +2,7 @@
 
 ## Começando
 
-> ### Exemplo de Instalação <br />
+> ### Exemplo de Instalação <br /> 
 Troque `<TOKEN>` por seu token de acesso
  
 ```javascript
@@ -29,6 +29,7 @@ var ht = new HT({
     <h2>Conte com a ajuda do Hugo, nosso intérprete virtual, para tornar a sua comunicação mais acessível.</h2>
     <p>Oferecemos tradução digital para acessibilidade em Libras, a Língua Brasileira de Sinais.</p>
 
+    <!-- Pega a ultima versão do plugin Hand Talk -->
     <script src="https://api.handtalk.me/plugin/latest/handtalk.min.js"></script>
 
     <script>
@@ -64,12 +65,14 @@ Você pode pode preferir habilitar/desabilitar algumas funcionalidades do Tradut
 | zIndex        | Define o posicionamento da profundidade do tradutor no site, ou seja, determinar se o Tradutor de Sites estará mais próximo ou mais afastado da tela. | Inteiros                       | 1000000   |
 | maxTextSize   | Define o tamanho máximo de caracteres para captura de texto em um elemento.                                                                           | Inteiros                       | 500       |
 | doNotTrack    | Se o valor desta propriedade for verdadeiro, as frases traduzidas não serão armazenadas ou utilizada para a melhoria do sistema de tradução.          | false ou true                  | false     |
-| exceptions    | Lista de queries que serão ignoradas pelo plugin, ex.: ```['a', 'form', '.main', '#site-title']```                                                  | array                          | [ ]       |
+| exceptions    | Lista de queries que serão ignoradas pelo plugin, ex.: ```['a', 'form', '.main', '#site-title']```                                                    | array                          | [ ]       |
 | mobileConfig  | Objeto de configuração para a plataforma mobile, quando definido, sobscreve as configurações padrões de HT.                                           | Object                         | { }       |
 
 Consulte a guia [Definindo Parametros] para mais detalhes de implementação.
 
 ### Parâmetros para versão mobile
+
+> ### Adicionando parâmetros exclusivos para versão mobile
 
 ```javascript
 var ht = new HT({
@@ -101,6 +104,7 @@ var ht = new HT({
     <h2>Conte com a ajuda do Hugo, nosso intérprete virtual, para tornar a sua comunicação mais acessível.</h2>
     <p>Oferecemos tradução digital para acessibilidade em Libras, a Língua Brasileira de Sinais.</p>
 
+    <!-- Pega a ultima versão do plugin Hand Talk -->
     <script src="https://api.handtalk.me/plugin/latest/handtalk.min.js"></script>
 
     <script>
@@ -123,45 +127,139 @@ var ht = new HT({
 
 Você pode passar parâmetros especificos para dispositivos movéis, para isso basta utilizar a propriedade ```mobileConfig```, e passar os parâmetros que serão sobrescritos. O Parâmetro ```bottom``` é exclusivo para dispositivos movéis.
 
-| Configurações | Descrição                                                                                                                                                     | Valores           | Padrão  |
-| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------- | ------- |
-| bottom        | Posicionamento do botão de acessibilidade e do Hugo em relação a parte inferior da tela na versão mobile. Especifique também a unidade de medida (em, %, px). | string            | "0px"   |
+| Configurações | Descrição                                                                                                                                                     | Valores | Padrão |
+| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- | ------ |
+| bottom        | Posicionamento do botão de acessibilidade e do Hugo em relação a parte inferior da tela na versão mobile. Especifique também a unidade de medida (em, %, px). | string  | "0px"  |
 
 Consulte o exemplo ao lado.
 
-## Compatibilidade
+## Adicionando Exceções
 
-O plugin é compatível com a maioria dos navegadores modernos com suporte a WebGL, tais como, Chrome, Firefox, Edge, Safari e Opera.
+> ### Adicionando Exceções
 
-Abaixo o resultado de testes feitos em sistemas operacionais diferentes usando o plugin em vários navegadores.
+```javascript
+var ht = new HT({
+  // Troque por seu token, exemplo:
+  // token: "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+  token: "<TOKEN>",
+  // Ignora todo o conteúdo que possuir o id/class referenciado
+  exceptions: ["#carousel", ".formulario"]
+});
+```
 
-| Navegador / S.O.     | Windows | MacOs | Ubuntu (Linux) |
-| -------------------- | ------- | ----- | -------------- |
-| Chrome               | ✔       | ✔     | ✔              |
-| Firefox              | ✔       | ✔     | ✔              |
-| Safari               | --      | ✔     | --             |
-| Opera                | ✔       | ✔     | ✔              |
-| Edge                 | ✔       | --    | --             |
-| Internet Explorer 11 | ✔       | --    | --             |
-| Internet Explorer 10 | ✖       | --    | --             |
-| Internet Explorer 9  | ✖       | --    | --             |
-  
-Legenda:
+```html
+<body>
+  <!-- Não existe nenhuma referência do elemento abaixo na lista de exceções, então ele será traduzido. -->
+  <h1 id="titulo">Hand Talk</h1>
 
-✔ Compatível
+  <!-- a classe formulario está sendo ignorada, logo todo o conteúdo deste form não será traduzido. -->
+  <form class="formulario">
+    <input type="text" placeholder="Insira o texto ">
+    <input type="submit" value="Pesquisar">
+  </form>
 
-✖ Não compatível
+  <!-- Este slide será ignorado devido ao id carousel ter sido adicionado a lista de exceções  -->
+  <div id="carousel">
+    <div>Meu slide 1</div>
+    <div>Meu slide 2</div>
+    <div>Meu slide 3</div>
+  </div>
 
--- Sistema operacional não suporta o navegador
+  <!-- Pega a ultima versão do plugin Hand Talk -->
+  <script src="https://api.handtalk.me/plugin/latest/handtalk.min.js"></script>
 
-## Adicionando exceções
+  <script>
+  var ht = new HT({
+    // Troque por seu token, exemplo:
+    // token: "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    token: "<TOKEN>",
+    // Ignora todo o conteúdo que possuir o id/class referenciado
+    exceptions: ["#carousel", ".formulario"]
+  });
+  </script>
+</body>
+```
 
-## Aumentando o limite de captura de texto
+Em alguns casos, pode haver algum conflito entre o código da Hand Talk e algum script que o site possui. Para evitar esse conflito, basta adicionar esse elemento como uma exceção.
 
-## Tornando iframes acessíveis
+### Tratamento de Excecão de ID e CLASS:
+
+Caso seu site tenha algum problema de conflito com um scripts de carousel, por exemplo, você pode adicionar o elemento na propriedade `exceptions`.
+
+Declare qual ID ou CLASS não utilizará o Hand Talk, como também nenhum dos seus elementos filhos, ou seja, quando declarar que `#carousel` não vai utilizar a tradução, nada dentro desta DIV ou elemento irá ser traduzido. Estes elementos devem ser inseridos entre aspas e separados por vírgula: 
+
+`exceptions: ["#menu", "#carousel", ".listas", ".formulario"]`
+
+No exemplo ao lado, colocamos na exceção um ID de elemento HTML e uma classe CSS, consecutivamente.
+
+**Atenção**: Ao adicionar o conteúdo como uma exceção, ele não será traduzido pela Hand Talk.
+
+**Importante**: Dependendo da linguagem e/ou lógica de programação aplicada no desenvolvimento do website, para possibilitar o pleno funcionamento ou aprimorar os resultados obtidos pelo serviço, pode ser necessária a realização de outras customizações no código da Hand Talk, que deverão ser feitas pelo Cliente.
 
 ## Iframes dinâmicos
 
-## Traduzindo imagens
+> Exemplo de compatibilidade com iframes dinâmicos
 
-## Desativando requisições de melhorias do sistema
+```javascript
+var ht = new HT({
+  // Troque por seu token, exemplo:
+  // token: "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+  token: "<TOKEN>"
+});
+
+// Aguarda 3 segundos e insere um iframe na página
+window.setTimeout(function() {
+  // Cria e adiciona um iframe para handtalk.me.
+  var iframe = document.createElement('iframe');
+  iframe.src = "http://handtalk.me";
+  document.body.appendChild(iframe);
+
+  // Quando o iframe for carregado
+  iframe.onload(function(){
+    // Adiciona os listeners no iframe
+    ht.addListenersToIframe(iframe);
+    // Ou utilize
+    // ht.addListenersToIframeAll();
+    // Para fazer a varredura na página inteira novamente
+  })
+}, 3000);
+```
+
+```html
+<body>
+  <!-- iframe a ser carregado posteriormente -->
+  <iframe id="meu-iframe"></iframe>
+
+  <!-- Pega a ultima versão do plugin Hand Talk -->
+  <script src="https://api.handtalk.me/plugin/latest/handtalk.min.js"></script>
+
+  <script>
+  var ht = new HT({
+    // Troque por seu token, exemplo:
+    // token: "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    token: "<TOKEN>"
+  )};
+  
+  // Pega o iframe da página
+  var iframe = document.getElementById("meu-iframe");
+
+  // Após 3 segundos define o source do iframe
+  window.setTimeout(function() {
+    iframe.src = "https://handtalk.me";
+
+    // Quando o iframe for carregado
+    iframe.onload(function(){
+      // Adiciona os listeners no iframe
+      ht.addListenersToIframe(iframe);
+      // Ou utilize
+      // ht.addListenersToIframeAll();
+      // Para fazer a varredura na página inteira novamente
+    });
+  }, 3000);
+  </script>
+</body>
+```
+
+Ao ser carregado, o plugin Hand Talk faz uma varredura na página buscando iframes e adicionando os listeners necessários para identificar o conteúdo de um elemento. Em casos de iframes que são atualizados dinâmicamente, deve ser utilizada a função `addIframesListenersAll()` para buscar novamente por iframes, ou `addListenersToIframe(iframe)` para um iframe especifico.
+
+Veja o exemplo ao lado.
