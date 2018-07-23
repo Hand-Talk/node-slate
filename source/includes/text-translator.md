@@ -198,7 +198,7 @@ No exemplo ao lado, colocamos na exceção um ID de elemento HTML e uma classe C
 
 ## Iframes Dinâmicos
 
-> Exemplo de compatibilidade com iframes dinâmicos
+> ### Exemplo de compatibilidade com iframes dinâmicos
 
 ```javascript
 var ht = new HT({
