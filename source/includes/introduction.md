@@ -1,6 +1,6 @@
 # Introdução
 
-O plugin desenvolvido pela Hand Talk torna os sites acessíveis em língua de sinais. O mesmo conta com duas principais funcionalidades: tradução de texto e tradução de vídeos.
+O plugin desenvolvido pela Hand Talk torna os sites acessíveis em língua de sinais. O mesmo conta com duas principais funcionalidades: tradução de texto e tradução de vídeos. Ambos estão 
 
 ## Sobre o Tradutor de Texto
 
@@ -35,8 +35,14 @@ No player acessível você encontra os botões de ativar e desativar tradução 
 
 ![](http://i67.tinypic.com/23qqt4.jpg)
 
+Consulte a guia [Tradutor de Vídeos > Começando](#come-ando18) para um guia de implementação.
+
 ## Sobre o Tradutor Mobile
 
 A funcionalidade de tradução em dispositivos móveis vem habilitada por padrão, mas você pode removê-la definindo o parâmetro `mobileEnabled` como `false` caso necessário.
 
 ![](http://i68.tinypic.com/nxn794.jpg)
+
+## Compatibilidade
+
+## Requisitos mínimos

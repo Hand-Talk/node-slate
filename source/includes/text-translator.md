@@ -1,4 +1,6 @@
-# Instalação
+# Tradutor de Sites
+
+## Começando
 
 > ### Exemplo de Instalação <br />
 Troque `<TOKEN>` por seu token de acesso

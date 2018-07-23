@@ -1,5 +1,7 @@
 # Tradutor de vídeos
 
+## Começando
+
 ## Utilizando o player acessível
 
 ### Exemplos
