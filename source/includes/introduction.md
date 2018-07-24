@@ -52,14 +52,14 @@ Abaixo o resultado de testes feitos em sistemas operacionais diferentes usando o
 
 | Navegador / S.O.     | Windows | MacOs | Ubuntu (Linux) |
 | -------------------- | ------- | ----- | -------------- |
-|![](/images/chrome.png)    | ✔       | ✔     | ✔             |
-|![](/images/firefox.png)    | ✔       | ✔     | ✔             |
-|![](/images/opera.png)    | --      | ✔     | --             |
-|![](/images/safari.png)   | ✔       | ✔     | ✔             |
-|![](/images/edge.png)   | ✔       | --    | --             |
-|![](/images/internet-explorer.png)<span style="margin-left: 15px;">**11**</span>   | ✔       | --    | --             |
-|![](/images/internet-explorer.png)<span style="margin-left: 15px;">**10**</span>   | ✖       | --    | --             |
-|![](/images/internet-explorer.png)<span style="margin-left: 15px;">**9**</span>  | ✖       | --    | --             |
+|![](images/chrome.png)    | ✔       | ✔     | ✔             |
+|![](images/firefox.png)    | ✔       | ✔     | ✔             |
+|![](images/opera.png)    | --      | ✔     | --             |
+|![](images/safari.png)   | ✔       | ✔     | ✔             |
+|![](images/edge.png)   | ✔       | --    | --             |
+|![](images/internet-explorer.png)<span style="margin-left: 15px;">**11**</span>   | ✔       | --    | --             |
+|![](images/internet-explorer.png)<span style="margin-left: 15px;">**10**</span>   | ✖       | --    | --             |
+|![](images/internet-explorer.png)<span style="margin-left: 15px;">**9**</span>  | ✖       | --    | --             |
   
 Legenda:
 
