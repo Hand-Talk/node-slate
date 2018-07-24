@@ -8,11 +8,11 @@ O usuário pode habilitar a funcionalidade clicando no ícone que representa a a
 
 ![](http://i66.tinypic.com/r93878.jpg)
 
-Ao clicar, será aberta uma gaveta com o intérprete 3D da Hand Talk, o Hugo.
+Ao clicar, será aberta uma janela com o intérprete 3D da Hand Talk, o Hugo.
   
 ![](http://i66.tinypic.com/2ib26w6.jpg)
 
-Enquanto a gaveta estiver aberta, os textos e imagens com descrição ficaram clicáveis. Ao clicar, o Hugo captura o texto e sinaliza sua tradução.
+Enquanto a janela estiver aberta, os textos e imagens com descrição ficaram clicáveis. Ao clicar, o Hugo captura o texto e sinaliza sua tradução.
 
 ![](http://i65.tinypic.com/20tqql1.jpg)
 
