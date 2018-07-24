@@ -113,10 +113,10 @@ var ht = new HT({
       // token: "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
       token: "<TOKEN>",
       // Posiciona o Tradutor de Sites ao lado esquerdo da página
-      align: "left",
+      side: "left",
       // Quando mobile, Posiciona o Tradutor de Sites ao lado direito da página 
       mobileConfig: {
-        align: "right"
+        side: "right"
       }
     });
     </script>
