@@ -68,5 +68,3 @@ Legenda:
 ✖ Não compatível
 
 -- Sistema operacional não suporta o navegador
-
-## Requisitos mínimos
