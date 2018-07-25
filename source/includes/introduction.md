@@ -30,11 +30,11 @@ Também é possível adicionar acessibilidade automaticamente aos embeds do Yout
 
 O usuário pode clicar no ícone que representa a acessibilidade em língua de sinais para iniciar o vídeo junto com a tradução do Hugo, ou apenas clicar no botão central para assistir o vídeo sem acessibilidade.
 
-![](http://i67.tinypic.com/szzwpl.jpg)
+![](images/screenshoots/tradutor-de-videos.png)
 
 No player acessível você encontra os botões de ativar e desativar tradução para língua de sinais, assistir em tela cheia, tocar e pausar, ajustar volume e a linha do tempo.
 
-![](http://i67.tinypic.com/23qqt4.jpg)
+![](images/screenshoots/tradutor-de-videos-2.png)
 
 Consulte a guia [Tradutor de Vídeos > Começando](#come-ando18) para um guia de implementação.
 
@@ -42,7 +42,7 @@ Consulte a guia [Tradutor de Vídeos > Começando](#come-ando18) para um guia de
 
 A funcionalidade de tradução em dispositivos móveis vem habilitada por padrão, mas você pode removê-la definindo o parâmetro `mobileEnabled` como `false` caso necessário.
 
-![](http://i68.tinypic.com/nxn794.jpg)
+![](images/screenshoots/tradutor-mobile.jpg)
 
 ## Compatibilidade
 
