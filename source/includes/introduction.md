@@ -6,15 +6,15 @@ O plugin desenvolvido pela Hand Talk torna os sites acessíveis em língua de si
 
 O usuário pode habilitar a funcionalidade clicando no ícone que representa a acessibilidade em língua de sinais:
 
-![](http://i66.tinypic.com/r93878.jpg)
+![](images/screenshoots/tradutor-de-sites.png)
 
 Ao clicar, será aberta uma janela com o intérprete 3D da Hand Talk, o Hugo.
   
-![](http://i66.tinypic.com/2ib26w6.jpg)
+![](images/screenshoots/tradutor-de-sites-2.png)
 
 Enquanto a janela estiver aberta, os textos e imagens com descrição ficaram clicáveis. Ao clicar, o Hugo captura o texto e sinaliza sua tradução.
 
-![](http://i65.tinypic.com/20tqql1.jpg)
+![](images/screenshoots/tradutor-de-sites-3.png)
 
 ## Sobre o Tradutor de Vídeos
 
@@ -30,19 +30,20 @@ Também é possível adicionar acessibilidade automaticamente aos embeds do Yout
 
 O usuário pode clicar no ícone que representa a acessibilidade em língua de sinais para iniciar o vídeo junto com a tradução do Hugo, ou apenas clicar no botão central para assistir o vídeo sem acessibilidade.
 
-![](http://i67.tinypic.com/szzwpl.jpg)
+![](images/screenshoots/tradutor-de-videos.png)
 
 No player acessível você encontra os botões de ativar e desativar tradução para língua de sinais, assistir em tela cheia, tocar e pausar, ajustar volume e a linha do tempo.
 
-![](http://i67.tinypic.com/23qqt4.jpg)
+![](images/screenshoots/tradutor-de-videos-2.png)
 
 Consulte a guia [Tradutor de Vídeos > Começando](#come-ando18) para um guia de implementação.
 
 ## Sobre o Tradutor Mobile
 
+A tradução de textos e vídeos também está disponivel na versão mobile, com pequenos ajustes que tornam a usabilidade ainda melhor para o usuário surdo.
 A funcionalidade de tradução em dispositivos móveis vem habilitada por padrão, mas você pode removê-la definindo o parâmetro `mobileEnabled` como `false` caso necessário.
 
-![](http://i68.tinypic.com/nxn794.jpg)
+![](images/screenshoots/tradutor-mobile.jpg)
 
 ## Compatibilidade
 
@@ -52,14 +53,14 @@ Abaixo o resultado de testes feitos em sistemas operacionais diferentes usando o
 
 | Navegador / S.O.     | Windows | MacOs | Ubuntu (Linux) |
 | -------------------- | ------- | ----- | -------------- |
-|![](/images/chrome.png)    | ✔       | ✔     | ✔             |
-|![](/images/firefox.png)    | ✔       | ✔     | ✔             |
-|![](/images/opera.png)    | --      | ✔     | --             |
-|![](/images/safari.png)   | ✔       | ✔     | ✔             |
-|![](/images/edge.png)   | ✔       | --    | --             |
-|![](/images/internet-explorer.png)<span style="margin-left: 15px;">**11**</span>   | ✔       | --    | --             |
-|![](/images/internet-explorer.png)<span style="margin-left: 15px;">**10**</span>   | ✖       | --    | --             |
-|![](/images/internet-explorer.png)<span style="margin-left: 15px;">**9**</span>  | ✖       | --    | --             |
+|![](images/icons/chrome.png)    | ✔       | ✔     | ✔             |
+|![](images/icons/firefox.png)    | ✔       | ✔     | ✔             |
+|![](images/icons/opera.png)    | --      | ✔     | --             |
+|![](images/icons/safari.png)   | ✔       | ✔     | ✔             |
+|![](images/icons/edge.png)   | ✔       | --    | --             |
+|![](images/icons/internet-explorer.png)<span style="margin-left: 15px;">**11**</span>   | ✔       | --    | --             |
+|![](images/icons/internet-explorer.png)<span style="margin-left: 15px;">**10**</span>   | ✖       | --    | --             |
+|![](images/icons/internet-explorer.png)<span style="margin-left: 15px;">**9**</span>  | ✖       | --    | --             |
   
 Legenda:
 
@@ -68,5 +69,3 @@ Legenda:
 ✖ Não compatível
 
 -- Sistema operacional não suporta o navegador
-
-## Requisitos mínimos
