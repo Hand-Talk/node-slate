@@ -40,6 +40,7 @@ Consulte a guia [Tradutor de Vídeos > Começando](#come-ando18) para um guia de
 
 ## Sobre o Tradutor Mobile
 
+A tradução de textos e vídeos também está disponivel na versão mobile, com pequenos ajustes que tornam a usabilidade ainda melhor para o usuário surdo.
 A funcionalidade de tradução em dispositivos móveis vem habilitada por padrão, mas você pode removê-la definindo o parâmetro `mobileEnabled` como `false` caso necessário.
 
 ![](images/screenshoots/tradutor-mobile.jpg)
