@@ -14,34 +14,23 @@ var ht = new HT({
 ```
 
 ```html
+<body>
 
-<!DOCTYPE html>
-<html lang="pt-br">
+  <h1>Hand Talk</h1>
+  <h2>Conte com a ajuda do Hugo, nosso intérprete virtual, para tornar a sua comunicação mais acessível.</h2>
+  <p>Oferecemos tradução digital para acessibilidade em Libras, a Língua Brasileira de Sinais.</p>
 
-  <head>
-    <meta charset="UTF-8">
-    <title>Website</title>
-  </head>
+  <!-- Pega a ultima versão do plugin Hand Talk -->
+  <script src="https://api.handtalk.me/plugin/latest/handtalk.min.js"></script>
 
-  <body>
-
-    <h1>Hand Talk</h1>
-    <h2>Conte com a ajuda do Hugo, nosso intérprete virtual, para tornar a sua comunicação mais acessível.</h2>
-    <p>Oferecemos tradução digital para acessibilidade em Libras, a Língua Brasileira de Sinais.</p>
-
-    <!-- Pega a ultima versão do plugin Hand Talk -->
-    <script src="https://api.handtalk.me/plugin/latest/handtalk.min.js"></script>
-
-    <script>
-    var ht = new HT({
-      // Troque por seu token, exemplo:
-      // token: "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-      token: "<TOKEN>"
-    });
-    </script>
-  </body>
-
-</html>
+  <script>
+  var ht = new HT({
+    // Troque por seu token, exemplo:
+    // token: "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    token: "<TOKEN>"
+  });
+  </script>
+</body>
 ```
 
 Para a instalação do plugin, deve-se inserir o script da Hand Talk e instanciar a classe HT passando por argumento um dicionário com o token e demais configurações.
@@ -89,40 +78,28 @@ var ht = new HT({
 ```
 
 ```html
+<body>
+  <h1>Hand Talk</h1>
+  <h2>Conte com a ajuda do Hugo, nosso intérprete virtual, para tornar a sua comunicação mais acessível.</h2>
+  <p>Oferecemos tradução digital para acessibilidade em Libras, a Língua Brasileira de Sinais.</p>
 
-<!DOCTYPE html>
-<html lang="pt-br">
+  <!-- Pega a ultima versão do plugin Hand Talk -->
+  <script src="https://api.handtalk.me/plugin/latest/handtalk.min.js"></script>
 
-  <head>
-    <meta charset="UTF-8">
-    <title>Website</title>
-  </head>
-
-  <body>
-
-    <h1>Hand Talk</h1>
-    <h2>Conte com a ajuda do Hugo, nosso intérprete virtual, para tornar a sua comunicação mais acessível.</h2>
-    <p>Oferecemos tradução digital para acessibilidade em Libras, a Língua Brasileira de Sinais.</p>
-
-    <!-- Pega a ultima versão do plugin Hand Talk -->
-    <script src="https://api.handtalk.me/plugin/latest/handtalk.min.js"></script>
-
-    <script>
-    var ht = new HT({
-      // Troque por seu token, exemplo:
-      // token: "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-      token: "<TOKEN>",
-      // Posiciona o Tradutor de Sites ao lado esquerdo da página
-      side: "left",
-      // Quando mobile, Posiciona o Tradutor de Sites ao lado direito da página 
-      mobileConfig: {
-        side: "right"
-      }
-    });
-    </script>
-  </body>
-
-</html>
+  <script>
+  var ht = new HT({
+    // Troque por seu token, exemplo:
+    // token: "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    token: "<TOKEN>",
+    // Posiciona o Tradutor de Sites ao lado esquerdo da página
+    side: "left",
+    // Quando mobile, Posiciona o Tradutor de Sites ao lado direito da página 
+    mobileConfig: {
+      side: "right"
+    }
+  });
+  </script>
+</body>
 ```
 
 Você pode passar parâmetros especificos para dispositivos movéis, para isso basta utilizar a propriedade ```mobileConfig```, e passar os parâmetros que serão sobrescritos. O Parâmetro ```bottom``` é exclusivo para dispositivos movéis.
