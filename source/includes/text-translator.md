@@ -209,53 +209,47 @@ var ht = new HT({
 
 // Aguarda 3 segundos e insere um iframe na página
 window.setTimeout(function() {
-  // Cria e adiciona um iframe para handtalk.me.
-  var iframe = document.createElement('iframe');
-  iframe.src = "http://handtalk.me";
+  // Cria o iframe e adiciona na pagina
+  var iframe = document.createElement("iframe");
   document.body.appendChild(iframe);
-
-  // Quando o iframe for carregado
-  iframe.onload(function(){
-    // Adiciona os listeners no iframe
-    ht.addListenersToIframe(iframe);
-    // Ou utilize
-    // ht.addListenersToIframeAll();
-    // Para fazer a varredura na página inteira novamente
-  })
+    
+  //Define o conteúdo do iframe
+  iframe.contentDocument.write("<div>Olá mundo!</div>");
+  
+  // Adiciona os listeners no iframe
+  ht.addListenersToIframe(iframe);
+  // Ou utilize
+  // ht.addListenersToIframeAll();
+  // Para fazer a varredura na página inteira novamente
 }, 3000);
 ```
 
 ```html
 <body>
-  <!-- iframe a ser carregado posteriormente -->
-  <iframe id="meu-iframe"></iframe>
-
   <!-- Pega a ultima versão do plugin Hand Talk -->
   <script src="https://api.handtalk.me/plugin/latest/handtalk.min.js"></script>
 
   <script>
-  var ht = new HT({
-    // Troque por seu token, exemplo:
-    // token: "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-    token: "<TOKEN>"
-  )};
-  
-  // Pega o iframe da página
-  var iframe = document.getElementById("meu-iframe");
+    var ht = new HT({
+      // Troque por seu token, exemplo:
+      // token: "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+      token: "<TOKEN>"
+    )};
 
-  // Após 3 segundos define o source do iframe
-  window.setTimeout(function() {
-    iframe.src = "https://handtalk.me";
-
-    // Quando o iframe for carregado
-    iframe.onload(function(){
+    // Após 3 segundos cria um iframe
+    window.setTimeout(function() {
+      // Cria o iframe e adiciona na pagina
+      var iframe = document.createElement("iframe");
+      document.body.appendChild(iframe);
+      
+      //Define o conteúdo do iframe
+      iframe.contentDocument.write("<div>Olá mundo!</div>");
+      
       // Adiciona os listeners no iframe
       ht.addListenersToIframe(iframe);
-      // Ou utilize
+      // Para buscar iframes e adicionar os listeners, utilize:
       // ht.addListenersToIframeAll();
-      // Para fazer a varredura na página inteira novamente
-    });
-  }, 3000);
+    }, 3000);
   </script>
 </body>
 ```
