@@ -478,6 +478,7 @@ html, body {
 
     &.warning {
       background-color: $aside-warning-bg;
+      color: $aside-warning-text;
       text-shadow: 0 1px 0 lighten($aside-warning-bg, 15%);
     }
 
