@@ -36,20 +36,11 @@ var ht = new HT({
   </body>
 ```
 
-Para a instalação do plugin, deve-se inserir o script da Hand Talk e instanciar a classe HT passando por argumento um dicionário com o token e demais configurações.
+Para começar a utilizar o Tradutor de Vídeos, você deve inserir o script da Hand Talk e instanciar a classe HT, passando por parâmetro um dicionário com o token e demais configurações.
 
-No exemplo de instalação à direita, utilizamos a última versão do script hospedado em https://api.handtalk.me/plugin/latest/handtalk.min.js, após inserir o script da Hand Talk instanciamos a classe `HT` passando por parâmetro um dicionário com o token.
+No exemplo de instalação à direita, utilizamos a última versão do script hospedado em https://api.handtalk.me/plugin/latest/handtalk.min.js, após inserir o script da Hand Talk instanciamos a classe `HT` passando por parâmetro um dicionário com o `token` e `videoEnabled` para habilitar o Tradutor de Vídeos.
 
-Sem um token válido, a ferramenta não irá funcionar, emitindo o erro:
-
-<aside class="warning">
-406 - O serviço está desabilitado temporariamente para este website.
-</aside>
-
-após clicar no botão de ativação da ferramenta.
-
-Você pode adquirir um token para o seu domínio em [account.handtalk.me](https://account.handtalk.me/). <br /> 
-Ou fale com um de nossos consultores em [handtalk.me/sites](http://handtalk.me/sites).
+Sem a flag `videoEnabled` ativada, o Tradutor de Vídeos não irá funcionar.
 
 ## Utilizando o player acessível
 

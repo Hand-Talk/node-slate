@@ -69,3 +69,19 @@ Legenda:
 ✖ Não compatível
 
 -- Sistema operacional não suporta o navegador
+
+## Mensagens de erro
+
+Algumas mensagens de erro podem surgir por má configuração da ferramenta, são elas:
+
+Sem um token válido, a ferramenta não irá funcionar, emitindo o erro:
+
+<aside class="warning">
+**406 - O serviço está desabilitado temporariamente para este website.**
+</aside>
+
+O Tradutor de vídeos está disponível no plano **Gold 2** ou superior. Caso a sua assinatura não suporte a funcionalidade de vídeos e a flag `videoEnabled` estiver habilitada, receberá o erro:
+
+<aside class="warning">
+**406 - A funcionalidade de vídeo não está habilitada para a sua assinatura.**
+</aside>
