@@ -104,6 +104,8 @@ O exemplo ao lado *(Criando um vídeo com o tech youtube)* deve gerar o seguinte
 
 ### Exemplo com tech do Vimeo
 
+> ### Exemplo: Criando um vídeo com o **tech** vimeo
+
 ```html
 <!-- Cria um novo player com uma legenda estatica -->
 <video style="left:2%; width:46%; height: 500px;" data-ht="src=vimeo:https://player.vimeo.com/video/259226390;subtitle=vtt:assets/HandTalk.vtt"></video>
@@ -118,6 +120,8 @@ Como no exemplo ao lado, o vídeo deve aparecer da seguinte forma:
   
 ### Exemplo com tech de mp4
 
+> ### Exemplo: Criando um vídeo com o **tech** mp4
+
 ```html
 <!-- Cria um novo player com uma legenda estatica -->
 <video style="left:2%; width:46%; height: 500px;" data-ht="src=mp4:assets/HandTalk.mp4;subtitle=vtt:assets/HandTalk.vtt"></video>
@@ -131,6 +135,8 @@ Utilize para vídeos e legendas hospedadas na internet com link direto - Exemplo
 
 ### Exemplo com tech da SambaTech
 
+> ### Exemplo: Criando um vídeo com o **tech** sambatech
+
 ```html
 <!-- Cria um novo player com uma legenda estatica -->
 <video style="left:2%; width:46%; height: 500px;" data-ht="src=sambatech:https://fast.player.liquidplatform.com/pApiv2/embed/c750c09d7d04891b7f3f5c9a9337d6b9/a40cc34d36f0ee05ae55a971b427888e;subtitle=vtt:assets/HandTalk.vtt"></video>
@@ -142,22 +148,59 @@ Utilize para vídeos hospedados na SambaTech e legendas hospedadas na internet c
 
 <video style="left:2%; width:46%; height: 500px;" data-ht="src=sambatech:https://fast.player.liquidplatform.com/pApiv2/embed/c750c09d7d04891b7f3f5c9a9337d6b9/a40cc34d36f0ee05ae55a971b427888e;subtitle=vtt:assets/HandTalk.vtt"></video>
 
-<br />
-  
-
-Também é possível substituir automaticamente os embeds do Youtube e player existentes do Videojs pelo player acessível da HandTalk, sempre que uma legenda for encontrada.
-
-O usuário pode clicar no ícone que representa a acessibilidade em língua de sinais para iniciar o vídeo junto com a tradução do Hugo, ou apenas clicar no botão central para assistir o vídeo sem acessibilidade.
-
-### Exemplos
-
 ## Utilizando apenas o tradutor de vídeos
 
 ### Exemplos
 
 ## Replace automático de vídeos
 
-### Exemplos
+É possível substituir automaticamente os embeds do Youtube e player existentes do Videojs pelo Player Acessível da HandTalk, sempre que uma legenda for encontrada.
+
+### Replace automático de embeds do Youtube
+
+A ferramenta busca por embeds (iframes) do youtube, e substitui por players accesíveis da Hand Talk.
+
+Você pode habilitar o replace automático passando o valor `true` a configuração `ytEmbedReplace` ao instanciar o plugin. Lembrando que você deve também habilitar a feature de vídeo passando `true` na configuração `videoEnabled`.
+
+```javascript
+var ht = new HT({
+  token: "<TOKEN>",
+  videoEnabled: true,
+  ytEmbedReplace: true
+});
+```
+
+```html
+<body>
+<!-- Pega a ultima versão do plugin Hand Talk -->
+<script src="https://api.handtalk.me/plugin/latest/handtalk.min.js"></script>
+
+<script>
+var ht = new HT({
+  token: "<TOKEN>",
+  videoEnabled: true,
+  ytEmbedReplace: true
+});
+</script>
+</body>
+```
+
+Se embeds do Youtube forem inseridos após a inicialização do plugin, você deve chamar a função `ht.ytEmbedReplaceAll();` para que os novos vídeos tornem-se acessíveis.
+Também é possível efetuar o replace de um único embed com `ht.ytEmbedReplace(elem)`:
+
+```html
+<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/H2Io3y98FV4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+<script>
+var iframe = document.querySelector('iframe');
+ht.ytEmbedReplace(iframe);
+</script>
+```
+
+Caso o vídeo não possua legenda no idioma `pt-BR` ou `pt` hospedada no Youtube, o mesmo ficará com a funcionalidade de Tradução para Libras bloqueada.
+
+### Replace automático de emebeds do Videojs
+
 
 ## Vídeos dinâmicos
 
