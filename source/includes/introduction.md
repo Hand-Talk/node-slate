@@ -2,6 +2,7 @@
 
 O plugin desenvolvido pela Hand Talk torna os sites acessíveis em língua de sinais. O mesmo conta com duas principais funcionalidades: tradução de texto e tradução de vídeos.
 
+
 ## Sobre o Tradutor de Texto
 
 O usuário pode habilitar a funcionalidade clicando no ícone que representa a acessibilidade em língua de sinais:
@@ -69,3 +70,17 @@ Legenda:
 ✖ Não compatível
 
 -- Sistema operacional não suporta o navegador
+
+## Eventos
+
+Você pode escutar os eventos utilizando o método .on(eventName, callback).
+
+> ### Exemplo de Instalação
+
+```javascript
+ht.on('hugoLoaded', function () {
+
+console.log('Hugo carregado!');
+
+});
+```
