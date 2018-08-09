@@ -13,7 +13,7 @@ Ao clicar, será aberta uma janela com o intérprete 3D da Hand Talk, o Hugo.
   
 ![](images/screenshoots/tradutor-de-sites-2.png)
 
-Enquanto a janela estiver aberta, os textos e imagens com descrição ficaram clicáveis. Ao clicar, o Hugo captura o texto e sinaliza sua tradução.
+Enquanto a janela estiver aberta, os textos e imagens com descrição ficarão clicáveis. Ao clicar, o Hugo captura o texto e sinaliza sua tradução.
 
 ![](images/screenshoots/tradutor-de-sites-3.png)
 
