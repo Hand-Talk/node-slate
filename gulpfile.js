@@ -74,6 +74,10 @@ gulp.task('images', function() {
   return gulp.src('./source/images/**/*').pipe(gulp.dest('build/images'));
 });
 
+gulp.task('assets', function() {
+  return gulp.src('./source/assets/**/*').pipe(gulp.dest('build/assets'));
+});
+
 gulp.task('js', function() {
   var config = readIndexYml();
   var libs = [
@@ -129,7 +133,7 @@ gulp.task('NO_COMPRESS', function() {
   COMPRESS = false;
 });
 
-gulp.task('default', ['clean', 'fonts', 'images', 'highlightjs', 'js', 'sass', 'html']);
+gulp.task('default', ['clean', 'fonts', 'images', 'assets', 'highlightjs', 'js', 'sass', 'html']);
 
 gulp.task('serve', ['NO_COMPRESS', 'default'], function() {
 
