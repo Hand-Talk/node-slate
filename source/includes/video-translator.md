@@ -80,79 +80,6 @@ Em seguida, separando por ponto e virgula `;`, defina o tipo e caminho da legend
 
 Você pode tornar um vídeo acessível definindo o atributo ht-data em um elemento de vídeo, primeiramente defina o tipo e caminho do vídeo (obrigatório).
 
-
-## Utilizando o player acessível
-
-> ### Exemplo: Criando um vídeo com o **tech** youtube
-
-```html
-<!-- Torna o vídeo https://www.youtube.com/watch?v=H2Io3y98FV4 acessivel -->
-<video style="left:2%; width:46%; height: 500px;" data-ht="src=youtube:H2Io3y98FV4"></video>
-```
-
-Caso o campo subtitle fique em branco em um src do tipo Youtube, a legenda será obtida automaticamente. Como no exemplo ao lado.
-
-<aside class="info">
-Nota: No source do tipo Youtube, você pode optar por adicionar o link do vídeo, ou apenas o ID. Conforme exemplo ao lado.
-</aside>
-
-Caso o vídeo esteja definido como **não listado**, ou algum outro tipo de restrição no Youtube", não conseguiremos acessar a legenda, restornando o erro:
-
-<aside class="warning">
-404 - Legenda não encontrada.
-</aside>
-
-O exemplo ao lado *(Criando um vídeo com o tech youtube)* deve gerar o seguinte player:
-
-<video style="left:2%; width:46%; height: 500px;" data-ht="src=youtube:H2Io3y98FV4"></video>
-
-
-### Exemplo com tech do Vimeo
-
-> ### Exemplo: Criando um vídeo com o **tech** vimeo
-
-```html
-<!-- Cria um novo player com uma legenda estatica -->
-<video style="left:2%; width:46%; height: 500px;" data-ht="src=vimeo:https://player.vimeo.com/video/259226390;subtitle=vtt:assets/HandTalk.vtt"></video>
-```
-
-<br />
-
-Para vídeos hospedados no Vimeo, você deve informar a legenda manualmente.
-Como no exemplo ao lado, o vídeo deve aparecer da seguinte forma:
-
-<video style="left:2%; width:46%; height: 500px;" data-ht="src=vimeo:https://player.vimeo.com/video/259226390;subtitle=vtt:assets/HandTalk.vtt"></video>
-  
-### Exemplo com tech de mp4
-
-> ### Exemplo: Criando um vídeo com o **tech** mp4
-
-```html
-<!-- Cria um novo player com uma legenda estatica -->
-<video style="left:2%; width:46%; height: 500px;" data-ht="src=mp4:assets/HandTalk.mp4;subtitle=vtt:assets/HandTalk.vtt"></video>
-```
-
-<br />
-
-Utilize para vídeos e legendas hospedadas na internet com link direto - Exemplo ao lado.
-
-<video style="left:2%; width:46%; height: 500px;" data-ht="src=mp4:assets/HandTalk.mp4;subtitle=vtt:assets/HandTalk.vtt"></video>
-
-### Exemplo com tech da SambaTech
-
-> ### Exemplo: Criando um vídeo com o **tech** sambatech
-
-```html
-<!-- Cria um novo player com uma legenda estatica -->
-<video style="left:2%; width:46%; height: 500px;" data-ht="src=sambatech:https://fast.player.liquidplatform.com/pApiv2/embed/c750c09d7d04891b7f3f5c9a9337d6b9/a40cc34d36f0ee05ae55a971b427888e;subtitle=vtt:assets/HandTalk.vtt"></video>
-```
-
-<br />
-
-Utilize para vídeos hospedados na SambaTech e legendas hospedadas na internet com link direto - Exemplo ao lado.
-
-<video style="left:2%; width:46%; height: 500px;" data-ht="src=sambatech:https://fast.player.liquidplatform.com/pApiv2/embed/c750c09d7d04891b7f3f5c9a9337d6b9/a40cc34d36f0ee05ae55a971b427888e;subtitle=vtt:assets/HandTalk.vtt"></video>
-
 ## Utilizando apenas o tradutor de vídeos
 ```javascript
 var ht = new HT({
@@ -164,7 +91,7 @@ var ht = new HT({
 });
 ```
 
-Em alguns casos pode ser necessário adicionar apenas o tradutor de vídeos na página. Geralmente acontece quando a página inteira só possui um vídeo e, esta incorporada em outra página em formato de iframe. Pra isso basta desativar o tradutor de textos, assim o botão de acessibilidade em Libras não irá aparecer nas laterais.
+Em alguns casos pode ser necessário adicionar apenas o tradutor de vídeos na página. Geralmente acontece quando a página inteira só possui um vídeo e, estar incorporada em outra página em formato de iframe. Pra isso basta desativar o tradutor de textos, assim o botão de acessibilidade em Libras não irá aparecer nas laterais.
 
 
 ## Replace automático de vídeos
@@ -192,8 +119,11 @@ var ht = new HT({
 
 <script>
 var ht = new HT({
+  // Troque por seu token
   token: "<TOKEN>",
+  // ativa/desativa o tradutor de sinais nos players
   videoEnabled: true,
+  // ativa/desativa embeds do Youtube
   ytEmbedReplace: true
 });
 </script>
@@ -214,7 +144,7 @@ ht.ytEmbedReplace(iframe);
 
 Caso o vídeo não possua legenda no idioma `pt-BR` ou `pt` hospedada no Youtube, o mesmo ficará com a funcionalidade de Tradução para Libras bloqueada.
 
-### Replace automático de emebeds do Videojs
+### Replace automático de embeds do Videojs
 
 
 ## Vídeos dinâmicos
@@ -267,10 +197,11 @@ No exemplo ao lado o código CSS espera que o filho da classe video seja um ifra
 
   <script>
     var ht = new HT({
-      // Troque por seu token, exemplo:
-      // token: "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+      // Troque por seu token
       token: "<TOKEN>",
+      // ativa/desativa o tradutor de sinais nos players
       videoEnabled: true,
+      // ativa/desativa embeds do Youtube
       ytEmbedReplace: true
     });
   </script>
