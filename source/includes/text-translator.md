@@ -7,8 +7,7 @@ Troque `<TOKEN>` por seu token de acesso
  
 ```javascript
 var ht = new HT({
-  // Troque por seu token, exemplo:
-  // token: "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+  // Troque por seu token
   token: "<TOKEN>"
 });
 ```
@@ -25,8 +24,7 @@ var ht = new HT({
 
   <script>
   var ht = new HT({
-    // Troque por seu token, exemplo:
-    // token: "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    // Troque por seu token
     token: "<TOKEN>"
   });
   </script>
@@ -65,8 +63,7 @@ Consulte a guia [Definindo Parametros] para mais detalhes de implementação.
 
 ```javascript
 var ht = new HT({
-  // Troque por seu token, exemplo:
-  // token: "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+  // Troque por seu token
   token: "<TOKEN>",
   // Posiciona o Tradutor de Sites ao lado esquerdo da página
   align: "left",
@@ -136,8 +133,7 @@ Os eventos que podem ser disparados pela instancia de HT são:
 
 ```javascript
 var ht = new HT({
-  // Troque por seu token, exemplo:
-  // token: "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+  // Troque por seu token
   token: "<TOKEN>",
   // Ignora todo o conteúdo que possuir o id/class referenciado
   exceptions: ["#carousel", ".formulario"]
@@ -191,7 +187,7 @@ No exemplo ao lado, colocamos na exceção um ID de elemento HTML e uma classe C
 
 **Atenção**: Ao adicionar o conteúdo como uma exceção, ele não será traduzido pela Hand Talk.
 
-**Importante**: Dependendo da linguagem e/ou lógica de programação aplicada no desenvolvimento do website, para possibilitar o pleno funcionamento ou aprimorar os resultados obtidos pelo serviço, pode ser necessária a realização de outras customizações no código da Hand Talk, que deverão ser feitas pelo Cliente.
+**Importante**: Dependendo da linguagem e/ou lógica de programação aplicada no desenvolvimento do website, para possibilitar o pleno funcionamento ou aprimorar os resultados obtidos pelo serviço, pode ser necessária a realização de outras customizações no código da Hand Talk, que deverão ser feitas pelo cliente.
 
 ## Iframes Dinâmicos
 
