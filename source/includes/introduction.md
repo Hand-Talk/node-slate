@@ -5,7 +5,7 @@ O plugin desenvolvido pela Hand Talk torna os sites acessíveis em língua de si
 
 ## Sobre o Tradutor de Texto
 
-O usuário pode habilitar a funcionalidade clicando no ícone que representa a acessibilidade em língua de sinais:
+O usuário pode ativar a funcionalidade clicando no ícone que representa a acessibilidade em língua de sinais:
 
 ![](images/screenshoots/tradutor-de-sites.png)
 
@@ -71,7 +71,7 @@ Legenda:
 
 -- Sistema operacional não suporta o navegador
 
-## Mensagens de erro
+## Mensagens de Erro
 
 Algumas mensagens de erro podem surgir por má configuração da ferramenta, são elas:
 
@@ -96,7 +96,7 @@ Você pode escutar os eventos utilizando o método .on(eventName, callback).
 ```javascript
 ht.on('hugoLoaded', function () {
 
-console.log('Hugo carregado!');
+  console.log('Hugo carregado!');
 
 });
 ```
