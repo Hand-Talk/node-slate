@@ -3,11 +3,10 @@
 ## Começando
 
 > ### Exemplo de Instalação <br /> 
-Troque `<TOKEN>` por seu token de acesso
  
 ```javascript
 var ht = new HT({
-  // Troque por seu token
+  // Troque por seu token de acesso
   token: "<TOKEN>"
 });
 ```
@@ -24,7 +23,7 @@ var ht = new HT({
 
   <script>
   var ht = new HT({
-    // Troque por seu token
+    // Troque por seu token de acesso
     token: "<TOKEN>"
   });
   </script>
@@ -55,15 +54,14 @@ Você pode pode preferir habilitar/desabilitar algumas funcionalidades do Tradut
 | exceptions    | Lista de queries que serão ignoradas pelo plugin, ex.: ```['a', 'form', '.main', '#site-title']```                                                    | array                          | [ ]       |
 | mobileConfig  | Objeto de configuração para a plataforma mobile, quando definido, sobscreve as configurações padrões de HT.                                           | Object                         | { }       |
 
-Consulte a guia [Definindo Parametros] para mais detalhes de implementação.
 
 ### Parâmetros para versão mobile
 
-> ### Adicionando parâmetros exclusivos para versão mobile
+> ### Adicionando Parâmetros Exclusivos para Versão Mobile
 
 ```javascript
 var ht = new HT({
-  // Troque por seu token
+  // Troque por seu token de acesso
   token: "<TOKEN>",
   // Posiciona o Tradutor de Sites ao lado esquerdo da página
   align: "left",
@@ -85,8 +83,7 @@ var ht = new HT({
 
   <script>
   var ht = new HT({
-    // Troque por seu token, exemplo:
-    // token: "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    // Troque por seu token de acesso
     token: "<TOKEN>",
     // Posiciona o Tradutor de Sites ao lado esquerdo da página
     side: "left",
@@ -133,7 +130,7 @@ Os eventos que podem ser disparados pela instancia de HT são:
 
 ```javascript
 var ht = new HT({
-  // Troque por seu token
+  // Troque por seu token de acesso
   token: "<TOKEN>",
   // Ignora todo o conteúdo que possuir o id/class referenciado
   exceptions: ["#carousel", ".formulario"]
@@ -163,8 +160,7 @@ var ht = new HT({
 
   <script>
   var ht = new HT({
-    // Troque por seu token, exemplo:
-    // token: "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    // Troque por seu token de acesso
     token: "<TOKEN>",
     // Ignora todo o conteúdo que possuir o id/class referenciado
     exceptions: ["#carousel", ".formulario"]
@@ -175,7 +171,7 @@ var ht = new HT({
 
 Em alguns casos, pode haver algum conflito entre o código da Hand Talk e algum script que o site possui. Para evitar esse conflito, basta adicionar esse elemento como uma exceção.
 
-### Tratamento de Excecão de ID e CLASS:
+### Tratamento de Exceção de ID e CLASS:
 
 Caso seu site tenha algum problema de conflito com um scripts de carousel, por exemplo, você pode adicionar o elemento na propriedade `exceptions`.
 
@@ -191,12 +187,11 @@ No exemplo ao lado, colocamos na exceção um ID de elemento HTML e uma classe C
 
 ## Iframes Dinâmicos
 
-> ### Exemplo de compatibilidade com iframes dinâmicos
+> ### Exemplo de Compatibilidade com Iframes Dinâmicos
 
 ```javascript
 var ht = new HT({
-  // Troque por seu token, exemplo:
-  // token: "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+  // Troque por seu token de acesso
   token: "<TOKEN>"
 });
 
@@ -224,8 +219,7 @@ window.setTimeout(function() {
 
   <script>
     var ht = new HT({
-      // Troque por seu token, exemplo:
-      // token: "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+      // Troque por seu token de acesso
       token: "<TOKEN>"
     )};
 
