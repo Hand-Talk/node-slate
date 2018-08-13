@@ -58,7 +58,7 @@ Os tipos de legenda suportados são:
 - SRT.
 
 <aside class="info">
-Nota: Para utilizar o player acessível, certifique-se de estar com o plugin devidamente configurado de acordo com a sessão **Começando** (logo acima).
+Nota: Para utilizar o player acessível, certifique-se de estar com o plugin devidamente configurado de acordo com a sessão [Tradutor de Vídeos > Começando](index.html?html#come-ando14).
 </aside>
 
 ```html

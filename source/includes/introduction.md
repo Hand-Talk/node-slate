@@ -37,7 +37,7 @@ No player acessível você encontra os botões de ativar e desativar tradução 
 
 ![](images/screenshoots/tradutor-de-videos-2.png)
 
-Consulte a guia [Tradutor de Vídeos > Começando](#come-ando18) para um guia de implementação.
+Consulte a guia [Tradutor de Vídeos > Começando](index.html?html#come-ando14) para um guia de implementação.
 
 ## Sobre o Tradutor Mobile
 
