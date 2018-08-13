@@ -5,7 +5,7 @@ O plugin desenvolvido pela Hand Talk torna os sites acessíveis em língua de si
 
 ## Sobre o Tradutor de Texto
 
-O usuário pode habilitar a funcionalidade clicando no ícone que representa a acessibilidade em língua de sinais:
+O usuário pode ativar a funcionalidade clicando no ícone que representa a acessibilidade em língua de sinais:
 
 ![](images/screenshoots/tradutor-de-sites.png)
 
@@ -13,7 +13,7 @@ Ao clicar, será aberta uma janela com o intérprete 3D da Hand Talk, o Hugo.
   
 ![](images/screenshoots/tradutor-de-sites-2.png)
 
-Enquanto a janela estiver aberta, os textos e imagens com descrição ficaram clicáveis. Ao clicar, o Hugo captura o texto e sinaliza sua tradução.
+Enquanto a janela estiver aberta, os textos e imagens com descrição ficarão clicáveis. Ao clicar, o Hugo captura o texto e sinaliza sua tradução.
 
 ![](images/screenshoots/tradutor-de-sites-3.png)
 
@@ -37,7 +37,7 @@ No player acessível você encontra os botões de ativar e desativar tradução 
 
 ![](images/screenshoots/tradutor-de-videos-2.png)
 
-Consulte a guia [Tradutor de Vídeos > Começando](#come-ando18) para um guia de implementação.
+Consulte a guia [Tradutor de Vídeos > Começando](index.html?html#come-ando14) para um guia de implementação.
 
 ## Sobre o Tradutor Mobile
 
@@ -71,7 +71,7 @@ Legenda:
 
 -- Sistema operacional não suporta o navegador
 
-## Mensagens de erro
+## Mensagens de Erro
 
 Algumas mensagens de erro podem surgir por má configuração da ferramenta, são elas:
 
@@ -96,7 +96,7 @@ Você pode escutar os eventos utilizando o método .on(eventName, callback).
 ```javascript
 ht.on('hugoLoaded', function () {
 
-console.log('Hugo carregado!');
+  console.log('Hugo carregado!');
 
 });
 ```

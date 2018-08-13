@@ -1,3 +1,0 @@
-# Eventos
-
-## Ouvindo os eventos
