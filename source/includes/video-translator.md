@@ -111,7 +111,7 @@ Caso o vídeo não possua legenda no idioma **pt-BR** ou **pt**, o mesmo ficará
 var ht = new HT({
   // Troque por seu token de acesso
   token: "<TOKEN>",
-  // Habilita o tradutor de sinais nos players
+  // Habilita o tradutor de vídeos
   videoEnabled: true,
   // Habilita embeds do Youtube
   ytEmbedReplace: true
@@ -143,6 +143,7 @@ Também é possível efetuar o replace de um único embed com `ht.ytEmbedReplace
 var ht = new HT({
   // Troque por seu token de acesso
   token: "<TOKEN>",
+  // Habilita o tradutor de vídeos
   videoEnabled: true,
   // Habilita embeds Videojs
   videojsReplace: true 
