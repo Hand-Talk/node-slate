@@ -164,7 +164,7 @@ Conforme o exemplo ao lado direito, também é possível efetuar o replace de um
 
 > ### Exemplo de Utilização de Embeds do Videojs <br /> 
 
-```javascript
+```html
 <video id="vid" class="video-js vjs-default-skin" controls width="800" height="450">
   <source src="HandTalk.mp4" type='video/mp4'>
   <track src="HandTalk.vtt" kind="captions" srclang="pt" label="Português">
@@ -178,7 +178,87 @@ Conforme o exemplo ao lado direito, também é possível efetuar o replace de um
 
 ## Vídeos Dinâmicos
 
-### Exemplos
+> Exemplo: Embeds dinâmicos do youtube
+
+
+```javascript
+var ht = new HT({
+  // Troque por seu token de acesso
+  token: "<TOKEN>",
+  // Habilita o tradutor de sinais nos players
+  videoEnabled: true
+});
+
+// Adiciona um vídeo do youtube após 3 segundos
+window.setTimeout(function() {
+  var iframe = document.createElement('iframe');
+  iframe.src='https://www.youtube.com/embed/a9qsp7l5C3o';
+  document.body.appendChild(iframe);
+      
+  // Aguarda o iframe carregar
+  iframe.onload = function() {
+    // Torna o embed acessível em Libras 
+    ht.replaceYtEmbed(iframe);
+    // Ou utilize a linha abaixo para buscar e substituir varios embeds
+    // ht.replaceYtEmbedAll();
+  }
+}, 3000);
+```
+
+```html
+<body>
+
+  <!-- Pega a ultima versão do plugin Hand Talk -->
+  <script src="https://api.handtalk.me/plugin/latest/handtalk.min.js"></script>
+
+  <script>
+
+    var ht = new HT({
+      // Troque por seu token
+      token: "<TOKEN>",
+      // Habilita o tradutor de sinais nos players
+      videoEnabled: true
+    });
+
+    // Adiciona um vídeo do youtube após 3 segundos
+    setTimeout(function() {
+      var iframe = document.createElement('iframe');
+      iframe.src='https://www.youtube.com/embed/a9qsp7l5C3o';
+      document.body.appendChild(iframe);
+      
+      // Aguarda o iframe carregar
+      iframe.onload = function() {
+        // Torna o embed acessível em Libras 
+        ht.replaceYtEmbed(iframe);
+        // Ou utilize a linha abaixo para buscar e substituir varios embeds
+        // ht.replaceYtEmbedAll();
+      }
+    }, 3000);
+  </script>
+
+</body>
+```
+
+Caso o elemento do vídeo seja adicionado ao HTML dinâmicamente depois do carregamento do plugin, você precisa chamar a função de busca para renderizar os players novos.
+
+<aside class="info">
+Nota: Para realizar esse procedimento, certifique-se de estar com o plugin devidamente configurado de acordo com a sessão [Tradutor de Vídeos > Começando](index.html?html#come-ando14).
+</aside>
+
+Para player construidos manualmente, ou seja, utilizando o [Player Acessível](#utilizando-o-player-acess-vel):
+
+`videoManager.search();`
+
+
+Para embeds do youtube:
+
+`replaceYtEmbedAll()` ou `replaceYtEmbed(ytembed)`.
+
+Para players existentes do videojs:
+
+`replaceVideoJsAll()` ou `replaceVideoJs(vjsplayer)`.
+
+Para mais detalhes sobre o replace consulte a guia [Replace Automático de Vídeos](#replace-autom-tico-de-v-deos)
 
 ## Legendas
 As legendas precisam ser breves e de acordo com o tempo que será utilizado nelas para que o Hugo possa traduzí-las de forma que ele não acelere e não perca a sincronia com o vídeo.
