@@ -104,26 +104,6 @@ Você pode passar parâmetros especificos para dispositivos movéis, para isso b
 
 Consulte o exemplo ao lado.
 
-## Eventos
-
-Os eventos que podem ser disparados pela instancia de HT são:
-
-| Eventos        | Descrição           | Retorno  |
-| ------------- |:-------------:| -----:|
-| authenticating      | Autenticando | undefined |
-| errorOnAuth      | Erro ao autenticar      |   undefined |
-| authenticated | Autenticado      |    	undefined |
-| notCompatible | Navegador ou hardware não compatível      |    string: 'withoutCanvas' ou 'withoutWebGL' ou 'hardwareDoesNotSupport' |
-| customizing | Customizando      |    undefined |
-| customized | Customizado      |    undefined |
-| hugoLoaded | Hugo carregado      |    undefined |
-| activated | Feature de texto ou vídeo ativada      |    string: 'textManager' ou 'videoManager' |
-| translate	 | Dispara quando um texto é capturado e enviado para tradução pela feature de tradução de texto      |    string: texto capturado |
-| translating	 | Traduzindo texto no servidor da Hand Talk      |    undefined |
-| errorOnTranslate	 | Erro ao traduzir texto no servidor da Hand Talk      |    undefined |
-| translated	 | Texto traduzido corretamente no Servidor da Hand Talk      |    undefined |
-| signalized		 | Sentença sinalizada por completo      |    undefined |
-| videoManagerReady		 | Disparado quando o assistente de vídeo esta pronto, utilize para chamar as funções de replace manualmente     |    undefined |
 ## Adicionando Exceções
 
 > ### Adicionando Exceções

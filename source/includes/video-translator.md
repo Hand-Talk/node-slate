@@ -78,10 +78,6 @@ Em seguida, separando por ponto e virgula (`;`), defina o tipo e caminho da lege
 
 `subtitle=<CAPTIONS_TYPE>:<CAPTIONS_URL>`
 
-## Eventos
-
-Você pode tornar um vídeo acessível definindo o atributo `ht-data` em um elemento de vídeo, primeiramente defina o tipo e caminho do vídeo (obrigatório).
-
 ## Utilizando Apenas o Tradutor de Vídeos
 
 > Exemplo de Utilização
@@ -107,7 +103,7 @@ var ht = new HT({
 ```html
 <body>
 
-  <!-- Troque os campos <VIDEO_TYPE>, <VIDEO_URL>, <CAPTION_TYPE> e <CAPTION_URL>, pelos dados solicitados-->
+  <!-- Troque os campos <VIDEO_TYPE>, <VIDEO_URL>, <CAPTION_TYPE> e <CAPTION_URL>, pelos dados solicitados -->
   <video data-ht="src=<VIDEO_TYPE>:<VIDEO_URL>;subtitle=<CAPTION_TYPE>:<CAPTION_URL>"></video>
 
   <!-- Pega a ultima versão do plugin Hand Talk -->
