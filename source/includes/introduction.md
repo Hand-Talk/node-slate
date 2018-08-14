@@ -89,7 +89,7 @@ O Tradutor de vídeos está disponível no plano **Gold 2** ou superior. Caso a 
 
 ## Eventos
 
-> Exemplo: Ouvindo Eventos
+> Exemplo de Listener de Eventos
 
 ```javascript
 ht.on('translated', function () {
@@ -137,13 +137,3 @@ Os eventos disparados por `HT` são:
 | translated | Texto traduzido corretamente no Servidor da Hand Talk | ```undefined``` |
 | signalized | Sentença sinalizada por completo | ```undefined``` |
 | videoManagerReady | Disparado quando o assistente de vídeo esta pronto, utilize para chamar as funções de replace manualmente | ```undefined``` |
-
-> ### Exemplo de Instalação
-
-```javascript
-ht.on('hugoLoaded', function () {
-
-  console.log('Hugo carregado!');
-
-});
-```

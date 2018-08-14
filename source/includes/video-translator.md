@@ -312,7 +312,7 @@ Enquanto que o exemplo acima retrata uma prática ruim para legendas.
 É provável que na substituição do elemento `<iframe />` do Youtube, pelo elemento `<div />` com a classe CSS video-js do player da Hand Talk, você perca a referência do elemento no seu CSS e Javascript.
 
 No exemplo ao lado o código CSS espera que o filho da classe video seja um iframe:
->### Exemplo para o código CSS
+> Exemplo para o código CSS
 
 ```html
 <style>
@@ -351,7 +351,7 @@ No exemplo ao lado o código CSS espera que o filho da classe video seja um ifra
 
 Ao substituir o elemento `<iframe />` por uma `<div />` a estrutura do site ficará quebrada. A solução seria esperar como filho um elemento com a classe video-js também.
 
->### Solução para a quebra na estrutura
+> Solução para a quebra na estrutura
 
 ```html
 <style>

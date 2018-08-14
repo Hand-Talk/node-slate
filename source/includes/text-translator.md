@@ -2,7 +2,7 @@
 
 ## Começando
 
-> ### Exemplo de Instalação <br /> 
+> Exemplo de Instalação 
  
 ```javascript
 var ht = new HT({
@@ -61,7 +61,7 @@ Você pode pode preferir habilitar/desabilitar algumas funcionalidades do Tradut
 
 ### Parâmetros para versão mobile
 
-> ### Adicionando Parâmetros Exclusivos para Versão Mobile
+> Exemplo de Parâmetros Exclusivos para Versão Mobile
 
 ```javascript
 var ht = new HT({
@@ -110,7 +110,7 @@ Consulte o exemplo ao lado.
 
 ## Adicionando Exceções
 
-> ### Adicionando Exceções
+> Adicionando Exceções
 
 ```javascript
 var ht = new HT({
@@ -171,7 +171,7 @@ No exemplo ao lado, colocamos na exceção um ID de elemento HTML e uma classe C
 
 ## Iframes Dinâmicos
 
-> ### Exemplo de Compatibilidade com Iframes Dinâmicos
+> Exemplo de Compatibilidade com Iframes Dinâmicos
 
 ```javascript
 var ht = new HT({
