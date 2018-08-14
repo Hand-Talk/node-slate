@@ -2,7 +2,7 @@
 
 ## Começando
 
-> ### Exemplo de Instalação <br /> 
+> Exemplo de Instalação
  
 ```javascript
 var ht = new HT({
@@ -14,23 +14,23 @@ var ht = new HT({
 ```
 
 ```html
-  <body>
+<body>
 
-    <!-- Troque os campos <VIDEO_TYPE>, <VIDEO_URL>, <CAPTION_TYPE> e <CAPTION_URL>, pelos dados solicitados-->
-    <video data-ht="src=<VIDEO_TYPE>:<VIDEO_URL>;subtitle=<CAPTION_TYPE>:<CAPTION_URL>"></video>
+  <!-- Troque os campos <VIDEO_TYPE>, <VIDEO_URL>, <CAPTION_TYPE> e <CAPTION_URL>, pelos dados solicitados-->
+  <video data-ht="src=<VIDEO_TYPE>:<VIDEO_URL>;subtitle=<CAPTION_TYPE>:<CAPTION_URL>"></video>
 
-    <!-- Pega a ultima versão do plugin Hand Talk -->
-    <script src="https://api.handtalk.me/plugin/latest/handtalk.min.js"></script>
+  <!-- Pega a ultima versão do plugin Hand Talk -->
+  <script src="https://api.handtalk.me/plugin/latest/handtalk.min.js"></script>
 
-    <script>
-    var ht = new HT({
-      // Troque por seu token de acesso
-      token: "<TOKEN>",
-      // Habilita o Tradutor de Vídeos
-      videoEnabled: true
-    });
-    </script>
-  </body>
+  <script>
+  var ht = new HT({
+    // Troque por seu token de acesso
+    token: "<TOKEN>",
+    // Habilita o Tradutor de Vídeos
+    videoEnabled: true
+  });
+  </script>
+</body>
 ```
 
 Para começar a utilizar o Tradutor de Vídeos, você deve inserir o script da Hand Talk e instanciar a classe HT, passando por parâmetro um dicionário com o token e demais configurações.
@@ -79,7 +79,7 @@ Você pode tornar um vídeo acessível definindo o atributo `ht-data` em um elem
 
 ## Utilizando Apenas o Tradutor de Vídeos
 
-> ### Exemplo de Utilização  <br /> 
+> Exemplo de Utilização
 
 ```javascript
 var ht = new HT({
@@ -105,7 +105,7 @@ Em alguns casos pode ser necessário adicionar apenas o tradutor de vídeos na p
 
 Caso o vídeo não possua legenda no idioma **pt-BR** ou **pt**, o mesmo ficará com a funcionalidade de Tradução para Libras bloqueada.
 
-> ### Exemplo de Utilização de Embeds do Youtube <br /> 
+> Exemplo de Utilização de Embeds do Youtube
 
 ```javascript
 var ht = new HT({
@@ -137,7 +137,7 @@ Também é possível efetuar o replace de um único embed com `ht.ytEmbedReplace
 </script>
 ```
 
-> ### Exemplo Para Habilitação de Replace Automático no Videojs <br /> 
+> Exemplo Para Habilitação de Replace Automático no Videojs
 
 ```javascript
 var ht = new HT({
@@ -162,7 +162,7 @@ Se os players do videojs forem inseridos após a inicialização do plugin, voc�
 
 Conforme o exemplo ao lado direito, também é possível efetuar o replace de um único  player com `ht.videojsReplace(vjsPlayer):`
 
-> ### Exemplo de Utilização de Embeds do Videojs <br /> 
+> Exemplo de Utilização de Embeds do Videojs <br /> 
 
 ```html
 <video id="vid" class="video-js vjs-default-skin" controls width="800" height="450">
@@ -179,7 +179,6 @@ Conforme o exemplo ao lado direito, também é possível efetuar o replace de um
 ## Vídeos Dinâmicos
 
 > Exemplo: Embeds dinâmicos do youtube
-
 
 ```javascript
 var ht = new HT({
@@ -242,13 +241,12 @@ window.setTimeout(function() {
 Caso o elemento do vídeo seja adicionado ao HTML dinâmicamente depois do carregamento do plugin, você precisa chamar a função de busca para renderizar os players novos.
 
 <aside class="info">
-Nota: Para realizar esse procedimento, certifique-se de estar com o plugin devidamente configurado de acordo com a sessão [Tradutor de Vídeos > Começando](index.html?html#come-ando14).
+Nota: Para realizar esse procedimento, certifique-se de estar com o plugin devidamente configurado de acordo com a sessão [Tradutor de Vídeos > Começando](#come-ando14).
 </aside>
 
 Para player construidos manualmente, ou seja, utilizando o [Player Acessível](#utilizando-o-player-acess-vel):
 
 `videoManager.search();`
-
 
 Para embeds do youtube:
 
