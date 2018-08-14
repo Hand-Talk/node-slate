@@ -61,13 +61,18 @@ Os tipos de legenda suportados são:
 Nota: Para utilizar o player acessível, certifique-se de estar com o plugin devidamente configurado de acordo com a sessão [Tradutor de Vídeos > Começando](index.html?html#come-ando14).
 </aside>
 
-```html
-<video data-ht="src=<VIDEO_TECH>:<VIDEO_URL>;subtitle=<CAPTIONS_TYPE>:<CAPTIONS_URL>"></video>
-```
 
 Você pode tornar um vídeo acessível definindo o atributo `ht-data` em um elemento de vídeo, primeiramente defina o tech e caminho do vídeo (obrigatório).
 
 `src=<VIDEO_TECH>:<VIDEO_URL>`
+
+```html
+<video data-ht="src=<VIDEO_TECH>:<VIDEO_URL>;subtitle=<CAPTIONS_TYPE>:<CAPTIONS_URL>"></video>
+```
+
+```javascript
+// Confira o exemplo em html
+```
 
 Em seguida, separando por ponto e virgula (`;`), defina o tipo e caminho da legenda. (opcional)
 
@@ -88,15 +93,47 @@ var ht = new HT({
   // Se true, exibe o tradutor de sites para texto
   textEnabled: false,
   // Habilita o tradutor de sinais nos players
-  videoEnabled: true,
-  // Habilita embeds do Youtube
-  ytEmbedReplace: true,
-  // Habilita embeds do Videojs
-  videojsReplace: true
+  videoEnabled: true
+
+  // Use as linhas abaixo para replace automatico de vídeos
+
+  // Efetua replace de embeds do youtube automaticamente ao ser inicializado.
+  //ytEmbedReplace: true,
+  // Efetua replace de players existentes do videojs automaticamente ao ser inicializado.
+  //videojsReplace: true
 });
 ```
 
-Em alguns casos pode ser necessário adicionar apenas o tradutor de vídeos na página. Geralmente acontece quando a página inteira só possui um vídeo e, estar incorporada em outra página em formato de iframe. Pra isso basta desativar o tradutor de textos, assim o botão de acessibilidade em Libras não irá aparecer nas laterais.
+```html
+<body>
+
+  <!-- Troque os campos <VIDEO_TYPE>, <VIDEO_URL>, <CAPTION_TYPE> e <CAPTION_URL>, pelos dados solicitados-->
+  <video data-ht="src=<VIDEO_TYPE>:<VIDEO_URL>;subtitle=<CAPTION_TYPE>:<CAPTION_URL>"></video>
+
+  <!-- Pega a ultima versão do plugin Hand Talk -->
+  <script src="https://api.handtalk.me/plugin/latest/handtalk.min.js"></script>
+
+  <script>
+    var ht = new HT({
+      // Troque por seu token de acesso
+      token: '<SEU TOKEN>',
+      // Se true, exibe o tradutor de sites para texto
+      textEnabled: false,
+      // Habilita o tradutor de vídeos
+      videoEnabled: true
+
+      // Use as linhas abaixo para replace automatico de vídeos
+
+      // Efetua replace de embeds do youtube automaticamente ao ser inicializado.
+      //ytEmbedReplace: true,
+      // Efetua replace de players existentes do videojs automaticamente ao ser inicializado.
+      //videojsReplace: true
+    });
+  </script>
+</body>
+```
+
+Em alguns casos pode ser necessário adicionar apenas o tradutor de vídeos na página. Geralmente acontece quando a página inteira só possui um vídeo e, está incorporada em outra página em formato de iframe. Pra isso basta desativar o tradutor de textos, assim o botão de acessibilidade em Libras não irá aparecer nas laterais.
 
 
 ## Replace Automático de Vídeos
