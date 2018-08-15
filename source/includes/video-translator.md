@@ -78,6 +78,82 @@ Em seguida, separando por ponto e virgula (`;`), defina o tipo e caminho da lege
 
 `subtitle=<CAPTIONS_TYPE>:<CAPTIONS_URL>`
 
+### Exemplo com Tech do Youtube
+
+> Exemplo: Criando um vídeo com o **tech** youtube
+ 
+```html
+<!-- Torna o vídeo https://www.youtube.com/watch?v=H2Io3y98FV4 acessivel -->
+<video data-ht="src=youtube:H2Io3y98FV4"></video>
+```
+
+Caso o campo subtitle fique em branco em um src do tipo Youtube, a legenda será obtida automaticamente. Como no exemplo ao lado.
+ 
+<aside class="info">
+Nota: No source do tipo Youtube, você pode optar por adicionar o link do vídeo, ou apenas o ID. Conforme exemplo ao lado.
+</aside>
+ 
+Caso o vídeo esteja definido como **não listado**, ou algum outro tipo de restrição no Youtube", não conseguiremos acessar a legenda, restornando o erro:
+
+<aside class="warning">
+404 - Legenda não encontrada.
+</aside>
+
+O exemplo ao lado *(Criando um vídeo com o tech youtube)* deve gerar o seguinte player:
+
+<video data-ht="src=youtube:H2Io3y98FV4"></video>
+
+### Exemplo com Tech do Vimeo
+
+> Exemplo: Criando um vídeo com o **tech** vimeo
+
+```html
+<!-- Cria um novo player com uma legenda estatica -->
+<video data-ht="src=vimeo:https://player.vimeo.com/video/259226390;subtitle=vtt:assets/HandTalk.vtt"></video>
+```
+
+```javascript
+// Confira o exemplo em html
+```
+
+Para vídeos hospedados no Vimeo, você deve informar a legenda manualmente.
+Como no exemplo ao lado, o vídeo deve aparecer da seguinte forma:
+
+<video data-ht="src=vimeo:https://player.vimeo.com/video/259226390;subtitle=vtt:assets/HandTalk.vtt"></video>
+  
+### Exemplo com Tech de MP4/WEBM
+ 
+> Exemplo: Criando um vídeo com o **tech** mp4
+
+```html
+<!-- Cria um novo player com uma legenda estatica -->
+<video data-ht="src=mp4:assets/HandTalk.mp4;subtitle=vtt:assets/HandTalk.vtt"></video>
+```
+
+```javascript
+// Confira o exemplo em html
+```
+
+Utilize para vídeos e legendas hospedadas na internet com link direto - Exemplo ao lado.
+
+<video data-ht="src=mp4:assets/HandTalk.mp4;subtitle=vtt:assets/HandTalk.vtt"></video>
+
+### Exemplo com Tech da SambaTech
+
+> Exemplo: Criando um vídeo com o **tech** sambatech
+
+```html
+<!-- Cria um novo player com uma legenda estatica -->
+<video data-ht="src=sambatech:https://fast.player.liquidplatform.com/pApiv2/embed/c750c09d7d04891b7f3f5c9a9337d6b9/a40cc34d36f0ee05ae55a971b427888e;subtitle=vtt:assets/HandTalk.vtt"></video>
+```
+
+```javascript
+// Confira o exemplo em html
+```
+
+Utilize para vídeos hospedados na SambaTech e legendas hospedadas na internet com link direto - Exemplo ao lado.
+<video data-ht="src=sambatech:https://fast.player.liquidplatform.com/pApiv2/embed/c750c09d7d04891b7f3f5c9a9337d6b9/a40cc34d36f0ee05ae55a971b427888e;subtitle=vtt:assets/HandTalk.vtt"></video>
+
 ## Utilizando Apenas o Tradutor de Vídeos
 
 > Exemplo de Utilização
