@@ -2,7 +2,7 @@
 
 ## Começando
 
-> ### Exemplo de Instalação <br /> 
+> Exemplo de Instalação 
  
 ```javascript
 var ht = new HT({
@@ -43,21 +43,25 @@ Ou fale com um de nossos consultores em [handtalk.me/sites](http://handtalk.me/s
 
 Você pode pode preferir habilitar/desabilitar algumas funcionalidades do Tradutor de Sites, para isso utilize os parâmetros abaixo:
 
-| Configurações | Descrição                                                                                                                                             | Valores                        | Padrão    |
-| ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------ | --------- |
-| textEnabled   | Quando verdadeiro: exibe o tradutor de sites para textos.                                                                                             | false ou true                  | true      |
-| side          | Define o posicionamento da janela do tradutor no site. O Tradutor de Sites pode ser inicializado do lado esquerdo ou do lado direito da tela.         | "right" ou "left"              | "right"   |
-| align         | Define o alinhamento horizontal da janela do tradutor no site.                                                                                        | "default" ou "top" ou "bottom" | "default" |
-| zIndex        | Define o posicionamento da profundidade do tradutor no site, ou seja, determinar se o Tradutor de Sites estará mais próximo ou mais afastado da tela. | Inteiros                       | 1000000   |
-| maxTextSize   | Define o tamanho máximo de caracteres para captura de texto em um elemento.                                                                           | Inteiros                       | 500       |
-| doNotTrack    | Se o valor desta propriedade for verdadeiro, as frases traduzidas não serão armazenadas ou utilizada para a melhoria do sistema de tradução.          | false ou true                  | false     |
-| exceptions    | Lista de queries que serão ignoradas pelo plugin, ex.: ```['a', 'form', '.main', '#site-title']```                                                    | array                          | [ ]       |
-| mobileConfig  | Objeto de configuração para a plataforma mobile, quando definido, sobscreve as configurações padrões de HT.                                           | Object                         | { }       |
+| Configurações | Descrição | Valores | Padrão |
+|---|---|---|---|
+| textEnabled | Quando verdadeiro: exibe o tradutor de sites para textos. | false ou true | true |
+| videoEnabled | Quando verdadeiro: monta os players acessíveis em língua de sinais. | false ou true | false |
+| side | Define o posicionamento da janela do tradutor no site. O Tradutor de Sites pode ser inicializado do lado esquerdo ou do lado direito da tela. | "right" ou "left" | "right" |
+| align | Define o alinhamento horizontal da janela do tradutor no site. | "default" ou "top" ou "bottom" | "default" |
+| zIndex | Define o posicionamento da profundidade do tradutor no site, ou seja, determinar se o Tradutor de Sites estará mais próximo ou mais afastado da tela. | Inteiros | 1000000 |
+| maxTextSize | Define o tamanho máximo de caracteres para captura de texto em um elemento. | Inteiros | 500 |
+| doNotTrack | Se o valor desta propriedade for verdadeiro, as frases traduzidas não serão armazenadas ou utilizada para a melhoria do sistema de tradução. | false ou true | false |
+| exceptions | Lista de queries que serão ignoradas pelo plugin, ex.: ```['a', 'form', '.main', '#site-title']``` | array | [ ] |
+| ytEmbedReplace | Quando verdadeiro substitui os embeds do Youtube por players acessíveis em língua de sinais. | false ou true | false |
+| videojsReplace | Quando verdadeiro adiciona os componentes de acessibilidade em uma instancia atual do videojs | false ou true | false |
+| mobileEnabled | Quando verdadeiro ativa o tradutor de sites em dispositivos móveis. | false ou true | true
+| mobileConfig | Objeto de configuração para a plataforma mobile, quando definido, sobscreve as configurações padrões de HT. | Object | { }
 
 
 ### Parâmetros para versão mobile
 
-> ### Adicionando Parâmetros Exclusivos para Versão Mobile
+> Exemplo de Parâmetros Exclusivos para Versão Mobile
 
 ```javascript
 var ht = new HT({
@@ -104,29 +108,9 @@ Você pode passar parâmetros especificos para dispositivos movéis, para isso b
 
 Consulte o exemplo ao lado.
 
-## Eventos
-
-Os eventos que podem ser disparados pela instancia de HT são:
-
-| Eventos        | Descrição           | Retorno  |
-| ------------- |:-------------:| -----:|
-| authenticating      | Autenticando | undefined |
-| errorOnAuth      | Erro ao autenticar      |   undefined |
-| authenticated | Autenticado      |    	undefined |
-| notCompatible | Navegador ou hardware não compatível      |    string: 'withoutCanvas' ou 'withoutWebGL' ou 'hardwareDoesNotSupport' |
-| customizing | Customizando      |    undefined |
-| customized | Customizado      |    undefined |
-| hugoLoaded | Hugo carregado      |    undefined |
-| activated | Feature de texto ou vídeo ativada      |    string: 'textManager' ou 'videoManager' |
-| translate	 | Dispara quando um texto é capturado e enviado para tradução pela feature de tradução de texto      |    string: texto capturado |
-| translating	 | Traduzindo texto no servidor da Hand Talk      |    undefined |
-| errorOnTranslate	 | Erro ao traduzir texto no servidor da Hand Talk      |    undefined |
-| translated	 | Texto traduzido corretamente no Servidor da Hand Talk      |    undefined |
-| signalized		 | Sentença sinalizada por completo      |    undefined |
-| videoManagerReady		 | Disparado quando o assistente de vídeo esta pronto, utilize para chamar as funções de replace manualmente     |    undefined |
 ## Adicionando Exceções
 
-> ### Adicionando Exceções
+> Adicionando Exceções
 
 ```javascript
 var ht = new HT({
@@ -187,7 +171,7 @@ No exemplo ao lado, colocamos na exceção um ID de elemento HTML e uma classe C
 
 ## Iframes Dinâmicos
 
-> ### Exemplo de Compatibilidade com Iframes Dinâmicos
+> Exemplo de Compatibilidade com Iframes Dinâmicos
 
 ```javascript
 var ht = new HT({

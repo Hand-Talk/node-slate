@@ -89,14 +89,51 @@ O Tradutor de vídeos está disponível no plano **Gold 2** ou superior. Caso a 
 
 ## Eventos
 
-Você pode escutar os eventos utilizando o método .on(eventName, callback).
-
-> ### Exemplo de Instalação
+> Exemplo de Listener de Eventos
 
 ```javascript
-ht.on('hugoLoaded', function () {
-
-  console.log('Hugo carregado!');
-
+ht.on('translated', function () {
+  console.log('Nova frase traduzida!');
 });
 ```
+
+```html
+<body>
+  <!-- Pega a ultima versão do plugin Hand Talk -->
+  <script src="https://api.handtalk.me/plugin/latest/handtalk.min.js"></script>
+
+  <script>
+    var ht = new HT({
+      // Troque por seu token de acesso
+      token: '<SEU TOKEN>'
+    });
+
+    // Escuta o evento translated
+    ht.on('translated', function () {
+      console.log('Nova frase traduzida!');
+    });
+  </script>
+</body>
+```
+
+Em alguns momentos você pode necessitar de dados de uso da ferramenta, como quantidade de aberturas, traduções, saber se a ferramenta carregou, e entre outros.
+Pra isso, você deve ouvir os eventos disparados por `HT`, conforme o exemplo ao lado.
+
+Os eventos disparados por `HT` são:
+
+| Evento | Descrição | Retorno |
+|---|---|---|
+| authenticating | Autenticando | ```undefined``` |
+| errorOnAuth | Erro ao autenticar | ```undefined``` |
+| authenticated | Autenticado | ```undefined``` |
+| notCompatible | Navegador ou hardware não compatível | string: ```'withoutCanvas'``` ou ```'withoutWebGL'``` ou ```'hardwareDoesNotSupport'``` |
+| customizing | Customizando | ```undefined``` |
+| customized | Customizado | ```undefined``` |
+| hugoLoaded | Hugo carregado | ```undefined``` |
+| activated | Feature de texto ou vídeo ativada | string: ```'textManager'``` ou ```'videoManager'``` |
+| translate | Dispara quando um texto é capturado e enviado para tradução pela feature de tradução de texto | string: texto capturado |
+| translating | Traduzindo texto no servidor da Hand Talk | ```undefined``` |
+| errorOnTranslate | Erro ao traduzir texto no servidor da Hand Talk | ```undefined``` |
+| translated | Texto traduzido corretamente no Servidor da Hand Talk | ```undefined``` |
+| signalized | Sentença sinalizada por completo | ```undefined``` |
+| videoManagerReady | Disparado quando o assistente de vídeo esta pronto, utilize para chamar as funções de replace manualmente | ```undefined``` |
