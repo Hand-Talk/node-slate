@@ -212,7 +212,11 @@ Em alguns casos pode ser necessário adicionar apenas o tradutor de vídeos na p
 
 É possível substituir automaticamente os embeds do Youtube e player existentes do Videojs pelo Player Acessível da HandTalk, sempre que uma legenda for encontrada.
 
-Caso o vídeo não possua legenda no idioma **pt-BR** ou **pt**, o mesmo ficará com a funcionalidade de Tradução para Libras bloqueada.
+Caso o vídeo não possua legenda no idioma **pt-BR** ou **pt**, o mesmo ficará com a funcionalidade de Tradução para Libras bloqueada. Conforme a imagem abaixo
+
+![](images/screenshoots/tradutor-de-videos-fail.png)
+
+## Replace Automático de Embeds do Youtube
 
 > Exemplo de Utilização de Embeds do Youtube
 
@@ -222,12 +226,32 @@ var ht = new HT({
   token: "<TOKEN>",
   // Habilita o tradutor de vídeos
   videoEnabled: true,
-  // Habilita embeds do Youtube
+  // Busca por embeds do youtube ao inicializar a ferramenta
   ytEmbedReplace: true
 });
 ```
 
-### Replace automático de embeds do Youtube
+```html
+<body>
+
+  <!-- Embed padrão do youtube -->
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/H2Io3y98FV4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+  <!-- Pega a ultima versão do plugin Hand Talk -->
+  <script src="https://api.handtalk.me/plugin/latest/handtalk.min.js"></script>
+
+  <script>
+    var ht = new HT({
+      // Troque por seu token de acesso
+      token: "<TOKEN>",
+      // Habilita o tradutor de vídeos
+      videoEnabled: true,
+      // Busca por embeds do youtube ao inicializar a ferramenta
+      ytEmbedReplace: true
+    });
+  </script>
+</body>
+```
 
 A ferramenta busca por embeds (iframes) do youtube, e substitui por players accesíveis da Hand Talk.
 
@@ -237,16 +261,35 @@ Você pode habilitar o replace automático passando o valor `true` a configuraç
 Se embeds do Youtube forem inseridos após a inicialização do plugin, você deve chamar a função `ht.ytEmbedReplaceAll();` para que os novos vídeos tornem-se acessíveis.
 Também é possível efetuar o replace de um único embed com `ht.ytEmbedReplace(elem)`:
 
+## Replace Automático de Embeds do Videojs
+
+> Exemplo de Utilização de Embeds do Videojs
+
 ```html
-<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/H2Io3y98FV4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<body>
 
-<script>
-  var iframe = document.querySelector('iframe');
-  ht.ytEmbedReplace(iframe);
-</script>
+  <!-- Embed padrão do videojs -->
+  <video id="vid" class="video-js vjs-default-skin" controls width="800" height="450">
+    <source src="HandTalk.mp4" type='video/mp4'>
+    <track src="HandTalk.vtt" kind="captions" srclang="pt" label="Português">
+  </video>
+
+  <!-- Pega a ultima versão do plugin Hand Talk -->
+  <script src="https://api.handtalk.me/plugin/latest/handtalk.min.js"></script>
+
+  <script>
+    videojs('vid');
+    var ht = new HT({
+      // Troque por seu token de acesso
+      token: "<TOKEN>",
+      // Habilita o tradutor de vídeos
+      videoEnabled: true,
+      // Busca por embeds do videojs ao inicializar a ferramenta
+      videojsReplace: true
+    });
+  </script>
+</body>
 ```
-
-> Exemplo Para Habilitação de Replace Automático no Videojs
 
 ```javascript
 var ht = new HT({
@@ -259,31 +302,16 @@ var ht = new HT({
 });
 ```
 
-### Replace automático de embeds do Videojs
-
 Parecido com o Youtube Embed Replace, a ferramenta varre a página e adiciona os componentes de acessibilidade em um player existente do videojs, de maneira que você não perca a referência.
 
 Você pode habilitar o replace automático passando com valor `true` a configuração `videojsReplace` ao instanciar o plugin. Lembrando que você deve também habilitar a feature de vídeo passando `true` na configuração `videoEnabled`.
 
 Veja o exemplo ao lado.
 
+
 Se os players do videojs forem inseridos após a inicialização do plugin, você deve chamar a função `ht.videojsReplaceAll();` para que os novos vídeos tornem-se acessíveis.
 
 Conforme o exemplo ao lado direito, também é possível efetuar o replace de um único  player com `ht.videojsReplace(vjsPlayer):`
-
-> Exemplo de Utilização de Embeds do Videojs <br /> 
-
-```html
-<video id="vid" class="video-js vjs-default-skin" controls width="800" height="450">
-  <source src="HandTalk.mp4" type='video/mp4'>
-  <track src="HandTalk.vtt" kind="captions" srclang="pt" label="Português">
-</video>
-
-<script>
-  var vjsPlayer = videojs('vid');
-  ht.videojsReplace(vjsPlayer);
-</script>
-```
 
 ## Vídeos Dinâmicos
 
