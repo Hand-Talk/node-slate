@@ -66,6 +66,8 @@ Você pode tornar um vídeo acessível definindo o atributo `ht-data` em um elem
 
 `src=<VIDEO_TECH>:<VIDEO_URL>`
 
+> Construtor do player Hand Talk
+
 ```html
 <video data-ht="src=<VIDEO_TECH>:<VIDEO_URL>;subtitle=<CAPTIONS_TYPE>:<CAPTIONS_URL>"></video>
 ```
@@ -85,6 +87,10 @@ Em seguida, separando por ponto e virgula (`;`), defina o tipo e caminho da lege
 ```html
 <!-- Torna o vídeo https://www.youtube.com/watch?v=H2Io3y98FV4 acessivel -->
 <video data-ht="src=youtube:H2Io3y98FV4"></video>
+```
+
+```javascript
+// Confira o exemplo em html
 ```
 
 Caso o campo subtitle fique em branco em um src do tipo Youtube, a legenda será obtida automaticamente. Como no exemplo ao lado.
@@ -413,10 +419,8 @@ Asteroblaudo corria pela rua do alagamento no deserto para poder fugir de um cas
 Enquanto que o exemplo acima retrata uma prática ruim para legendas.
 
 ## Resolvendo Conflitos de Estilo (css)
-É provável que na substituição do elemento `<iframe />` do Youtube, pelo elemento `<div />` com a classe CSS video-js do player da Hand Talk, você perca a referência do elemento no seu CSS e Javascript.
 
-No exemplo ao lado o código CSS espera que o filho da classe video seja um iframe:
-> Exemplo para o código CSS
+> Exemplo de Estrutura Quebrada
 
 ```html
 <style>
@@ -433,7 +437,7 @@ No exemplo ao lado o código CSS espera que o filho da classe video seja um ifra
 
 <body>
   <div class="video">
-  <iframe src="https://www.youtube.com/embed/H2Io3y98FV4" frameborder="0"></iframe>
+    <iframe src="https://www.youtube.com/embed/H2Io3y98FV4" frameborder="0"></iframe>
   </div>
 
   <!-- Pega a ultima versão do plugin Hand Talk -->
@@ -453,9 +457,17 @@ No exemplo ao lado o código CSS espera que o filho da classe video seja um ifra
 </body>
 ```
 
+```javascript
+// Confira o exemplo em html
+```
+
+É provável que na substituição do elemento `<iframe />` do Youtube, pelo elemento `<div />` com a classe CSS video-js do player da Hand Talk, você perca a referência do elemento no seu CSS e Javascript.
+
+No exemplo ao lado o código CSS espera que o filho da classe video seja um iframe:
+
 Ao substituir o elemento `<iframe />` por uma `<div />` a estrutura do site ficará quebrada. A solução seria esperar como filho um elemento com a classe video-js também.
 
-> Solução para a quebra na estrutura
+> Solução para a Quebra na Estrutura
 
 ```html
 <style>
@@ -473,7 +485,7 @@ Ao substituir o elemento `<iframe />` por uma `<div />` a estrutura do site fica
 
 <body>
   <div class="video">
-  <iframe src="https://www.youtube.com/embed/H2Io3y98FV4" frameborder="0"></iframe>
+    <iframe src="https://www.youtube.com/embed/H2Io3y98FV4" frameborder="0"></iframe>
   </div>
 
   <!-- Pega a ultima versão do plugin Hand Talk -->
@@ -488,4 +500,8 @@ Ao substituir o elemento `<iframe />` por uma `<div />` a estrutura do site fica
     });
   </script>
 </body>
+```
+
+```javascript
+// Confira o exemplo em html
 ```
