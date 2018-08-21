@@ -12,8 +12,7 @@ includes:
   - introduction
   - text-translator
   - video-translator
-  - events
-
+  
 search: true
 
 highlight_theme: monokai

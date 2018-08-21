@@ -1,24 +1,507 @@
-# Tradutor de vídeos
+# Tradutor de Vídeos
 
 ## Começando
 
-## Utilizando o player acessível
+> Exemplo de Instalação
+ 
+```javascript
+var ht = new HT({
+  // Troque por seu token de acesso
+  token: "<TOKEN>",
+  // Habilita o Tradutor de Vídeos
+  videoEnabled: true
+});
+```
 
-### Exemplos
+```html
+<body>
 
-## Utilizando apenas o tradutor de vídeos
+  <!-- Troque os campos <VIDEO_TYPE>, <VIDEO_URL>, <CAPTION_TYPE> e <CAPTION_URL>, pelos dados solicitados-->
+  <video data-ht="src=<VIDEO_TYPE>:<VIDEO_URL>;subtitle=<CAPTION_TYPE>:<CAPTION_URL>"></video>
 
-### Exemplos
+  <!-- Pega a ultima versão do plugin Hand Talk -->
+  <script src="https://api.handtalk.me/plugin/latest/handtalk.min.js"></script>
 
-## Replace automático de vídeos
+  <script>
+  var ht = new HT({
+    // Troque por seu token de acesso
+    token: "<TOKEN>",
+    // Habilita o Tradutor de Vídeos
+    videoEnabled: true
+  });
+  </script>
+</body>
+```
 
-### Exemplos
+Para começar a utilizar o Tradutor de Vídeos, você deve inserir o script da Hand Talk e instanciar a classe HT, passando por parâmetro um dicionário com o token e demais configurações.
 
-## Vídeos dinâmicos
+No exemplo de instalação à direita, utilizamos a última versão do script hospedado em https://api.handtalk.me/plugin/latest/handtalk.min.js, após inserir o script da Hand Talk instanciamos a classe `HT` passando por parâmetro um dicionário com o `token` e `videoEnabled` para habilitar o Tradutor de Vídeos.
 
-### Exemplos
+Sem a flag `videoEnabled` ativada, o Tradutor de Vídeos não irá funcionar.
+
+Com o plugin devidamente configurado, siga os passos da sessão abaixo para implementar o Player Acessível.
+
+## Utilizando o Player Acessível
+
+O plugin oferece um player de vídeo acessível em Libras, que suporta os seguintes **Techs**:
+
+- MP4;
+- OGG;
+- WEBM;
+- Youtube;
+- Vimeo;
+- SambaTech.
+
+Os tipos de legenda suportados são:
+
+- VTT;
+- SRT.
+
+<aside class="info">
+Nota: Para utilizar o player acessível, certifique-se de estar com o plugin devidamente configurado de acordo com a sessão [Tradutor de Vídeos > Começando](index.html?html#come-ando14).
+</aside>
+
+
+Você pode tornar um vídeo acessível definindo o atributo `ht-data` em um elemento de vídeo, primeiramente defina o tech e caminho do vídeo (obrigatório).
+
+`src=<VIDEO_TECH>:<VIDEO_URL>`
+
+> Construtor do player Hand Talk
+
+```html
+<video data-ht="src=<VIDEO_TECH>:<VIDEO_URL>;subtitle=<CAPTIONS_TYPE>:<CAPTIONS_URL>"></video>
+```
+
+```javascript
+// Confira o exemplo em html
+```
+
+Em seguida, separando por ponto e virgula (`;`), defina o tipo e caminho da legenda. (opcional)
+
+`subtitle=<CAPTIONS_TYPE>:<CAPTIONS_URL>`
+
+### Exemplo com Tech do Youtube
+
+> Exemplo: Criando um vídeo com o **tech** youtube
+ 
+```html
+<!-- Torna o vídeo https://www.youtube.com/watch?v=H2Io3y98FV4 acessivel -->
+<video data-ht="src=youtube:H2Io3y98FV4"></video>
+```
+
+```javascript
+// Confira o exemplo em html
+```
+
+Caso o campo subtitle fique em branco em um src do tipo Youtube, a legenda será obtida automaticamente. Como no exemplo ao lado.
+ 
+<aside class="info">
+Nota: No source do tipo Youtube, você pode optar por adicionar o link do vídeo, ou apenas o ID. Conforme exemplo ao lado.
+</aside>
+ 
+Caso o vídeo esteja definido como **não listado**, ou algum outro tipo de restrição no Youtube", não conseguiremos acessar a legenda, restornando o erro:
+
+<aside class="warning">
+404 - Legenda não encontrada.
+</aside>
+
+O exemplo ao lado *(Criando um vídeo com o tech youtube)* deve gerar o seguinte player:
+
+<video data-ht="src=youtube:H2Io3y98FV4"></video>
+
+### Exemplo com Tech do Vimeo
+
+> Exemplo: Criando um vídeo com o **tech** vimeo
+
+```html
+<!-- Cria um novo player com uma legenda estatica -->
+<video data-ht="src=vimeo:https://player.vimeo.com/video/259226390;subtitle=vtt:assets/HandTalk.vtt"></video>
+```
+
+```javascript
+// Confira o exemplo em html
+```
+
+Para vídeos hospedados no Vimeo, você deve informar a legenda manualmente.
+Como no exemplo ao lado, o vídeo deve aparecer da seguinte forma:
+
+<video data-ht="src=vimeo:https://player.vimeo.com/video/259226390;subtitle=vtt:assets/HandTalk.vtt"></video>
+  
+### Exemplo com Tech de MP4/WEBM
+ 
+> Exemplo: Criando um vídeo com o **tech** mp4
+
+```html
+<!-- Cria um novo player com uma legenda estatica -->
+<video data-ht="src=mp4:assets/HandTalk.mp4;subtitle=vtt:assets/HandTalk.vtt"></video>
+```
+
+```javascript
+// Confira o exemplo em html
+```
+
+Utilize para vídeos e legendas hospedadas na internet com link direto - Exemplo ao lado.
+
+<video data-ht="src=mp4:assets/HandTalk.mp4;subtitle=vtt:assets/HandTalk.vtt"></video>
+
+### Exemplo com Tech da SambaTech
+
+> Exemplo: Criando um vídeo com o **tech** sambatech
+
+```html
+<!-- Cria um novo player com uma legenda estatica -->
+<video data-ht="src=sambatech:https://fast.player.liquidplatform.com/pApiv2/embed/c750c09d7d04891b7f3f5c9a9337d6b9/a40cc34d36f0ee05ae55a971b427888e;subtitle=vtt:assets/HandTalk.vtt"></video>
+```
+
+```javascript
+// Confira o exemplo em html
+```
+
+Utilize para vídeos hospedados na SambaTech e legendas hospedadas na internet com link direto - Exemplo ao lado.
+<video data-ht="src=sambatech:https://fast.player.liquidplatform.com/pApiv2/embed/c750c09d7d04891b7f3f5c9a9337d6b9/a40cc34d36f0ee05ae55a971b427888e;subtitle=vtt:assets/HandTalk.vtt"></video>
+
+## Utilizando Apenas o Tradutor de Vídeos
+
+> Exemplo de Utilização
+
+```javascript
+var ht = new HT({
+  // Troque por seu token de acesso
+  token: '<SEU TOKEN>',
+  // Se true, exibe o tradutor de sites para texto
+  textEnabled: false,
+  // Habilita o tradutor de sinais nos players
+  videoEnabled: true
+
+  // Use as linhas abaixo para replace automatico de vídeos
+
+  // Efetua replace de embeds do youtube automaticamente ao ser inicializado.
+  //ytEmbedReplace: true,
+  // Efetua replace de players existentes do videojs automaticamente ao ser inicializado.
+  //videojsReplace: true
+});
+```
+
+```html
+<body>
+
+  <!-- Troque os campos <VIDEO_TYPE>, <VIDEO_URL>, <CAPTION_TYPE> e <CAPTION_URL>, pelos dados solicitados -->
+  <video data-ht="src=<VIDEO_TYPE>:<VIDEO_URL>;subtitle=<CAPTION_TYPE>:<CAPTION_URL>"></video>
+
+  <!-- Pega a ultima versão do plugin Hand Talk -->
+  <script src="https://api.handtalk.me/plugin/latest/handtalk.min.js"></script>
+
+  <script>
+    var ht = new HT({
+      // Troque por seu token de acesso
+      token: '<SEU TOKEN>',
+      // Se true, exibe o tradutor de sites para texto
+      textEnabled: false,
+      // Habilita o tradutor de vídeos
+      videoEnabled: true
+
+      // Use as linhas abaixo para replace automatico de vídeos
+
+      // Efetua replace de embeds do youtube automaticamente ao ser inicializado.
+      //ytEmbedReplace: true,
+      // Efetua replace de players existentes do videojs automaticamente ao ser inicializado.
+      //videojsReplace: true
+    });
+  </script>
+</body>
+```
+
+Em alguns casos pode ser necessário adicionar apenas o tradutor de vídeos na página. Geralmente acontece quando a página inteira só possui um vídeo e, está incorporada em outra página em formato de iframe. Pra isso basta desativar o tradutor de textos, assim o botão de acessibilidade em Libras não irá aparecer nas laterais.
+
+
+## Replace Automático de Vídeos
+
+É possível substituir automaticamente os embeds do Youtube e player existentes do Videojs pelo Player Acessível da HandTalk, sempre que uma legenda for encontrada.
+
+Caso o vídeo não possua legenda no idioma **pt-BR** ou **pt**, o mesmo ficará com a funcionalidade de Tradução para Libras bloqueada. Conforme a imagem abaixo
+
+![](images/screenshoots/tradutor-de-videos-fail.png)
+
+## Replace Automático de Embeds do Youtube
+
+> Exemplo de Utilização de Embeds do Youtube
+
+```javascript
+var ht = new HT({
+  // Troque por seu token de acesso
+  token: "<TOKEN>",
+  // Habilita o tradutor de vídeos
+  videoEnabled: true,
+  // Busca por embeds do youtube ao inicializar a ferramenta
+  ytEmbedReplace: true
+});
+```
+
+```html
+<body>
+
+  <!-- Embed padrão do youtube -->
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/H2Io3y98FV4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+  <!-- Pega a ultima versão do plugin Hand Talk -->
+  <script src="https://api.handtalk.me/plugin/latest/handtalk.min.js"></script>
+
+  <script>
+    var ht = new HT({
+      // Troque por seu token de acesso
+      token: "<TOKEN>",
+      // Habilita o tradutor de vídeos
+      videoEnabled: true,
+      // Busca por embeds do youtube ao inicializar a ferramenta
+      ytEmbedReplace: true
+    });
+  </script>
+</body>
+```
+
+A ferramenta busca por embeds (iframes) do youtube, e substitui por players accesíveis da Hand Talk.
+
+Você pode habilitar o replace automático passando o valor `true` a configuração `ytEmbedReplace` ao instanciar o plugin. Lembrando que você deve também habilitar a feature de vídeo passando `true` na configuração `videoEnabled`.
+
+
+Se embeds do Youtube forem inseridos após a inicialização do plugin, você deve chamar a função `ht.ytEmbedReplaceAll();` para que os novos vídeos tornem-se acessíveis.
+Também é possível efetuar o replace de um único embed com `ht.ytEmbedReplace(elem)`:
+
+## Replace Automático de Embeds do Videojs
+
+> Exemplo de Utilização de Embeds do Videojs
+
+```html
+<body>
+
+  <!-- Embed padrão do videojs -->
+  <video id="vid" class="video-js vjs-default-skin" controls width="800" height="450">
+    <source src="HandTalk.mp4" type='video/mp4'>
+    <track src="HandTalk.vtt" kind="captions" srclang="pt" label="Português">
+  </video>
+
+  <!-- Pega a ultima versão do plugin Hand Talk -->
+  <script src="https://api.handtalk.me/plugin/latest/handtalk.min.js"></script>
+
+  <script>
+    videojs('vid');
+    var ht = new HT({
+      // Troque por seu token de acesso
+      token: "<TOKEN>",
+      // Habilita o tradutor de vídeos
+      videoEnabled: true,
+      // Busca por embeds do videojs ao inicializar a ferramenta
+      videojsReplace: true
+    });
+  </script>
+</body>
+```
+
+```javascript
+var ht = new HT({
+  // Troque por seu token de acesso
+  token: "<TOKEN>",
+  // Habilita o tradutor de vídeos
+  videoEnabled: true,
+  // Habilita embeds Videojs
+  videojsReplace: true 
+});
+```
+
+Parecido com o Youtube Embed Replace, a ferramenta varre a página e adiciona os componentes de acessibilidade em um player existente do videojs, de maneira que você não perca a referência.
+
+Você pode habilitar o replace automático passando com valor `true` a configuração `videojsReplace` ao instanciar o plugin. Lembrando que você deve também habilitar a feature de vídeo passando `true` na configuração `videoEnabled`.
+
+Veja o exemplo ao lado.
+
+
+Se os players do videojs forem inseridos após a inicialização do plugin, você deve chamar a função `ht.videojsReplaceAll();` para que os novos vídeos tornem-se acessíveis.
+
+Conforme o exemplo ao lado direito, também é possível efetuar o replace de um único  player com `ht.videojsReplace(vjsPlayer):`
+
+## Vídeos Dinâmicos
+
+> Exemplo: Embeds dinâmicos do youtube
+
+```javascript
+var ht = new HT({
+  // Troque por seu token de acesso
+  token: "<TOKEN>",
+  // Habilita o tradutor de sinais nos players
+  videoEnabled: true
+});
+
+// Adiciona um vídeo do youtube após 3 segundos
+window.setTimeout(function() {
+  var iframe = document.createElement('iframe');
+  iframe.src='https://www.youtube.com/embed/a9qsp7l5C3o';
+  document.body.appendChild(iframe);
+      
+  // Aguarda o iframe carregar
+  iframe.onload = function() {
+    // Torna o embed acessível em Libras 
+    ht.replaceYtEmbed(iframe);
+    // Ou utilize a linha abaixo para buscar e substituir varios embeds
+    // ht.replaceYtEmbedAll();
+  }
+}, 3000);
+```
+
+```html
+<body>
+
+  <!-- Pega a ultima versão do plugin Hand Talk -->
+  <script src="https://api.handtalk.me/plugin/latest/handtalk.min.js"></script>
+
+  <script>
+
+    var ht = new HT({
+      // Troque por seu token
+      token: "<TOKEN>",
+      // Habilita o tradutor de sinais nos players
+      videoEnabled: true
+    });
+
+    // Adiciona um vídeo do youtube após 3 segundos
+    setTimeout(function() {
+      var iframe = document.createElement('iframe');
+      iframe.src='https://www.youtube.com/embed/a9qsp7l5C3o';
+      document.body.appendChild(iframe);
+      
+      // Aguarda o iframe carregar
+      iframe.onload = function() {
+        // Torna o embed acessível em Libras 
+        ht.replaceYtEmbed(iframe);
+        // Ou utilize a linha abaixo para buscar e substituir varios embeds
+        // ht.replaceYtEmbedAll();
+      }
+    }, 3000);
+  </script>
+
+</body>
+```
+
+Caso o elemento do vídeo seja adicionado ao HTML dinâmicamente depois do carregamento do plugin, você precisa chamar a função de busca para renderizar os players novos.
+
+<aside class="info">
+Nota: Para realizar esse procedimento, certifique-se de estar com o plugin devidamente configurado de acordo com a sessão [Tradutor de Vídeos > Começando](#come-ando14).
+</aside>
+
+Para player construidos manualmente, ou seja, utilizando o [Player Acessível](#utilizando-o-player-acess-vel):
+
+`videoManager.search();`
+
+Para embeds do youtube:
+
+`replaceYtEmbedAll()` ou `replaceYtEmbed(ytembed)`.
+
+Para players existentes do videojs:
+
+`replaceVideoJsAll()` ou `replaceVideoJs(vjsplayer)`.
+
+Para mais detalhes sobre o replace consulte a guia [Replace Automático de Vídeos](#replace-autom-tico-de-v-deos)
 
 ## Legendas
-(boas praticas e exemplos)
+As legendas precisam ser breves e de acordo com o tempo que será utilizado nelas para que o Hugo possa traduzí-las de forma que ele não acelere e não perca a sincronia com o vídeo.
 
-## Resolvendo conflitos de estilo (css)
+### Exemplos
+Abaixo está um exemplo de legenda boa e outro de legenda ruim, respectivamente:
+
+
+`00:00:04.868 --> 00:00:10.500` </br>
+Os grandes feitos da humanidade seriam inúteis se não houvesse a comunicação. 
+
+O exemplo acima retrata uma prática boa para legendas.
+
+`00:00:01.000 --> 00:00:01.500`</br>
+Asteroblaudo corria pela rua do alagamento no deserto para poder fugir de um casal de rinocerontes.
+
+Enquanto que o exemplo acima retrata uma prática ruim para legendas.
+
+## Resolvendo Conflitos de Estilo (css)
+
+> Exemplo de Estrutura Quebrada
+
+```html
+<style>
+  .video {
+  width: 800px;
+  height: 600px;
+}
+
+.video > iframe {
+  width: 100%;
+  height: 100%;
+}
+</style>
+
+<body>
+  <div class="video">
+    <iframe src="https://www.youtube.com/embed/H2Io3y98FV4" frameborder="0"></iframe>
+  </div>
+
+  <!-- Pega a ultima versão do plugin Hand Talk -->
+  <script src="https://api.handtalk.me/plugin/latest/handtalk.min.js"></script>
+
+  <script>
+    var ht = new HT({
+      // Troque por seu token
+      token: "<TOKEN>",
+      // Habilita o tradutor de sinais nos players
+      videoEnabled: true,
+      // Habilita embeds do Youtube
+      ytEmbedReplace: true
+    });
+  </script>
+
+</body>
+```
+
+```javascript
+// Confira o exemplo em html
+```
+
+É provável que na substituição do elemento `<iframe />` do Youtube, pelo elemento `<div />` com a classe CSS video-js do player da Hand Talk, você perca a referência do elemento no seu CSS e Javascript.
+
+No exemplo ao lado o código CSS espera que o filho da classe video seja um iframe:
+
+Ao substituir o elemento `<iframe />` por uma `<div />` a estrutura do site ficará quebrada. A solução seria esperar como filho um elemento com a classe video-js também.
+
+> Solução para a Quebra na Estrutura
+
+```html
+<style>
+.video {
+  width: 800px;
+  height: 600px;
+}
+
+.video > iframe,
+.video > .video-js {
+  width: 100%;
+  height: 100%;
+}
+</style>
+
+<body>
+  <div class="video">
+    <iframe src="https://www.youtube.com/embed/H2Io3y98FV4" frameborder="0"></iframe>
+  </div>
+
+  <!-- Pega a ultima versão do plugin Hand Talk -->
+  <script src="https://api.handtalk.me/plugin/latest/handtalk.min.js"></script>
+
+  <script>
+    var ht = new HT({
+      // Troque por seu token
+      token: "<TOKEN>",
+      videoEnabled: true,
+      ytEmbedReplace: true
+    });
+  </script>
+</body>
+```
+
+```javascript
+// Confira o exemplo em html
+```
