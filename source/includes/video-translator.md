@@ -1,6 +1,6 @@
-# Tradutor de Vídeos
+<h1 id='tradutor-de-videos'>Tradutor de Vídeos</h1>
 
-## Começando
+<h2 id='comecando-tradutor-de-videos'>Começando</h2>
 
 > ### Exemplo de Instalação <br /> 
  
@@ -41,7 +41,7 @@ Sem a flag `videoEnabled` ativada, o Tradutor de Vídeos não irá funcionar.
 
 Com o plugin devidamente configurado, siga os passos da sessão abaixo para implementar o Player Acessível.
 
-## Utilizando o Player Acessível
+<h2 id='utilizando-o-player-acessivel'>Utilizando o Player Acessível</h2>
 
 O plugin oferece um player de vídeo acessível em Libras, que suporta os seguintes **Techs**:
 
@@ -73,11 +73,11 @@ Em seguida, separando por ponto e virgula (`;`), defina o tipo e caminho da lege
 
 `subtitle=<CAPTIONS_TYPE>:<CAPTIONS_URL>`
 
-## Eventos
+<h2 id='eventos-tradutor-de-videos'>Eventos</h2>
 
 Você pode tornar um vídeo acessível definindo o atributo `ht-data` em um elemento de vídeo, primeiramente defina o tipo e caminho do vídeo (obrigatório).
 
-## Utilizando Apenas o Tradutor de Vídeos
+<h2 id='utilizando-apenas-o-tradutor-de-videos'>Utilizando Apenas o Tradutor de Vídeos</h2>
 
 > ### Exemplo de Utilização  <br /> 
 
@@ -99,7 +99,7 @@ var ht = new HT({
 Em alguns casos pode ser necessário adicionar apenas o tradutor de vídeos na página. Geralmente acontece quando a página inteira só possui um vídeo e, estar incorporada em outra página em formato de iframe. Pra isso basta desativar o tradutor de textos, assim o botão de acessibilidade em Libras não irá aparecer nas laterais.
 
 
-## Replace Automático de Vídeos
+<h2 id='replace-automatico-de-videos'>Replace Automático de Vídeos</h2>
 
 É possível substituir automaticamente os embeds do Youtube e player existentes do Videojs pelo Player Acessível da HandTalk, sempre que uma legenda for encontrada.
 
@@ -118,7 +118,7 @@ var ht = new HT({
 });
 ```
 
-### Replace automático de embeds do Youtube
+<h3 id='replace-automatico-de-embeds-do-youtube'>Replace automático de embeds do Youtube</h3>
 
 A ferramenta busca por embeds (iframes) do youtube, e substitui por players accesíveis da Hand Talk.
 
@@ -150,7 +150,7 @@ var ht = new HT({
 });
 ```
 
-### Replace automático de embeds do Videojs
+<h3 id='replace-automatico-de-embeds-do-videojs'>Replace automático de embeds do Videojs</h3>
 
 Parecido com o Youtube Embed Replace, a ferramenta varre a página e adiciona os componentes de acessibilidade em um player existente do videojs, de maneira que você não perca a referência.
 
@@ -176,9 +176,9 @@ Conforme o exemplo ao lado direito, também é possível efetuar o replace de um
 </script>
 ```
 
-## Vídeos Dinâmicos
+<h2 id='videos-dinamicos'>Vídeos Dinâmicos</h2>
 
-### Exemplos
+<h3 id='exemplos-videos-dinamicos'>Exemplos</h3>
 
 ## Legendas
 As legendas precisam ser breves e de acordo com o tempo que será utilizado nelas para que o Hugo possa traduzí-las de forma que ele não acelere e não perca a sincronia com o vídeo.
