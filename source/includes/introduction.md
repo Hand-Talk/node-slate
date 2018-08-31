@@ -87,7 +87,7 @@ O Tradutor de vídeos está disponível no plano **Gold 2** ou superior. Caso a 
 **406 - A funcionalidade de vídeo não está habilitada para a sua assinatura.**
 </aside>
 
-<h2 id='eventos'>Eventos</h2>
+<h2 id='eventos-introducao'>Eventos</h2>
 
 Você pode escutar os eventos utilizando o método .on(eventName, callback).
 
