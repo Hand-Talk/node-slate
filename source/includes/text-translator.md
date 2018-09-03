@@ -39,7 +39,7 @@ Sem um token válido, a ferramenta não irá funcionar, emitindo o erro  ***O se
 Você pode adquirir um token para o seu domínio em [account.handtalk.me](https://account.handtalk.me/). <br /> 
 Ou fale com um de nossos consultores em [handtalk.me/sites](http://handtalk.me/sites).
 
-<h2 id='parametros-tradutor-de-sites'>Parâmetros</h2>
+<h2 id='parametros'>Parâmetros</h2>
 
 Você pode pode preferir habilitar/desabilitar algumas funcionalidades do Tradutor de Sites, para isso utilize os parâmetros abaixo:
 
@@ -125,7 +125,7 @@ Os eventos que podem ser disparados pela instancia de HT são:
 | signalized		 | Sentença sinalizada por completo      |    undefined |
 | videoManagerReady		 | Disparado quando o assistente de vídeo esta pronto, utilize para chamar as funções de replace manualmente     |    undefined |
 
-<h2 id='adicionando-excecoes-tradutor-de-sites'>Adicionando Exceções</h2>
+<h2 id='adicionando-excecoes'>Adicionando Exceções</h2>
 
 > ### Adicionando Exceções
 

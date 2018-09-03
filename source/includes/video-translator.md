@@ -41,7 +41,7 @@ Sem a flag `videoEnabled` ativada, o Tradutor de Vídeos não irá funcionar.
 
 Com o plugin devidamente configurado, siga os passos da sessão abaixo para implementar o Player Acessível.
 
-<h2 id='utilizando-o-player-acessivel'>Utilizando o Player Acessível</h2>
+<h2 id='utilizando-o-player-acessivel-tradutor-de-videos'>Utilizando o Player Acessível</h2>
 
 O plugin oferece um player de vídeo acessível em Libras, que suporta os seguintes **Techs**:
 
@@ -58,7 +58,8 @@ Os tipos de legenda suportados são:
 - SRT.
 
 <aside class="info">
-Nota: Para utilizar o player acessível, certifique-se de estar com o plugin devidamente configurado de acordo com a sessão [Tradutor de Vídeos > Começando](index.html?html#come-ando14).
+
+Nota: Para utilizar o player acessível, certifique-se de estar com o plugin devidamente configurado de acordo com a sessão [Tradutor de Vídeos > Começando](index.html?html#comecando-tradutor-de-videos).
 </aside>
 
 ```html
@@ -180,10 +181,12 @@ Conforme o exemplo ao lado direito, também é possível efetuar o replace de um
 
 <h3 id='exemplos-videos-dinamicos'>Exemplos</h3>
 
-## Legendas
+<h2 id='legendas-tradutor-de-videos'>Legendas</h2>
+
 As legendas precisam ser breves e de acordo com o tempo que será utilizado nelas para que o Hugo possa traduzí-las de forma que ele não acelere e não perca a sincronia com o vídeo.
 
-### Exemplos
+<h3 id='exemplos-legendas'>Exemplos</h3>
+
 Abaixo está um exemplo de legenda boa e outro de legenda ruim, respectivamente:
 
 
@@ -197,7 +200,8 @@ Asteroblaudo corria pela rua do alagamento no deserto para poder fugir de um cas
 
 Enquanto que o exemplo acima retrata uma prática ruim para legendas.
 
-## Resolvendo Conflitos de Estilo (css)
+<h2 id='resolvendo-conflitos-de-estilo-css'>Resolvendo Conflitos de Estilo (css)</h2>
+
 É provável que na substituição do elemento `<iframe />` do Youtube, pelo elemento `<div />` com a classe CSS video-js do player da Hand Talk, você perca a referência do elemento no seu CSS e Javascript.
 
 No exemplo ao lado o código CSS espera que o filho da classe video seja um iframe:
