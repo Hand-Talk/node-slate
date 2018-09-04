@@ -1,6 +1,6 @@
-# Tradutor de Sites
+<h1 id='tradutor-de-sites'>Tradutor de Sites</h1>
 
-## Começando
+<h2 id='comecando-tradutor-de-sites'>Começando</h2>
 
 > Exemplo de Instalação 
  
@@ -39,7 +39,7 @@ Sem um token válido, a ferramenta não irá funcionar, emitindo o erro  ***O se
 Você pode adquirir um token para o seu domínio em [account.handtalk.me](https://account.handtalk.me/). <br /> 
 Ou fale com um de nossos consultores em [handtalk.me/sites](http://handtalk.me/sites).
 
-## Parâmetros
+<h2 id='parametros'>Parâmetros</h2>
 
 Você pode pode preferir habilitar/desabilitar algumas funcionalidades do Tradutor de Sites, para isso utilize os parâmetros abaixo:
 
@@ -59,7 +59,7 @@ Você pode pode preferir habilitar/desabilitar algumas funcionalidades do Tradut
 | mobileConfig | Objeto de configuração para a plataforma mobile, quando definido, sobscreve as configurações padrões de HT. | Object | { }
 
 
-### Parâmetros para versão mobile
+<h3 id='parametros-para-versao-mobile'>Parâmetros para versão mobile</h3>
 
 > Exemplo de Parâmetros Exclusivos para Versão Mobile
 
@@ -108,7 +108,28 @@ Você pode passar parâmetros especificos para dispositivos movéis, para isso b
 
 Consulte o exemplo ao lado.
 
-## Adicionando Exceções
+<h2 id='eventos-tradutor-de-sites'>Eventos</h2>
+
+Os eventos que podem ser disparados pela instancia de HT são:
+
+| Eventos        | Descrição           | Retorno  |
+| ------------- |:-------------:| -----:|
+| authenticating      | Autenticando | undefined |
+| errorOnAuth      | Erro ao autenticar      |   undefined |
+| authenticated | Autenticado      |    	undefined |
+| notCompatible | Navegador ou hardware não compatível      |    string: 'withoutCanvas' ou 'withoutWebGL' ou 'hardwareDoesNotSupport' |
+| customizing | Customizando      |    undefined |
+| customized | Customizado      |    undefined |
+| hugoLoaded | Hugo carregado      |    undefined |
+| activated | Feature de texto ou vídeo ativada      |    string: 'textManager' ou 'videoManager' |
+| translate	 | Dispara quando um texto é capturado e enviado para tradução pela feature de tradução de texto      |    string: texto capturado |
+| translating	 | Traduzindo texto no servidor da Hand Talk      |    undefined |
+| errorOnTranslate	 | Erro ao traduzir texto no servidor da Hand Talk      |    undefined |
+| translated	 | Texto traduzido corretamente no Servidor da Hand Talk      |    undefined |
+| signalized		 | Sentença sinalizada por completo      |    undefined |
+| videoManagerReady		 | Disparado quando o assistente de vídeo esta pronto, utilize para chamar as funções de replace manualmente     |    undefined |
+
+<h2 id='adicionando-excecoes'>Adicionando Exceções</h2>
 
 > Adicionando Exceções
 
@@ -155,7 +176,7 @@ var ht = new HT({
 
 Em alguns casos, pode haver algum conflito entre o código da Hand Talk e algum script que o site possui. Para evitar esse conflito, basta adicionar esse elemento como uma exceção.
 
-### Tratamento de Exceção de ID e CLASS:
+<h3 id='tratamento-de-excecao-de-id-e-class'>Tratamento de Exceção de ID e CLASS:</h3>
 
 Caso seu site tenha algum problema de conflito com um scripts de carousel, por exemplo, você pode adicionar o elemento na propriedade `exceptions`.
 
@@ -169,7 +190,7 @@ No exemplo ao lado, colocamos na exceção um ID de elemento HTML e uma classe C
 
 **Importante**: Dependendo da linguagem e/ou lógica de programação aplicada no desenvolvimento do website, para possibilitar o pleno funcionamento ou aprimorar os resultados obtidos pelo serviço, pode ser necessária a realização de outras customizações no código da Hand Talk, que deverão ser feitas pelo cliente.
 
-## Iframes Dinâmicos
+<h2 id='iframes-dinamicos'>Iframes Dinâmicos</h2>
 
 > Exemplo de Compatibilidade com Iframes Dinâmicos
 

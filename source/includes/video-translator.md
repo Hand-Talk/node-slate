@@ -1,6 +1,6 @@
-# Tradutor de Vídeos
+<h1 id='tradutor-de-videos'>Tradutor de Vídeos</h1>
 
-## Começando
+<h2 id='comecando-tradutor-de-videos'>Começando</h2>
 
 > Exemplo de Instalação
  
@@ -41,7 +41,7 @@ Sem a flag `videoEnabled` ativada, o Tradutor de Vídeos não irá funcionar.
 
 Com o plugin devidamente configurado, siga os passos da sessão abaixo para implementar o Player Acessível.
 
-## Utilizando o Player Acessível
+<h2 id='utilizando-o-player-acessivel-tradutor-de-videos'>Utilizando o Player Acessível</h2>
 
 O plugin oferece um player de vídeo acessível em Libras, que suporta os seguintes **Techs**:
 
@@ -58,7 +58,8 @@ Os tipos de legenda suportados são:
 - SRT.
 
 <aside class="info">
-Nota: Para utilizar o player acessível, certifique-se de estar com o plugin devidamente configurado de acordo com a sessão [Tradutor de Vídeos > Começando](index.html?html#come-ando14).
+
+Nota: Para utilizar o player acessível, certifique-se de estar com o plugin devidamente configurado de acordo com a sessão [Tradutor de Vídeos > Começando](index.html?html#comecando-tradutor-de-videos).
 </aside>
 
 
@@ -80,7 +81,7 @@ Em seguida, separando por ponto e virgula (`;`), defina o tipo e caminho da lege
 
 `subtitle=<CAPTIONS_TYPE>:<CAPTIONS_URL>`
 
-### Exemplo com Tech do Youtube
+<h3 id='exemplo-com-tech-youtube'>Exemplo com Tech do Youtube</h3>
 
 > Exemplo: Criando um vídeo com o **tech** youtube
  
@@ -96,6 +97,7 @@ Em seguida, separando por ponto e virgula (`;`), defina o tipo e caminho da lege
 Caso o campo subtitle fique em branco em um src do tipo Youtube, a legenda será obtida automaticamente. Como no exemplo ao lado.
  
 <aside class="info">
+
 Nota: No source do tipo Youtube, você pode optar por adicionar o link do vídeo, ou apenas o ID. Conforme exemplo ao lado.
 </aside>
  
@@ -107,9 +109,10 @@ Caso o vídeo esteja definido como **não listado**, ou algum outro tipo de rest
 
 O exemplo ao lado *(Criando um vídeo com o tech youtube)* deve gerar o seguinte player:
 
-<video data-ht="src=youtube:H2Io3y98FV4"></video>
 
-### Exemplo com Tech do Vimeo
+<video class='video-js' data-ht="src=youtube:H2Io3y98FV4"></video>
+
+<h3 id='exemplo-com-tech-do-vimeo'>Exemplo com Tech do Vimeo</h3>
 
 > Exemplo: Criando um vídeo com o **tech** vimeo
 
@@ -125,9 +128,11 @@ O exemplo ao lado *(Criando um vídeo com o tech youtube)* deve gerar o seguinte
 Para vídeos hospedados no Vimeo, você deve informar a legenda manualmente.
 Como no exemplo ao lado, o vídeo deve aparecer da seguinte forma:
 
+
 <video data-ht="src=vimeo:https://player.vimeo.com/video/259226390;subtitle=vtt:assets/HandTalk.vtt"></video>
+
   
-### Exemplo com Tech de MP4/WEBM
+<h3 id='exemplo-com-tech-de-mp4-webm'>Exemplo com Tech de MP4/WEBM/OGG</h3>
  
 > Exemplo: Criando um vídeo com o **tech** mp4
 
@@ -144,7 +149,7 @@ Utilize para vídeos e legendas hospedadas na internet com link direto - Exemplo
 
 <video data-ht="src=mp4:assets/HandTalk.mp4;subtitle=vtt:assets/HandTalk.vtt"></video>
 
-### Exemplo com Tech da SambaTech
+<h3 id='exemplo-com-tech-da-sambatech'>Exemplo com Tech da SambaTech</h3>
 
 > Exemplo: Criando um vídeo com o **tech** sambatech
 
@@ -158,9 +163,10 @@ Utilize para vídeos e legendas hospedadas na internet com link direto - Exemplo
 ```
 
 Utilize para vídeos hospedados na SambaTech e legendas hospedadas na internet com link direto - Exemplo ao lado.
+
 <video data-ht="src=sambatech:https://fast.player.liquidplatform.com/pApiv2/embed/c750c09d7d04891b7f3f5c9a9337d6b9/a40cc34d36f0ee05ae55a971b427888e;subtitle=vtt:assets/HandTalk.vtt"></video>
 
-## Utilizando Apenas o Tradutor de Vídeos
+<h2 id='utilizando-apenas-o-tradutor-de-videos'>Utilizando Apenas o Tradutor de Vídeos</h2>
 
 > Exemplo de Utilização
 
@@ -214,7 +220,7 @@ var ht = new HT({
 Em alguns casos pode ser necessário adicionar apenas o tradutor de vídeos na página. Geralmente acontece quando a página inteira só possui um vídeo e, está incorporada em outra página em formato de iframe. Pra isso basta desativar o tradutor de textos, assim o botão de acessibilidade em Libras não irá aparecer nas laterais.
 
 
-## Replace Automático de Vídeos
+<h2 id='replace-automatico-de-videos'>Replace Automático de Vídeos</h2>
 
 É possível substituir automaticamente os embeds do Youtube e player existentes do Videojs pelo Player Acessível da HandTalk, sempre que uma legenda for encontrada.
 
@@ -222,7 +228,7 @@ Caso o vídeo não possua legenda no idioma **pt-BR** ou **pt**, o mesmo ficará
 
 ![](images/screenshoots/tradutor-de-videos-fail.png)
 
-## Replace Automático de Embeds do Youtube
+<h2 id='replace-automatico-de-embeds-do-youtube'>Replace Automático de Embeds do Youtube</h2>
 
 > Exemplo de Utilização de Embeds do Youtube
 
@@ -236,6 +242,8 @@ var ht = new HT({
   ytEmbedReplace: true
 });
 ```
+
+<h3 id='replace-automatico-de-embeds-do-youtube'>Replace automático de embeds do Youtube</h3>
 
 ```html
 <body>
@@ -267,7 +275,7 @@ Você pode habilitar o replace automático passando o valor `true` a configuraç
 Se embeds do Youtube forem inseridos após a inicialização do plugin, você deve chamar a função `ht.ytEmbedReplaceAll();` para que os novos vídeos tornem-se acessíveis.
 Também é possível efetuar o replace de um único embed com `ht.ytEmbedReplace(elem)`:
 
-## Replace Automático de Embeds do Videojs
+<h2 id='replace-automatico-de-embeds-do-videojs'>Replace Automático de Embeds do Videojs</h2>
 
 > Exemplo de Utilização de Embeds do Videojs
 
@@ -319,9 +327,17 @@ Se os players do videojs forem inseridos após a inicialização do plugin, voc�
 
 Conforme o exemplo ao lado direito, também é possível efetuar o replace de um único  player com `ht.videojsReplace(vjsPlayer):`
 
-## Vídeos Dinâmicos
+<h2 id='videos-dinamicos'>Vídeos Dinâmicos</h2>
 
-> Exemplo: Embeds dinâmicos do youtube
+Caso o elemento do vídeo seja adicionado ao HTML dinâmicamente depois do carregamento do plugin, você precisa chamar a função de busca para renderizar os players novos.
+
+<aside class="info">
+
+Nota: Para realizar esse procedimento, certifique-se de estar com o plugin devidamente configurado de acordo com a sessão [Tradutor de Vídeos > Começando](index.html?html#comecando-tradutor-de-videos).
+
+</aside>
+
+> Exemplo de Utilização de Embeds dinâmicos do youtube
 
 ```javascript
 var ht = new HT({
@@ -367,7 +383,7 @@ window.setTimeout(function() {
       var iframe = document.createElement('iframe');
       iframe.src='https://www.youtube.com/embed/a9qsp7l5C3o';
       document.body.appendChild(iframe);
-      
+
       // Aguarda o iframe carregar
       iframe.onload = function() {
         // Torna o embed acessível em Libras 
@@ -381,13 +397,9 @@ window.setTimeout(function() {
 </body>
 ```
 
-Caso o elemento do vídeo seja adicionado ao HTML dinâmicamente depois do carregamento do plugin, você precisa chamar a função de busca para renderizar os players novos.
+<h3 id='exemplos-videos-dinamicos'>Exemplos</h3>
 
-<aside class="info">
-Nota: Para realizar esse procedimento, certifique-se de estar com o plugin devidamente configurado de acordo com a sessão [Tradutor de Vídeos > Começando](#come-ando14).
-</aside>
-
-Para player construidos manualmente, ou seja, utilizando o [Player Acessível](#utilizando-o-player-acess-vel):
+Para player construidos manualmente, ou seja, utilizando o [Tradutor de Vídeos > Player Acessível](index.html?html#utilizando-o-player-acessivel-tradutor-de-videos):
 
 `videoManager.search();`
 
@@ -399,26 +411,31 @@ Para players existentes do videojs:
 
 `replaceVideoJsAll()` ou `replaceVideoJs(vjsplayer)`.
 
-Para mais detalhes sobre o replace consulte a guia [Replace Automático de Vídeos](#replace-autom-tico-de-v-deos)
+Para mais detalhes sobre o replace consulte a guia [Tradutor de Vídeos > Replace Automático de Vídeos](index.html?html#replace-automatico-de-videos).
 
-## Legendas
+<h2 id='legendas-tradutor-de-videos'>Legendas</h2>
+
+
 As legendas precisam ser breves e de acordo com o tempo que será utilizado nelas para que o Hugo possa traduzí-las de forma que ele não acelere e não perca a sincronia com o vídeo.
 
-### Exemplos
+<h3 id='exemplos-legendas'>Exemplos</h3>
+
 Abaixo está um exemplo de legenda boa e outro de legenda ruim, respectivamente:
 
 
-`00:00:04.868 --> 00:00:10.500` </br>
+`00:00:04.868 --> 00:00:10.500`<br />
 Os grandes feitos da humanidade seriam inúteis se não houvesse a comunicação. 
 
 O exemplo acima retrata uma prática boa para legendas.
 
-`00:00:01.000 --> 00:00:01.500`</br>
+`00:00:01.000 --> 00:00:01.500`<br />
 Asteroblaudo corria pela rua do alagamento no deserto para poder fugir de um casal de rinocerontes.
 
 Enquanto que o exemplo acima retrata uma prática ruim para legendas.
 
-## Resolvendo Conflitos de Estilo (css)
+<h2 id='resolvendo-conflitos-de-estilo-css'>Resolvendo Conflitos de Estilo (css)</h2>
+
+É provável que na substituição do elemento `<iframe />` do Youtube, pelo elemento `<div />` com a classe CSS video-js do player da Hand Talk, você perca a referência do elemento no seu CSS e Javascript.
 
 > Exemplo de Estrutura Quebrada
 
