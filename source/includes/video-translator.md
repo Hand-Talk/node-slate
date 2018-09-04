@@ -132,7 +132,7 @@ Como no exemplo ao lado, o vídeo deve aparecer da seguinte forma:
 <video data-ht="src=vimeo:https://player.vimeo.com/video/259226390;subtitle=vtt:assets/HandTalk.vtt"></video>
 
   
-<h3 id='exemplo-com-tech-de-mp4-webm'>Exemplo com Tech de MP4/WEBM</h3>
+<h3 id='exemplo-com-tech-de-mp4-webm'>Exemplo com Tech de MP4/WEBM/OGG</h3>
  
 > Exemplo: Criando um vídeo com o **tech** mp4
 
