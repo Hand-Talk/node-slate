@@ -423,12 +423,12 @@ As legendas precisam ser breves e de acordo com o tempo que será utilizado nela
 Abaixo está um exemplo de legenda boa e outro de legenda ruim, respectivamente:
 
 
-`00:00:04.868 --> 00:00:10.500` </br>
+`00:00:04.868 --> 00:00:10.500`<br />
 Os grandes feitos da humanidade seriam inúteis se não houvesse a comunicação. 
 
 O exemplo acima retrata uma prática boa para legendas.
 
-`00:00:01.000 --> 00:00:01.500`</br>
+`00:00:01.000 --> 00:00:01.500`<br />
 Asteroblaudo corria pela rua do alagamento no deserto para poder fugir de um casal de rinocerontes.
 
 Enquanto que o exemplo acima retrata uma prática ruim para legendas.
