@@ -109,7 +109,8 @@ Caso o vídeo esteja definido como **não listado**, ou algum outro tipo de rest
 
 O exemplo ao lado *(Criando um vídeo com o tech youtube)* deve gerar o seguinte player:
 
-<video data-ht="src=youtube:H2Io3y98FV4"></video>
+
+<video class='video-js' data-ht="src=youtube:H2Io3y98FV4"></video>
 
 <h3 id='exemplo-com-tech-do-vimeo'>Exemplo com Tech do Vimeo</h3>
 
@@ -127,7 +128,9 @@ O exemplo ao lado *(Criando um vídeo com o tech youtube)* deve gerar o seguinte
 Para vídeos hospedados no Vimeo, você deve informar a legenda manualmente.
 Como no exemplo ao lado, o vídeo deve aparecer da seguinte forma:
 
+
 <video data-ht="src=vimeo:https://player.vimeo.com/video/259226390;subtitle=vtt:assets/HandTalk.vtt"></video>
+
   
 <h3 id='exemplo-com-tech-de-mp4-webm'>Exemplo com Tech de MP4/WEBM</h3>
  
@@ -326,11 +329,15 @@ Conforme o exemplo ao lado direito, também é possível efetuar o replace de um
 
 <h2 id='videos-dinamicos'>Vídeos Dinâmicos</h2>
 
-> Exemplo de Utilização de Embeds dinâmicos do youtube
+Caso o elemento do vídeo seja adicionado ao HTML dinâmicamente depois do carregamento do plugin, você precisa chamar a função de busca para renderizar os players novos.
 
-```html
-<!-- Confira o exemplo em html-->
-```
+<aside class="info">
+
+Nota: Para realizar esse procedimento, certifique-se de estar com o plugin devidamente configurado de acordo com a sessão [Tradutor de Vídeos > Começando](index.html?html#comecando-tradutor-de-videos).
+
+</aside>
+
+> Exemplo de Utilização de Embeds dinâmicos do youtube
 
 ```javascript
 var ht = new HT({
@@ -356,10 +363,6 @@ window.setTimeout(function() {
 }, 3000);
 ```
 
-<h3 id='exemplos-videos-dinamicos'>Exemplos</h3>
-
-<h2 id='legendas-tradutor-de-videos'>Legendas</h2>
-
 ```html
 <body>
 
@@ -380,7 +383,7 @@ window.setTimeout(function() {
       var iframe = document.createElement('iframe');
       iframe.src='https://www.youtube.com/embed/a9qsp7l5C3o';
       document.body.appendChild(iframe);
-      
+
       // Aguarda o iframe carregar
       iframe.onload = function() {
         // Torna o embed acessível em Libras 
@@ -394,13 +397,7 @@ window.setTimeout(function() {
 </body>
 ```
 
-Caso o elemento do vídeo seja adicionado ao HTML dinâmicamente depois do carregamento do plugin, você precisa chamar a função de busca para renderizar os players novos.
-
-<aside class="info">
-
-Nota: Para realizar esse procedimento, certifique-se de estar com o plugin devidamente configurado de acordo com a sessão [Tradutor de Vídeos > Começando](index.html?html#comecando-tradutor-de-videos).
-
-</aside>
+<h3 id='exemplos-videos-dinamicos'>Exemplos</h3>
 
 Para player construidos manualmente, ou seja, utilizando o [Tradutor de Vídeos > Player Acessível](index.html?html#utilizando-o-player-acessivel-tradutor-de-videos):
 
@@ -414,7 +411,10 @@ Para players existentes do videojs:
 
 `replaceVideoJsAll()` ou `replaceVideoJs(vjsplayer)`.
 
-Para mais detalhes sobre o replace consulte a guia [Tradutor de Vídeos > Replace Automático de Vídeos](index.html?html#replace-automatico-de-videos)
+Para mais detalhes sobre o replace consulte a guia [Tradutor de Vídeos > Replace Automático de Vídeos](index.html?html#replace-automatico-de-videos).
+
+<h2 id='legendas-tradutor-de-videos'>Legendas</h2>
+
 
 As legendas precisam ser breves e de acordo com o tempo que será utilizado nelas para que o Hugo possa traduzí-las de forma que ele não acelere e não perca a sincronia com o vídeo.
 
