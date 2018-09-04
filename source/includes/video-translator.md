@@ -326,7 +326,7 @@ Conforme o exemplo ao lado direito, também é possível efetuar o replace de um
 
 <h2 id='videos-dinamicos'>Vídeos Dinâmicos</h2>
 
-> Exemplo: Embeds dinâmicos do youtube
+> Exemplo de Utilização de Embeds dinâmicos do youtube
 
 ```html
 <!-- Confira o exemplo em html-->
