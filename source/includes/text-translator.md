@@ -157,7 +157,7 @@ var ht = new HT({
 
 ![](images/screenshoots/custom-button.png)
 
-Você pode utilizar o parâmetro `customButtonStyle` para aplicar uma customização no botão de acessibilidade na versão mobile,
+Você pode utilizar o parâmetro `customButtonStyle` para aplicar uma customização no botão de acessibilidade na versão mobile.
 
 Ao invocar `HT`, no parâmetro `mobileConfig`, defina também o objeto `customButtonStyle`. Consulte os exemplos ao lado.
 
@@ -213,7 +213,7 @@ var ht = new HT({
 });
 ```
 
-Você pode definir apenas o parâmetro que deseja aplicar. Com o exemplo ao lado, apenas a borda arredondada será aplicada ao botão. Os demais parametros ficarão com os valores padrões da Hand Talk.
+Você pode definir apenas o parâmetro que deseja aplicar. Com o exemplo ao lado, apenas a borda arredondada será aplicada ao botão. Os demais parâmetros ficarão com os valores padrões da Hand Talk.
 
 
 <h2 id='eventos-tradutor-de-sites'>Eventos</h2>
