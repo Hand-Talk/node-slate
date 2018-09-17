@@ -43,23 +43,24 @@ Ou fale com um de nossos consultores em [handtalk.me/sites](http://handtalk.me/s
 
 Você pode pode preferir habilitar/desabilitar algumas funcionalidades do Tradutor de Sites, para isso utilize os parâmetros abaixo:
 
-| Configurações | Descrição | Valores | Padrão |
-|---|---|---|---|
-| textEnabled | Quando verdadeiro: exibe o tradutor de sites para textos. | false ou true | true |
-| videoEnabled | Quando verdadeiro: monta os players acessíveis em língua de sinais. | false ou true | false |
-| side | Define o posicionamento da janela do tradutor no site. O Tradutor de Sites pode ser inicializado do lado esquerdo ou do lado direito da tela. | "right" ou "left" | "right" |
-| align | Define o alinhamento horizontal da janela do tradutor no site. | "default" ou "top" ou "bottom" | "default" |
-| zIndex | Define o posicionamento da profundidade do tradutor no site, ou seja, determinar se o Tradutor de Sites estará mais próximo ou mais afastado da tela. | Inteiros | 1000000 |
-| maxTextSize | Define o tamanho máximo de caracteres para captura de texto em um elemento. | Inteiros | 500 |
-| doNotTrack | Se o valor desta propriedade for verdadeiro, as frases traduzidas não serão armazenadas ou utilizada para a melhoria do sistema de tradução. | false ou true | false |
-| exceptions | Lista de queries que serão ignoradas pelo plugin, ex.: ```['a', 'form', '.main', '#site-title']``` | array | [ ] |
-| ytEmbedReplace | Quando verdadeiro substitui os embeds do Youtube por players acessíveis em língua de sinais. | false ou true | false |
-| videojsReplace | Quando verdadeiro adiciona os componentes de acessibilidade em uma instancia atual do videojs | false ou true | false |
-| mobileEnabled | Quando verdadeiro ativa o tradutor de sites em dispositivos móveis. | false ou true | true
-| mobileConfig | Objeto de configuração para a plataforma mobile, quando definido, sobscreve as configurações padrões de HT. | Object | { }
+| Configurações  | Descrição                                                                                                                                             | Valores                        | Padrão    |
+| -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------ | --------- |
+| textEnabled    | Quando verdadeiro: exibe o tradutor de sites para textos.                                                                                             | false ou true                  | true      |
+| videoEnabled   | Quando verdadeiro: monta os players acessíveis em língua de sinais.                                                                                   | false ou true                  | false     |
+| side           | Define o posicionamento da janela do tradutor no site. O Tradutor de Sites pode ser inicializado do lado esquerdo ou do lado direito da tela.         | "right" ou "left"              | "right"   |
+| align          | Define o alinhamento horizontal da janela do tradutor no site.                                                                                        | "default" ou "top" ou "bottom" | "default" |
+| zIndex         | Define o posicionamento da profundidade do tradutor no site, ou seja, determinar se o Tradutor de Sites estará mais próximo ou mais afastado da tela. | Inteiros                       | 1000000   |
+| maxTextSize    | Define o tamanho máximo de caracteres para captura de texto em um elemento.                                                                           | Inteiros                       | 500       |
+| doNotTrack     | Se o valor desta propriedade for verdadeiro, as frases traduzidas não serão armazenadas ou utilizada para a melhoria do sistema de tradução.          | false ou true                  | false     |
+| exceptions     | Lista de queries que serão ignoradas pelo plugin, ex.: ```['a', 'form', '.main', '#site-title']```                                                    | array                          | [ ]       |
+| ytEmbedReplace | Quando verdadeiro substitui os embeds do Youtube por players acessíveis em língua de sinais.                                                          | false ou true                  | false     |
+| videojsReplace | Quando verdadeiro adiciona os componentes de acessibilidade em uma instancia atual do videojs                                                         | false ou true                  | false     |
+| mobileEnabled  | Quando verdadeiro ativa o tradutor de sites em dispositivos móveis.                                                                                   | false ou true                  | true      |
+| mobileConfig   | Objeto de configuração para a plataforma mobile, quando definido, sobscreve as configurações padrões de HT.                                           | Object                         | { }       |
 
 
-<h3 id='parametros-para-versao-mobile'>Parâmetros para versão mobile</h3>
+<h2 id='parametros-para-versao-mobile'>Parâmetros para versão mobile</h2>
+
 
 > Exemplo de Parâmetros Exclusivos para Versão Mobile
 
@@ -100,34 +101,141 @@ var ht = new HT({
 </body>
 ```
 
-Você pode passar parâmetros especificos para dispositivos movéis, para isso basta utilizar a propriedade ```mobileConfig```, e passar os parâmetros que serão sobrescritos. O Parâmetro ```bottom``` é exclusivo para dispositivos movéis.
+Você pode passar parâmetros especificos para dispositivos movéis, para isso basta utilizar a propriedade ```mobileConfig```, e passar os parâmetros que serão sobrescritos. Os parâmetros abaixo são exclusivos para dispositivos móveis.
 
-| Configurações | Descrição                                                                                                                                                     | Valores | Padrão |
-| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- | ------ |
-| bottom        | Posicionamento do botão de acessibilidade e do Hugo em relação a parte inferior da tela na versão mobile. Especifique também a unidade de medida (em, %, px). | string  | "0px"  |
+| Configurações     | Descrição                                                                                                                                                     | Valores                                              | Padrão    |
+| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------- | --------- |
+| bottom            | Posicionamento do botão de acessibilidade e do Hugo em relação a parte inferior da tela na versão mobile. Especifique também a unidade de medida (em, %, px). | string                                               | "0px"     |
+| customButtonStyle | Define uma customização para o botão de acessibilidade na versão mobile.                                                                                      | {borderRadius, size, horizontalMargin, bottomMargin} | undefined |
 
 Consulte o exemplo ao lado.
+
+<h2 id='customizando-botao-mobile'>Customizando o botão na versão mobile</h2>
+
+> Exemplo de customização do botão
+
+```html
+<body>
+
+  <!-- Pega a ultima versão do plugin Hand Talk -->
+  <script src="https://api.handtalk.me/plugin/latest/handtalk.min.js"></script>
+
+  <script>
+  var ht = new HT({
+    // Troque por seu token de acesso
+    token: "<TOKEN>",
+    mobileConfig: {
+      // Aplica uma customizacão no botão de acessibilidade
+      customButtonStyle: {
+        borderRadius: '6px',
+        bottomMargin: '60px',
+        horizontalMargin: '4.4vw',
+        size: '40px'
+      }
+    }
+  });
+  </script>
+</body>
+```
+
+```javascript
+var ht = new HT({
+  // Troque por seu token de acesso
+  token: 'SEU TOKEN',
+  // Define uma configuração especifica para a versão mobile
+  mobileConfig: {
+    // Aplica uma customizacão no botão de acessibilidade
+    customButtonStyle: {
+      borderRadius: '6px',
+      bottomMargin: '60px',
+      horizontalMargin: '4.4vw',
+      size: '40px'
+    }
+  }
+});
+```
+
+![](images/screenshoots/custom-button.png)
+
+Você pode utilizar o parâmetro `customButtonStyle` para aplicar uma customização no botão de acessibilidade na versão mobile,
+
+Ao invocar `HT`, no parâmetro `mobileConfig`, defina também o objeto `customButtonStyle`. Consulte os exemplos ao lado.
+
+O objeto `customButtonStyle` suporta os parâmetros:
+
+| Configurações    | Descrição                                                                         | Valores | Padrão    |
+| ---------------- | --------------------------------------------------------------------------------- | ------- | --------- |
+| size             | Tamanho do botão, o valor será aplicado na largura e na altura.                   | string  | undefined |
+| borderRadius     | Nível de arredondamento do botão.                                                 | string  | undefined |
+| horizontalMargin | Margem entre o posicionamento definido no parâmetro `side` e as laterais da tela. | string  | undefined |
+| bottomMargin     | Margem entre o botão e a borda inferior da tela.                                  | string  | undefined |
+
+<aside class="info">
+
+**Nota: Para todos os casos, especifique a unidade de medida com os sufixos `em`, `%`, `px`, `vh`, `vw`.**
+
+</aside>
+
+> Exemplo de parâmetro de customização do botão
+
+```html
+<body>
+
+  <!-- Pega a ultima versão do plugin Hand Talk -->
+  <script src="https://api.handtalk.me/plugin/latest/handtalk.min.js"></script>
+
+  <script>
+  var ht = new HT({
+    // Troque por seu token de acesso
+    token: "<TOKEN>",
+    mobileConfig: {
+      // Aplica uma customizacão no botão de acessibilidade
+      customButtonStyle: {
+        borderRadius: '6px'
+      }
+    }
+  });
+  </script>
+</body>
+```
+
+```javascript
+var ht = new HT({
+  // Troque por seu token de acesso
+  token: 'SEU TOKEN',
+  // Define uma configuração especifica para a versão mobile
+  mobileConfig: {
+    // Aplica uma customizacão no botão de acessibilidade
+    customButtonStyle: {
+      borderRadius: '6px'
+    }
+  }
+});
+```
+
+Você pode definir apenas o parâmetro que deseja aplicar. Com o exemplo ao lado, apenas a borda arredondada será aplicada ao botão. Os demais parametros ficarão com os valores padrões da Hand Talk.
+
 
 <h2 id='eventos-tradutor-de-sites'>Eventos</h2>
 
 Os eventos que podem ser disparados pela instancia de HT são:
 
-| Eventos        | Descrição           | Retorno  |
-| ------------- |:-------------:| -----:|
-| authenticating      | Autenticando | undefined |
-| errorOnAuth      | Erro ao autenticar      |   undefined |
-| authenticated | Autenticado      |    	undefined |
-| notCompatible | Navegador ou hardware não compatível      |    string: 'withoutCanvas' ou 'withoutWebGL' ou 'hardwareDoesNotSupport' |
-| customizing | Customizando      |    undefined |
-| customized | Customizado      |    undefined |
-| hugoLoaded | Hugo carregado      |    undefined |
-| activated | Feature de texto ou vídeo ativada      |    string: 'textManager' ou 'videoManager' |
-| translate	 | Dispara quando um texto é capturado e enviado para tradução pela feature de tradução de texto      |    string: texto capturado |
-| translating	 | Traduzindo texto no servidor da Hand Talk      |    undefined |
-| errorOnTranslate	 | Erro ao traduzir texto no servidor da Hand Talk      |    undefined |
-| translated	 | Texto traduzido corretamente no Servidor da Hand Talk      |    undefined |
-| signalized		 | Sentença sinalizada por completo      |    undefined |
-| videoManagerReady		 | Disparado quando o assistente de vídeo esta pronto, utilize para chamar as funções de replace manualmente     |    undefined |
+| Eventos           | Descrição                                                                                                 | Retorno                                                               |
+| ----------------- | :-------------------------------------------------------------------------------------------------------: | --------------------------------------------------------------------: |
+| authenticating    | Autenticando                                                                                              | undefined                                                             |
+| errorOnAuth       | Erro ao autenticar                                                                                        | undefined                                                             |
+| authenticated     | Autenticado                                                                                               | undefined                                                             |
+| notCompatible     | Navegador ou hardware não compatível                                                                      | string: 'withoutCanvas' ou 'withoutWebGL' ou 'hardwareDoesNotSupport' |
+| customizing       | Customizando                                                                                              | undefined                                                             |
+| customized        | Customizado                                                                                               | undefined                                                             |
+| hugoLoaded        | Hugo carregado                                                                                            | undefined                                                             |
+| activated         | Feature de texto ou vídeo ativada                                                                         | string: 'textManager' ou 'videoManager'                               |
+| translate         | Dispara quando um texto é capturado e enviado para tradução pela feature de tradução de texto             | string: texto capturado                                               |
+| translating       | Traduzindo texto no servidor da Hand Talk                                                                 | undefined                                                             |
+| errorOnTranslate  | Erro ao traduzir texto no servidor da Hand Talk                                                           | undefined                                                             |
+| translated        | Texto traduzido corretamente no Servidor da Hand Talk                                                     | undefined                                                             |
+| signalized        | Sentença sinalizada por completo                                                                          | undefined                                                             |
+| videoManagerReady | Disparado quando o assistente de vídeo esta pronto, utilize para chamar as funções de replace manualmente | undefined                                                             |
 
 <h2 id='adicionando-excecoes'>Adicionando Exceções</h2>
 
