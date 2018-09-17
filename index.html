@@ -415,7 +415,7 @@
             </tr>
           </tbody>
         </table>
-        <h3 id='parametros-para-versao-mobile'>Parâmetros para versão mobile</h3>
+        <h2 id='parametros-para-versao-mobile'>Parâmetros para versão mobile</h2>
         <blockquote>
           <p>Exemplo de Parâmetros Exclusivos para Versão Mobile</p>
         </blockquote> <pre class="highlight javascript"><code><span class="hljs-keyword">var</span> ht = <span class="hljs-keyword">new</span> HT({
@@ -448,7 +448,7 @@
   });
   </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span></code></pre>
-        <p>Você pode passar parâmetros especificos para dispositivos movéis, para isso basta utilizar a propriedade <code>mobileConfig</code>, e passar os parâmetros que serão sobrescritos. O Parâmetro <code>bottom</code> é exclusivo para dispositivos movéis.</p>
+        <p>Você pode passar parâmetros especificos para dispositivos movéis, para isso basta utilizar a propriedade <code>mobileConfig</code>, e passar os parâmetros que serão sobrescritos. Os parâmetros abaixo são exclusivos para dispositivos móveis.</p>
         <table>
           <thead>
             <tr>
@@ -465,9 +465,128 @@
               <td>string</td>
               <td>&quot;0px&quot;</td>
             </tr>
+            <tr>
+              <td>customButtonStyle</td>
+              <td>Define uma customização para o botão de acessibilidade na versão mobile.</td>
+              <td>{borderRadius, size, horizontalMargin, bottomMargin}</td>
+              <td>undefined</td>
+            </tr>
           </tbody>
         </table>
         <p>Consulte o exemplo ao lado.</p>
+        <h2 id='customizando-botao-mobile'>Customizando o botão na versão mobile</h2>
+        <blockquote>
+          <p>Exemplo de customização do botão</p>
+        </blockquote> <pre class="highlight html"><code><span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+
+  <span class="hljs-comment">&lt;!-- Pega a ultima versão do plugin Hand Talk --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://api.handtalk.me/plugin/latest/handtalk.min.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="actionscript">
+  <span class="hljs-keyword">var</span> ht = <span class="hljs-keyword">new</span> HT({
+    <span class="hljs-comment">// Troque por seu token de acesso</span>
+    token: <span class="hljs-string">"&lt;TOKEN&gt;"</span>,
+    mobileConfig: {
+      <span class="hljs-comment">// Aplica uma customizacão no botão de acessibilidade</span>
+      customButtonStyle: {
+        borderRadius: <span class="hljs-string">'6px'</span>,
+        bottomMargin: <span class="hljs-string">'60px'</span>,
+        horizontalMargin: <span class="hljs-string">'4.4vw'</span>,
+        size: <span class="hljs-string">'40px'</span>
+      }
+    }
+  });
+  </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span></code></pre><pre class="highlight javascript"><code><span class="hljs-keyword">var</span> ht = <span class="hljs-keyword">new</span> HT({
+  <span class="hljs-comment">// Troque por seu token de acesso</span>
+  token: <span class="hljs-string">'SEU TOKEN'</span>,
+  <span class="hljs-comment">// Define uma configuração especifica para a versão mobile</span>
+  mobileConfig: {
+    <span class="hljs-comment">// Aplica uma customizacão no botão de acessibilidade</span>
+    customButtonStyle: {
+      <span class="hljs-attr">borderRadius</span>: <span class="hljs-string">'6px'</span>,
+      <span class="hljs-attr">bottomMargin</span>: <span class="hljs-string">'60px'</span>,
+      <span class="hljs-attr">horizontalMargin</span>: <span class="hljs-string">'4.4vw'</span>,
+      <span class="hljs-attr">size</span>: <span class="hljs-string">'40px'</span>
+    }
+  }
+});</code></pre>
+        <p>
+          <img src="images/screenshoots/custom-button.png" alt="">
+        </p>
+        <p>Você pode utilizar o parâmetro <code>customButtonStyle</code> para aplicar uma customização no botão de acessibilidade na versão mobile.</p>
+        <p>Ao invocar <code>HT</code>, no parâmetro <code>mobileConfig</code>, defina também o objeto <code>customButtonStyle</code>. Consulte os exemplos ao lado.</p>
+        <p>O objeto <code>customButtonStyle</code> suporta os parâmetros:</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Configurações</th>
+              <th>Descrição</th>
+              <th>Valores</th>
+              <th>Padrão</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>size</td>
+              <td>Tamanho do botão, o valor será aplicado na largura e na altura.</td>
+              <td>string</td>
+              <td>undefined</td>
+            </tr>
+            <tr>
+              <td>borderRadius</td>
+              <td>Nível de arredondamento do botão.</td>
+              <td>string</td>
+              <td>undefined</td>
+            </tr>
+            <tr>
+              <td>horizontalMargin</td>
+              <td>Margem entre o posicionamento definido no parâmetro <code>side</code> e as laterais da tela.</td>
+              <td>string</td>
+              <td>undefined</td>
+            </tr>
+            <tr>
+              <td>bottomMargin</td>
+              <td>Margem entre o botão e a borda inferior da tela.</td>
+              <td>string</td>
+              <td>undefined</td>
+            </tr>
+          </tbody>
+        </table>
+        <aside class="info">
+          <strong>Nota: Para todos os casos, especifique a unidade de medida com os sufixos <code>em</code>, <code>%</code>, <code>px</code>, <code>vh</code>, <code>vw</code>.</strong>
+        </aside>
+        <blockquote>
+          <p>Exemplo de parâmetro de customização do botão</p>
+        </blockquote> <pre class="highlight html"><code><span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+
+  <span class="hljs-comment">&lt;!-- Pega a ultima versão do plugin Hand Talk --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://api.handtalk.me/plugin/latest/handtalk.min.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="actionscript">
+  <span class="hljs-keyword">var</span> ht = <span class="hljs-keyword">new</span> HT({
+    <span class="hljs-comment">// Troque por seu token de acesso</span>
+    token: <span class="hljs-string">"&lt;TOKEN&gt;"</span>,
+    mobileConfig: {
+      <span class="hljs-comment">// Aplica uma customizacão no botão de acessibilidade</span>
+      customButtonStyle: {
+        borderRadius: <span class="hljs-string">'6px'</span>
+      }
+    }
+  });
+  </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span></code></pre><pre class="highlight javascript"><code><span class="hljs-keyword">var</span> ht = <span class="hljs-keyword">new</span> HT({
+  <span class="hljs-comment">// Troque por seu token de acesso</span>
+  token: <span class="hljs-string">'SEU TOKEN'</span>,
+  <span class="hljs-comment">// Define uma configuração especifica para a versão mobile</span>
+  mobileConfig: {
+    <span class="hljs-comment">// Aplica uma customizacão no botão de acessibilidade</span>
+    customButtonStyle: {
+      <span class="hljs-attr">borderRadius</span>: <span class="hljs-string">'6px'</span>
+    }
+  }
+});</code></pre>
+        <p>Você pode definir apenas o parâmetro que deseja aplicar. Com o exemplo ao lado, apenas a borda arredondada será aplicada ao botão. Os demais parâmetros ficarão com os valores padrões da Hand Talk.</p>
         <h2 id='eventos-tradutor-de-sites'>Eventos</h2>
         <p>Os eventos que podem ser disparados pela instancia de HT são:</p>
         <table>
