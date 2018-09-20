@@ -215,9 +215,9 @@ O objeto `customButtonStyle` suporta os parâmetros:
 
 Você pode definir apenas o parâmetro que deseja aplicar. Com o exemplo ao lado, apenas a borda arredondada será aplicada ao botão. Os demais parâmetros ficarão com os valores padrões da Hand Talk.
 
-<h2 id='customizando-botoes-acao-mobile'>Customizando os botões de ação na versão mobile</h2>
+<h2 id='alinhamento-botoes-acao-mobile'>Alinhamento dos botões de ação na versão mobile</h2>
 
-> Exemplo de customização dos botões de ação na versão mobile
+> Exemplo de alinhamento dos botões de ação na versão mobile
 
 ```html
 <body>
@@ -231,7 +231,7 @@ Você pode definir apenas o parâmetro que deseja aplicar. Com o exemplo ao lado
     token: "<TOKEN>",
     // Define uma configuração especifica para a versão mobile
     mobileConfig: {
-      // Aplica uma customização nos botões de ação
+      // Alinha os botões de ação no topo
       actionsAlign: 'top'
     }
   });
@@ -245,7 +245,7 @@ var ht = new HT({
   token: 'SEU TOKEN',
   // Define uma configuração especifica para a versão mobile
   mobileConfig: {
-    // Aplica uma customização nos botões de ação
+    // Alinha os botões de ação no topo
     actionsAlign: 'top'
   }
 });
@@ -254,11 +254,11 @@ var ht = new HT({
 ![](images/screenshoots/custom-button-actions.png)
 
 Os botões de ação incluem o botão **Fechar** e o spin **Carregando**.
-Você pode utilizar o parâmetro `actionsAlign` para aplicar uma customização de alinhamento nos botões de ação na versão mobile.
+Você pode utilizar o parâmetro `actionsAlign` para alinhar os botões de ação na versão mobile.
 
 Ao invocar `HT`, no parâmetro `mobileConfig`, defina também o atributo `actionsAlign`. Consulte os exemplos ao lado.
 
-`actionsAlign` suporta os valores:
+Definição de `actionsAlign` suporta os valores:
 
 | Configurações    | Descrição                                                                         | Valores | Padrão    |
 | ---------------- | --------------------------------------------------------------------------------- | ------- | --------- |
