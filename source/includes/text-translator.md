@@ -110,9 +110,9 @@ Você pode passar parâmetros especificos para dispositivos movéis, para isso b
 
 Consulte o exemplo ao lado.
 
-<h2 id='customizando-botao-mobile'>Customizando o botão na versão mobile</h2>
+<h2 id='customizando-botao-acessibilidade-mobile'>Customizando o botão de acessibilidade na versão mobile</h2>
 
-> Exemplo de customização do botão
+> Exemplo de customização do botão de acessibilidade mobile
 
 ```html
 <body>
@@ -161,22 +161,7 @@ Você pode utilizar o parâmetro `customButtonStyle` para aplicar uma customiza�
 
 Ao invocar `HT`, no parâmetro `mobileConfig`, defina também o objeto `customButtonStyle`. Consulte os exemplos ao lado.
 
-O objeto `customButtonStyle` suporta os parâmetros:
-
-| Configurações    | Descrição                                                                         | Valores | Padrão    |
-| ---------------- | --------------------------------------------------------------------------------- | ------- | --------- |
-| size             | Tamanho do botão, o valor será aplicado na largura e na altura.                   | string  | undefined |
-| borderRadius     | Nível de arredondamento do botão.                                                 | string  | undefined |
-| horizontalMargin | Margem entre o posicionamento definido no parâmetro `side` e as laterais da tela. | string  | undefined |
-| bottomMargin     | Margem entre o botão e a borda inferior da tela.                                  | string  | undefined |
-
-<aside class="info">
-
-**Nota: Para todos os casos, especifique a unidade de medida com os sufixos `em`, `%`, `px`, `vh`, `vw`.**
-
-</aside>
-
-> Exemplo de parâmetro de customização do botão
+> Exemplo de parâmetro de customização do botão de acessibilidade
 
 ```html
 <body>
@@ -213,7 +198,71 @@ var ht = new HT({
 });
 ```
 
+O objeto `customButtonStyle` suporta os parâmetros:
+
+| Configurações    | Descrição                                                                         | Valores | Padrão    |
+| ---------------- | --------------------------------------------------------------------------------- | ------- | --------- |
+| size             | Tamanho do botão, o valor será aplicado na largura e na altura.                   | string  | undefined |
+| borderRadius     | Nível de arredondamento do botão.                                                 | string  | undefined |
+| horizontalMargin | Margem entre o posicionamento definido no parâmetro `side` e as laterais da tela. | string  | undefined |
+| bottomMargin     | Margem entre o botão e a borda inferior da tela.                                  | string  | undefined |
+
+<aside class="info">
+
+**Nota: Para todos os casos, especifique a unidade de medida com os sufixos `em`, `%`, `px`, `vh`, `vw`.**
+
+</aside>
+
 Você pode definir apenas o parâmetro que deseja aplicar. Com o exemplo ao lado, apenas a borda arredondada será aplicada ao botão. Os demais parâmetros ficarão com os valores padrões da Hand Talk.
+
+<h2 id='customizando-botoes-acao-mobile'>Customizando os botões de ação na versão mobile</h2>
+
+> Exemplo de customização dos botões de ação na versão mobile
+
+```html
+<body>
+
+  <!-- Pega a ultima versão do plugin Hand Talk -->
+  <script src="https://api.handtalk.me/plugin/latest/handtalk.min.js"></script>
+
+  <script>
+  var ht = new HT({
+    // Troque por seu token de acesso
+    token: "<TOKEN>",
+    // Define uma configuração especifica para a versão mobile
+    mobileConfig: {
+      // Aplica uma customização nos botões de ação
+      actionsAlign: 'top'
+    }
+  });
+  </script>
+</body>
+```
+
+```javascript
+var ht = new HT({
+  // Troque por seu token de acesso
+  token: 'SEU TOKEN',
+  // Define uma configuração especifica para a versão mobile
+  mobileConfig: {
+    // Aplica uma customização nos botões de ação
+    actionsAlign: 'top'
+  }
+});
+```
+
+![](images/screenshoots/custom-button-actions.png)
+
+Os botões de ação incluem o botão **Fechar** e o spin **Carregando**.
+Você pode utilizar o parâmetro `actionsAlign` para aplicar uma customização de alinhamento nos botões de ação na versão mobile.
+
+Ao invocar `HT`, no parâmetro `mobileConfig`, defina também o atributo `actionsAlign`. Consulte os exemplos ao lado.
+
+`actionsAlign` suporta os valores:
+
+| Configurações    | Descrição                                                                         | Valores | Padrão    |
+| ---------------- | --------------------------------------------------------------------------------- | ------- | --------- |
+| actionsAlign             | Alinhamento do botões de ação                    | 'bottom' ou 'top'   | 'bottom' |
 
 
 <h2 id='eventos-tradutor-de-sites'>Eventos</h2>
