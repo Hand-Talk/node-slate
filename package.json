@@ -7,7 +7,7 @@
     "start": "npm run clear-build & gulp serve",
     "clear-build": "rm -r build/",
     "build": "gulp",
-    "deploy": "./deploy.sh"
+    "deploy": "npm run clear-build && ./deploy.sh"
   },
   "repository": {
     "type": "git",
