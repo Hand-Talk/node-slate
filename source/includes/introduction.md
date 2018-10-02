@@ -6,15 +6,15 @@ O plugin desenvolvido pela Hand Talk torna os sites acessíveis em língua de si
 
 O usuário pode ativar a funcionalidade clicando no ícone que representa a acessibilidade em língua de sinais:
 
-![](images/screenshoots/tradutor-de-sites.png)
+![Site da Hand Talk com o Hugo centralizado e uma seta indicando o plugin ao lado direito.](images/screenshoots/tradutor-de-sites.png)
 
 Ao clicar, será aberta uma janela com o intérprete 3D da Hand Talk, o Hugo.
   
-![](images/screenshoots/tradutor-de-sites-2.png)
+![Janela de Libras aberta com o Hugo parado esperando para texto para traduzir.](images/screenshoots/tradutor-de-sites-2.png)
 
 Enquanto a janela estiver aberta, os textos e imagens com descrição ficarão clicáveis. Ao clicar, o Hugo captura o texto e sinaliza sua tradução.
 
-![](images/screenshoots/tradutor-de-sites-3.png)
+![Janela de Libras aberta do lado direito, texto sendo clicado e Hugo traduzindo-o.](images/screenshoots/tradutor-de-sites-3.png)
 
 <h2 id='sobre-o-tradutor-de-videos'>Sobre o Tradutor de Vídeos</h2>
 
@@ -30,11 +30,11 @@ Também é possível adicionar acessibilidade automaticamente aos embeds do Yout
 
 O usuário pode clicar no ícone que representa a acessibilidade em língua de sinais para iniciar o vídeo junto com a tradução do Hugo, ou apenas clicar no botão central para assistir o vídeo sem acessibilidade.
 
-![](images/screenshoots/tradutor-de-videos.png)
+![Exemplo de player acessível com botão centralizado indicando acessibilidade em Libras.](images/screenshoots/tradutor-de-videos.png)
 
 No player acessível você encontra os botões de ativar e desativar tradução para língua de sinais, assistir em tela cheia, tocar e pausar, ajustar volume e a linha do tempo.
 
-![](images/screenshoots/tradutor-de-videos-2.png)
+![Player acessível com o Hugo posicionado à direita traduzindo o vídeo para Libras.](images/screenshoots/tradutor-de-videos-2.png)
 
 Consulte a guia [Tradutor de Vídeos > Começando](index.html?html#comecando-tradutor-de-videos) para um guia de implementação.
 
