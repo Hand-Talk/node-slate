@@ -53,14 +53,14 @@ Abaixo o resultado de testes feitos em sistemas operacionais diferentes usando o
 
 | Navegador / S.O.     | Windows | MacOs | Ubuntu (Linux) |
 | -------------------- | ------- | ----- | -------------- |
-|![](images/icons/chrome.png)    | ✔       | ✔     | ✔             |
-|![](images/icons/firefox.png)    | ✔       | ✔     | ✔             |
-|![](images/icons/opera.png)    | --      | ✔     | --             |
-|![](images/icons/safari.png)   | ✔       | ✔     | ✔             |
-|![](images/icons/edge.png)   | ✔       | --    | --             |
-|![](images/icons/internet-explorer.png)<span style="margin-left: 15px;">**11**</span>   | ✔       | --    | --             |
-|![](images/icons/internet-explorer.png)<span style="margin-left: 15px;">**10**</span>   | ✖       | --    | --             |
-|![](images/icons/internet-explorer.png)<span style="margin-left: 15px;">**9**</span>  | ✖       | --    | --             |
+|![Logotipo Chrome](images/icons/chrome.png)    | ✔       | ✔     | ✔             |
+|![Logotipo Firefox](images/icons/firefox.png)    | ✔       | ✔     | ✔             |
+|![Logotipo Opera](images/icons/opera.png)    | --      | ✔     | --             |
+|![Logotipo Safari](images/icons/safari.png)   | ✔       | ✔     | ✔             |
+|![Logotipo EDGE](images/icons/edge.png)   | ✔       | --    | --             |
+|![Logotipo Internet Explorer 11](images/icons/internet-explorer.png)<span style="margin-left: 15px;">**11**</span>   | ✔       | --    | --             |
+|![Logotipo Internet Explorer 10](images/icons/internet-explorer.png)<span style="margin-left: 15px;">**10**</span>   | ✖       | --    | --             |
+|![Logotipo Internet Explorer 9](images/icons/internet-explorer.png)<span style="margin-left: 15px;">**9**</span>  | ✖       | --    | --             |
   
 Legenda:
 
