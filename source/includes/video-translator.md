@@ -226,7 +226,7 @@ Em alguns casos pode ser necessário adicionar apenas o tradutor de vídeos na p
 
 Caso o vídeo não possua legenda no idioma **pt-BR** ou **pt**, o mesmo ficará com a funcionalidade de Tradução para Libras bloqueada. Conforme a imagem abaixo
 
-![](images/screenshoots/tradutor-de-videos-fail.png)
+![Exemplo de vídeo sem legenda em português brasileiro com ícone de tradução para libras bloqueado.](images/screenshoots/tradutor-de-videos-fail.png)
 
 <h2 id='replace-automatico-de-embeds-do-youtube'>Replace Automático de Embeds do Youtube</h2>
 

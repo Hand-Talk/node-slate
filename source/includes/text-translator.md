@@ -155,7 +155,7 @@ var ht = new HT({
 });
 ```
 
-![](images/screenshoots/custom-button.png)
+![Fotografias do site indicação de variação da altura do posicionamento do botão do plugin.](images/screenshoots/custom-button.png)
 
 Você pode utilizar o parâmetro `customButtonStyle` para aplicar uma customização no botão de acessibilidade na versão mobile.
 
@@ -251,7 +251,7 @@ var ht = new HT({
 });
 ```
 
-![](images/screenshoots/custom-button-actions.png)
+![Sites mobile exibindo o Hugo com duas opções de posicionamento do botão x (que fecha o tradutor).](images/screenshoots/custom-button-actions.png)
 
 Os botões de ação incluem o botão **Fechar** e o spin **Carregando**.
 Você pode utilizar o parâmetro `actionsAlign` para alinhar os botões de ação na versão mobile.
