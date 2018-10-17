@@ -166,7 +166,41 @@ Utilize para vídeos hospedados na SambaTech e legendas hospedadas na internet c
 
 <video data-ht="src=sambatech:https://fast.player.liquidplatform.com/pApiv2/embed/c750c09d7d04891b7f3f5c9a9337d6b9/a40cc34d36f0ee05ae55a971b427888e;subtitle=vtt:assets/HandTalk.vtt"></video>
 
-<h2 id='utilizando-apenas-o-tradutor-de-videos'>Utilizando Apenas o Tradutor de Vídeos</h2>
+
+<h2 id="manipulando-player-acessivel">Manipulando Player Acessível</h2>
+
+Em alguns casos plataformas de ensino EAD precisam ter as métricas dos seus vídeos. Se você quer analisar os seus vídeos online está no caminho certo, esteja bem atento a métricas que mostram quanto tempo os usuários permaneceram assistindo o seu conteúdo para saber a retenção que seus vídeos tem atingido. Ao lado temos alguns exemplos de métricas do VídeoJS.
+
+> Exemplo de Utilização
+
+```javascript
+
+// PLAY
+player.on('play', function () {
+  console.log('play')
+});
+//PAUSE
+player.on('pause', function () {
+  console.log('pause')
+});
+//TEMPO DO VÌDEO
+player.on('play', function () {
+  this.on('timeupdate', function () {
+    console.log(this.currentTime());
+  });
+});
+//FIM DO VÌDEO
+player.on('play', function () {
+ this.on('ended', function () {
+    console.log(FIM DO VIDEO);
+  });
+});
+
+
+
+```
+
+<h2 id="utilizando-apenas-o-tradutor-de-videos">Utilizando Apenas o Tradutor de Vídeos</h2>
 
 > Exemplo de Utilização
 
