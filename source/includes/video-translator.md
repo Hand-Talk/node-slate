@@ -169,11 +169,12 @@ Utilize para vídeos hospedados na SambaTech e legendas hospedadas na internet c
 
 <h2 id="manipulando-player-acessivel">Manipulando Player Acessível</h2>
 
-Em alguns casos você precisa ter as métricas dos seus vídeos. Se você quer analisar os seus vídeos esteja bem atento a métricas que mostram quanto tempo os usuários permaneceram assistindo o seu conteúdo. Ao lado temos alguns exemplos de métricas do VídeoJS.
+
+Em alguns casos você pode precisar coletar dados do vídeo para saber se o mesmo foi assistido até o final, se foi iniciado, ou se está em reprodução.
 
 | Configurações  | Descrição
 | -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------ | 
-| play    | Evento disparado quando reprodução do vídeo for iniciado.    |
+| play    | Evento disparado quando a reprodução do vídeo for iniciada.    |
 | pause   | Evento disparado quando reprodução do vídeo for pausado.                  |
 | timeupdate           | Evento disparado após ínicio do vídeo é responsável por contagem de tempo de execução do vídeo.         |
 | ended          | Evento disparado após o término da reprodução.
@@ -186,10 +187,10 @@ https://docs.videojs.com/docs/api/player.html
 > Exemplo de Utilização
 
 ```html
-// Confira o exemplo em html
+
 <body>
 
-  <!-- Troque os campos <VIDEO_TYPE>, <VIDEO_URL>, <CAPTION_TYPE> e <CAPTION_URL>, pelos dados solicitados-->
+  <!-- Caminho do vídeo-->
   <video data-ht="src=youtube:H2Io3y98FV4"></video>
 
   <!-- Pega a ultima versão do plugin Hand Talk -->
@@ -212,12 +213,12 @@ https://docs.videojs.com/docs/api/player.html
 
   // Cria evento para verificar se o vídeo iniciou a reprodução.
   player.on('play', function () {
-    console.log('play')
+    console.log('play');
   });
 
   // Cria evento para verificar se o vídeo foi pausado
   player.on('pause', function () {
-    console.log('pause')
+    console.log('pause');
   });
 
   // Cria evento para verificar o tempo que o vídeo esta sendo reproduzido.
