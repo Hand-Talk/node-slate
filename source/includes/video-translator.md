@@ -169,32 +169,73 @@ Utilize para vídeos hospedados na SambaTech e legendas hospedadas na internet c
 
 <h2 id="manipulando-player-acessivel">Manipulando Player Acessível</h2>
 
-Em alguns casos plataformas de ensino EAD precisam ter as métricas dos seus vídeos. Se você quer analisar os seus vídeos online está no caminho certo, esteja bem atento a métricas que mostram quanto tempo os usuários permaneceram assistindo o seu conteúdo para saber a retenção que seus vídeos tem atingido. Ao lado temos alguns exemplos de métricas do VídeoJS.
+Em alguns casos você precisa ter as métricas dos seus vídeos. Se você quer analisar os seus vídeos esteja bem atento a métricas que mostram quanto tempo os usuários permaneceram assistindo o seu conteúdo. Ao lado temos alguns exemplos de métricas do VídeoJS.
+
+| Configurações  | Descrição
+| -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------ | 
+| play    | Evento disparado quando reprodução do vídeo for iniciado.    |
+| pause   | Evento disparado quando reprodução do vídeo for pausado.                  |
+| timeupdate           | Evento disparado após ínicio do vídeo é responsável por contagem de tempo de execução do vídeo.         |
+| ended          | Evento disparado após o término da reprodução.
+
+**Nota: Caso você não possua as depedência do vídeo Js o nosso plugin irá adiciona-las automaticamente.**
+
+Caso deseje mais informações da documentação do vídeo Js segue o link abaixo:
+https://docs.videojs.com/docs/api/player.html
 
 > Exemplo de Utilização
 
+```html
+// Confira o exemplo em html
+<body>
+
+  <!-- Troque os campos <VIDEO_TYPE>, <VIDEO_URL>, <CAPTION_TYPE> e <CAPTION_URL>, pelos dados solicitados-->
+  <video data-ht="src=youtube:H2Io3y98FV4"></video>
+
+  <!-- Pega a ultima versão do plugin Hand Talk -->
+  <script src="https://api.handtalk.me/plugin/latest/handtalk.min.js"></script>
+
+  <script>
+  var ht = new HT({
+    // Troque por seu token de acesso
+    token: "<TOKEN>",
+    // Habilita o Tradutor de Vídeos
+    videoEnabled: true
+    // Efetua replace de players existentes do videojs automaticamente ao ser inicializado.
+    videojsReplace: true
+  });
+  </script>
+  <script>
+
+  // Criando variavél para manipulação do vídeo JS 
+  var player= videojs('video');
+
+  // Cria evento para verificar se o vídeo iniciou a reprodução.
+  player.on('play', function () {
+    console.log('play')
+  });
+
+  // Cria evento para verificar se o vídeo foi pausado
+  player.on('pause', function () {
+    console.log('pause')
+  });
+
+  // Cria evento para verificar o tempo que o vídeo esta sendo reproduzido.
+  player.on('timeupdate', function () {
+    console.log(player.currentTime());
+  });
+
+  // Cria evento para verificar se o vídeo terminou a reprodução.
+  player.on('ended', function () {
+    console.log('FIM DO VIDEO');
+  });
+</script>
+</body>
+```
+
 ```javascript
 
-// PLAY
-player.on('play', function () {
-  console.log('play')
-});
-//PAUSE
-player.on('pause', function () {
-  console.log('pause')
-});
-//TEMPO DO VÌDEO
-player.on('play', function () {
-  this.on('timeupdate', function () {
-    console.log(this.currentTime());
-  });
-});
-//FIM DO VÌDEO
-player.on('play', function () {
- this.on('ended', function () {
-    console.log(FIM DO VIDEO);
-  });
-});
+
 
 
 
