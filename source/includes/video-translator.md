@@ -269,6 +269,11 @@ Caso o vídeo não possua legenda no idioma **pt-BR** ou **pt**, o mesmo ficará
 
 ![Exemplo de vídeo sem legenda em português brasileiro com ícone de tradução para libras bloqueado.](images/screenshoots/tradutor-de-videos-fail.png)
 
+
+<aside class="notice">
+Ao usar o Replace automático de vídeos você perderá a referência do seu player atual, caso precise manipular o player recomendamos que verifique essa sessão [Utilizando o Player Acessível](#utilizando-o-player-acessivel-tradutor-de-videos)
+</aside>
+
 <h2 id='replace-automatico-de-embeds-do-youtube'>Replace Automático de Embeds do Youtube</h2>
 
 > Exemplo de Utilização de Embeds do Youtube
