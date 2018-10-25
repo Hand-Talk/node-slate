@@ -17,7 +17,13 @@ var ht = new HT({
 <body>
 
   <!-- Troque os campos <VIDEO_TYPE>, <VIDEO_URL>, <CAPTION_TYPE> e <CAPTION_URL>, pelos dados solicitados-->
-  <video data-ht="src=<VIDEO_TYPE>:<VIDEO_URL>;subtitle=<CAPTION_TYPE>:<CAPTION_URL>"></video>
+  <video
+  data-ht-srcType="<VIDEO_TYPE>"
+  data-ht-src = "<VIDEO_URL>"
+  data-ht-subtitle-type="<CAPTION_TYPE>"
+  data-ht-subtitle = "<CAPTION_URL>"
+  ></video>
+
 
   <!-- Pega a ultima versão do plugin Hand Talk -->
   <script src="https://api.handtalk.me/plugin/latest/handtalk.min.js"></script>
@@ -65,12 +71,23 @@ Nota: Para utilizar o player acessível, certifique-se de estar com o plugin dev
 
 Você pode tornar um vídeo acessível definindo o atributo `ht-data` em um elemento de vídeo, primeiramente defina o tech e caminho do vídeo (obrigatório).
 
+<aside class="alert">
+
+Nota : O construtor de vídeos através de um único atributo está depreciado, e pode ser removido em futuras versões.
+</aside>
+
 `src=<VIDEO_TECH>:<VIDEO_URL>`
 
 > Construtor do player Hand Talk
 
 ```html
-<video data-ht="src=<VIDEO_TECH>:<VIDEO_URL>;subtitle=<CAPTIONS_TYPE>:<CAPTIONS_URL>"></video>
+<video
+data-ht-srcType="<VIDEO_TYPE>"
+data-ht-src = "<VIDEO_URL>"
+data-ht-subtitle-type="<CAPTION_TYPE>"
+data-ht-subtitle = "<CAPTION_URL>"
+></video>
+
 ```
 
 ```javascript
@@ -118,7 +135,13 @@ O exemplo ao lado *(Criando um vídeo com o tech youtube)* deve gerar o seguinte
 
 ```html
 <!-- Cria um novo player com uma legenda estatica -->
-<video data-ht="src=vimeo:https://player.vimeo.com/video/259226390;subtitle=vtt:assets/HandTalk.vtt"></video>
+<video
+data-ht-srcType="vimeo"
+data-ht-src = "https://player.vimeo.com/video/259226390"
+data-ht-subtitle-type="vtt"
+data-ht-subtitle = "assets/HandTalk.vtt"
+></video>
+
 ```
 
 ```javascript
@@ -138,7 +161,14 @@ Como no exemplo ao lado, o vídeo deve aparecer da seguinte forma:
 
 ```html
 <!-- Cria um novo player com uma legenda estatica -->
-<video data-ht="src=mp4:assets/HandTalk.mp4;subtitle=vtt:assets/HandTalk.vtt"></video>
+<video
+data-ht-srcType="mp4"
+data-ht-src = "assets/HandTalk.mp4"
+data-ht-subtitle-type="vtt"
+data-ht-subtitle = "assets/HandTalk.vtt"
+></video>
+
+
 ```
 
 ```javascript
@@ -155,7 +185,12 @@ Utilize para vídeos e legendas hospedadas na internet com link direto - Exemplo
 
 ```html
 <!-- Cria um novo player com uma legenda estatica -->
-<video data-ht="src=sambatech:https://fast.player.liquidplatform.com/pApiv2/embed/c750c09d7d04891b7f3f5c9a9337d6b9/a40cc34d36f0ee05ae55a971b427888e;subtitle=vtt:assets/HandTalk.vtt"></video>
+<video
+data-ht-srcType="sambatech"
+data-ht-src = "https://fast.player.liquidplatform.com/pApiv2/embed/c750c09d7d04891b7f3f5c9a9337d6b9/a40cc34d36f0ee05ae55a971b427888e"
+data-ht-subtitle-type="vtt"
+data-ht-subtitle = "assets/HandTalk.vtt"
+></video>
 ```
 
 ```javascript
@@ -192,7 +227,13 @@ var ht = new HT({
 <body>
 
   <!-- Troque os campos <VIDEO_TYPE>, <VIDEO_URL>, <CAPTION_TYPE> e <CAPTION_URL>, pelos dados solicitados -->
-  <video data-ht="src=<VIDEO_TYPE>:<VIDEO_URL>;subtitle=<CAPTION_TYPE>:<CAPTION_URL>"></video>
+  <video
+  data-ht-srcType="<VIDEO_TYPE>"
+  data-ht-src = "<VIDEO_URL>"
+  data-ht-subtitle-type="<CAPTION_TYPE>"
+  data-ht-subtitle = "<CAPTION_URL>"
+  ></video>
+
 
   <!-- Pega a ultima versão do plugin Hand Talk -->
   <script src="https://api.handtalk.me/plugin/latest/handtalk.min.js"></script>
