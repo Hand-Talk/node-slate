@@ -19,9 +19,9 @@ var ht = new HT({
   <!-- Troque os campos VIDEO_TYPE, VIDEO_URL, CAPTION_TYPE e CAPTION_URL, pelos dados solicitados-->
   <video
   data-ht-src-type="VIDEO_TYPE"
-  data-ht-src = "VIDEO_URL"
+  data-ht-src="VIDEO_URL"
   data-ht-subtitle-type="CAPTION_TYPE"
-  data-ht-subtitle = "CAPTION_URL"
+  data-ht-subtitle="CAPTION_URL"
   ></video>
 
 
@@ -69,23 +69,27 @@ Nota: Para utilizar o player acessível, certifique-se de estar com o plugin dev
 </aside>
 
 
-Você pode tornar um vídeo acessível definindo o atributo `ht-data` em um elemento de vídeo, primeiramente defina o tech e caminho do vídeo (obrigatório).
+Você pode tornar um vídeo acessível definindo o atributos abaixo:
+
+`data-ht-src-type` Define o tech do vídeo.  
+`data-ht-src` Define o caminho do vídeo.  
+`data-ht-subtitle-type` Define o tipo da legenda.  
+`data-ht-subtitle` Define o caminho da legenda.  
+ 
 
 <aside class="info">
 
 Nota : O construtor de vídeos através de um único atributo está depreciado, e pode ser removido em futuras versões.
 </aside>
 
-`src=VIDEO_TECH:VIDEO_URL`
-
 > Construtor do player Hand Talk
 
 ```html
 <video
 data-ht-src-type="VIDEO_TYPE"
-data-ht-src = "VIDEO_URL"
+data-ht-src="VIDEO_URL"
 data-ht-subtitle-type="CAPTION_TYPE"
-data-ht-subtitle = "CAPTION_URL"
+data-ht-subtitle="CAPTION_URL"
 ></video>
 
 ```
@@ -94,9 +98,9 @@ data-ht-subtitle = "CAPTION_URL"
 // Confira o exemplo em html
 ```
 
-Em seguida, separando por ponto e virgula (`;`), defina o tipo e caminho da legenda. (opcional)
-
-`subtitle=<CAPTIONS_TYPE>:<CAPTIONS_URL>`
+Os atributos de legenda não são obrigatórios:  
+`data-ht-subtitle-type="CAPTION_TYPE"
+data-ht-subtitle="CAPTION_URL"`
 
 <h3 id='exemplo-com-tech-youtube'>Exemplo com Tech do Youtube</h3>
 
@@ -106,7 +110,7 @@ Em seguida, separando por ponto e virgula (`;`), defina o tipo e caminho da lege
 <!-- Torna o vídeo https://www.youtube.com/watch?v=H2Io3y98FV4 acessivel -->
 <video
 data-ht-src-type="youtube"
-data-ht-src = "H2Io3y98FV4"
+data-ht-src="H2Io3y98FV4"
 ></video>
 
 ```
@@ -131,7 +135,7 @@ Caso o vídeo esteja definido como **não listado**, ou algum outro tipo de rest
 O exemplo ao lado *(Criando um vídeo com o tech youtube)* deve gerar o seguinte player:
 
 
-<video class='video-js' data-ht-src-type="youtube" data-ht-src = "H2Io3y98FV4"></video>
+<video class='video-js' data-ht-src-type="youtube" data-ht-src="H2Io3y98FV4"></video>
 
 
 <h3 id='exemplo-com-tech-do-vimeo'>Exemplo com Tech do Vimeo</h3>
@@ -142,9 +146,9 @@ O exemplo ao lado *(Criando um vídeo com o tech youtube)* deve gerar o seguinte
 <!-- Cria um novo player com uma legenda estatica -->
 <video
 data-ht-src-type="vimeo"
-data-ht-src = "https://player.vimeo.com/video/259226390"
+data-ht-src="https://player.vimeo.com/video/259226390"
 data-ht-subtitle-type="vtt"
-data-ht-subtitle = "assets/HandTalk.vtt"
+data-ht-subtitle="assets/HandTalk.vtt"
 ></video>
 
 ```
@@ -158,7 +162,7 @@ Como no exemplo ao lado, o vídeo deve aparecer da seguinte forma:
 
 
 
-<video data-ht-src-type="vimeo" data-ht-src = "https://player.vimeo.com/video/259226390" data-ht-subtitle-type="vtt" data-ht-subtitle="assets/HandTalk.vtt"
+<video data-ht-src-type="vimeo" data-ht-src="https://player.vimeo.com/video/259226390" data-ht-subtitle-type="vtt" data-ht-subtitle="assets/HandTalk.vtt"
 ></video>
 
   
@@ -170,9 +174,9 @@ Como no exemplo ao lado, o vídeo deve aparecer da seguinte forma:
 <!-- Cria um novo player com uma legenda estatica -->
 <video
 data-ht-src-type="mp4"
-data-ht-src = "assets/HandTalk.mp4"
+data-ht-src="assets/HandTalk.mp4"
 data-ht-subtitle-type="vtt"
-data-ht-subtitle = "assets/HandTalk.vtt"
+data-ht-subtitle="assets/HandTalk.vtt"
 ></video>
 
 
@@ -184,7 +188,7 @@ data-ht-subtitle = "assets/HandTalk.vtt"
 
 Utilize para vídeos e legendas hospedadas na internet com link direto - Exemplo ao lado.
 
-<video data-ht-src-type="mp4" data-ht-src = "assets/HandTalk.mp4" data-ht-subtitle-type="vtt" data-ht-subtitle = "assets/HandTalk.vtt"></video>
+<video data-ht-src-type="mp4" data-ht-src="assets/HandTalk.mp4" data-ht-subtitle-type="vtt" data-ht-subtitle="assets/HandTalk.vtt"></video>
 
 <h3 id='exemplo-com-tech-da-sambatech'>Exemplo com Tech da SambaTech</h3>
 
@@ -194,9 +198,9 @@ Utilize para vídeos e legendas hospedadas na internet com link direto - Exemplo
 <!-- Cria um novo player com uma legenda estatica -->
 <video
 data-ht-src-type="sambatech"
-data-ht-src = "https://fast.player.liquidplatform.com/pApiv2/embed/c750c09d7d04891b7f3f5c9a9337d6b9/a40cc34d36f0ee05ae55a971b427888e"
+data-ht-src="https://fast.player.liquidplatform.com/pApiv2/embed/c750c09d7d04891b7f3f5c9a9337d6b9/a40cc34d36f0ee05ae55a971b427888e"
 data-ht-subtitle-type="vtt"
-data-ht-subtitle = "assets/HandTalk.vtt"
+data-ht-subtitle="assets/HandTalk.vtt"
 ></video>
 ```
 
@@ -206,7 +210,7 @@ data-ht-subtitle = "assets/HandTalk.vtt"
 
 Utilize para vídeos hospedados na SambaTech e legendas hospedadas na internet com link direto - Exemplo ao lado.
 
-<video data-ht-src-type="sambatech" data-ht-src = "https://fast.player.liquidplatform.com/pApiv2/embed/c750c09d7d04891b7f3f5c9a9337d6b9/a40cc34d36f0ee05ae55a971b427888e" data-ht-subtitle-type="vtt" data-ht-subtitle = "assets/HandTalk.vtt" ></video>
+<video data-ht-src-type="sambatech" data-ht-src="https://fast.player.liquidplatform.com/pApiv2/embed/c750c09d7d04891b7f3f5c9a9337d6b9/a40cc34d36f0ee05ae55a971b427888e" data-ht-subtitle-type="vtt" data-ht-subtitle="assets/HandTalk.vtt" ></video>
 
 
 
@@ -238,9 +242,9 @@ var ht = new HT({
   <!-- Troque os campos VIDEO_TYPE, VIDEO_URL, CAPTION_TYPE e CAPTION_URL, pelos dados solicitados -->
   <video
   data-ht-src-type="VIDEO_TYPE"
-  data-ht-src = "VIDEO_URL"
+  data-ht-src="VIDEO_URL"
   data-ht-subtitle-type="CAPTION_TYPE"
-  data-ht-subtitle = "CAPTION_URL"
+  data-ht-subtitle="CAPTION_URL"
   ></video>
 
 
