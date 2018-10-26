@@ -21,8 +21,8 @@ var ht = new HT({
   data-ht-src-type="VIDEO_TYPE"
   data-ht-src="VIDEO_URL"
   data-ht-subtitle-type="CAPTION_TYPE"
-  data-ht-subtitle="CAPTION_URL"
-  ></video>
+  data-ht-subtitle="CAPTION_URL">
+  </video>
 
 
   <!-- Pega a ultima versão do plugin Hand Talk -->
@@ -69,12 +69,15 @@ Nota: Para utilizar o player acessível, certifique-se de estar com o plugin dev
 </aside>
 
 
-Você pode tornar um vídeo acessível definindo o atributos abaixo:
+Você pode tornar um vídeo acessível definindo o atributos abaixo:  
 
-`data-ht-src-type` Define o tech do vídeo.  
-`data-ht-src` Define o caminho do vídeo.  
-`data-ht-subtitle-type` Define o tipo da legenda.  
-`data-ht-subtitle` Define o caminho da legenda.  
+
+| Atributo                     | Descrição                                               | Observação      |
+|-----------------------------|---------------------------------------------------------|-----------------|
+| data-ht-src-type       | Define o tech do vídeo.|                                     | 
+| data-ht-src            | Define o caminho do vídeo.|                                  |
+| data-ht-subtitle-type           | Define o tipo da legenda(Opcional).|  O tradutor de vídeos não funcionará caso não seja utilizado o atributo|
+| data-ht-subtitle       | Define o caminho da legenda(Opcional).|  O tradutor de vídeos não funcionará caso não seja utilizado o atributo|
  
 
 <aside class="info">
@@ -89,8 +92,8 @@ Nota : O construtor de vídeos através de um único atributo está depreciado, 
 data-ht-src-type="VIDEO_TYPE"
 data-ht-src="VIDEO_URL"
 data-ht-subtitle-type="CAPTION_TYPE"
-data-ht-subtitle="CAPTION_URL"
-></video>
+data-ht-subtitle="CAPTION_URL">
+</video>
 
 ```
 
@@ -110,8 +113,8 @@ data-ht-subtitle="CAPTION_URL"`
 <!-- Torna o vídeo https://www.youtube.com/watch?v=H2Io3y98FV4 acessivel -->
 <video
 data-ht-src-type="youtube"
-data-ht-src="H2Io3y98FV4"
-></video>
+data-ht-src="H2Io3y98FV4">
+</video>
 
 ```
 
@@ -148,8 +151,8 @@ O exemplo ao lado *(Criando um vídeo com o tech youtube)* deve gerar o seguinte
 data-ht-src-type="vimeo"
 data-ht-src="https://player.vimeo.com/video/259226390"
 data-ht-subtitle-type="vtt"
-data-ht-subtitle="assets/HandTalk.vtt"
-></video>
+data-ht-subtitle="assets/HandTalk.vtt">
+</video>
 
 ```
 
@@ -162,8 +165,8 @@ Como no exemplo ao lado, o vídeo deve aparecer da seguinte forma:
 
 
 
-<video data-ht-src-type="vimeo" data-ht-src="https://player.vimeo.com/video/259226390" data-ht-subtitle-type="vtt" data-ht-subtitle="assets/HandTalk.vtt"
-></video>
+<video data-ht-src-type="vimeo" data-ht-src="https://player.vimeo.com/video/259226390" data-ht-subtitle-type="vtt" data-ht-subtitle="assets/HandTalk.vtt">
+</video>
 
   
 <h3 id='exemplo-com-tech-de-mp4-webm'>Exemplo com Tech de MP4/WEBM/OGG</h3>
@@ -176,8 +179,8 @@ Como no exemplo ao lado, o vídeo deve aparecer da seguinte forma:
 data-ht-src-type="mp4"
 data-ht-src="assets/HandTalk.mp4"
 data-ht-subtitle-type="vtt"
-data-ht-subtitle="assets/HandTalk.vtt"
-></video>
+data-ht-subtitle="assets/HandTalk.vtt">
+</video>
 
 
 ```
@@ -200,8 +203,8 @@ Utilize para vídeos e legendas hospedadas na internet com link direto - Exemplo
 data-ht-src-type="sambatech"
 data-ht-src="https://fast.player.liquidplatform.com/pApiv2/embed/c750c09d7d04891b7f3f5c9a9337d6b9/a40cc34d36f0ee05ae55a971b427888e"
 data-ht-subtitle-type="vtt"
-data-ht-subtitle="assets/HandTalk.vtt"
-></video>
+data-ht-subtitle="assets/HandTalk.vtt">
+</video>
 ```
 
 ```javascript
@@ -244,8 +247,8 @@ var ht = new HT({
   data-ht-src-type="VIDEO_TYPE"
   data-ht-src="VIDEO_URL"
   data-ht-subtitle-type="CAPTION_TYPE"
-  data-ht-subtitle="CAPTION_URL"
-  ></video>
+  data-ht-subtitle="CAPTION_URL">
+  </video>
 
 
   <!-- Pega a ultima versão do plugin Hand Talk -->
