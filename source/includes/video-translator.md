@@ -16,8 +16,14 @@ var ht = new HT({
 ```html
 <body>
 
-  <!-- Troque os campos <VIDEO_TYPE>, <VIDEO_URL>, <CAPTION_TYPE> e <CAPTION_URL>, pelos dados solicitados-->
-  <video data-ht="src=<VIDEO_TYPE>:<VIDEO_URL>;subtitle=<CAPTION_TYPE>:<CAPTION_URL>"></video>
+  <!-- Troque os campos VIDEO_TYPE, VIDEO_URL, CAPTION_TYPE e CAPTION_URL, pelos dados solicitados-->
+  <video
+  data-ht-src-type="VIDEO_TYPE"
+  data-ht-src="VIDEO_URL"
+  data-ht-subtitle-type="CAPTION_TYPE"
+  data-ht-subtitle="CAPTION_URL">
+  </video>
+
 
   <!-- Pega a ultima versão do plugin Hand Talk -->
   <script src="https://api.handtalk.me/plugin/latest/handtalk.min.js"></script>
@@ -63,23 +69,42 @@ Nota: Para utilizar o player acessível, certifique-se de estar com o plugin dev
 </aside>
 
 
-Você pode tornar um vídeo acessível definindo o atributo `ht-data` em um elemento de vídeo, primeiramente defina o tech e caminho do vídeo (obrigatório).
+Você pode tornar um vídeo acessível definindo o atributos abaixo:  
 
-`src=<VIDEO_TECH>:<VIDEO_URL>`
+
+| Atributo                     | Descrição                                                       |
+|-----------------------------|------------------------------------------------------------------|
+| data-ht-src-type       | Define o tech do vídeo.|
+| data-ht-src            | Define o caminho do vídeo.|
+| data-ht-subtitle-type  | Define o tipo da legenda(Opcional).|
+| data-ht-subtitle       | Define o caminho da legenda(Opcional).|
+ 
+
+<aside class="info">
+
+Nota: O construtor de vídeos através de um único atributo `ht-data="src=<VIDEO_TECH>:<VIDEO_URL>;subtitle=<CAPTIONS_TYPE>:<CAPTIONS_URL>"` está depreciado, e pode ser removido em futuras versões.
+
+</aside>
 
 > Construtor do player Hand Talk
 
 ```html
-<video data-ht="src=<VIDEO_TECH>:<VIDEO_URL>;subtitle=<CAPTIONS_TYPE>:<CAPTIONS_URL>"></video>
+<video
+data-ht-src-type="VIDEO_TYPE"
+data-ht-src="VIDEO_URL"
+data-ht-subtitle-type="CAPTION_TYPE"
+data-ht-subtitle="CAPTION_URL">
+</video>
+
 ```
 
 ```javascript
 // Confira o exemplo em html
 ```
 
-Em seguida, separando por ponto e virgula (`;`), defina o tipo e caminho da legenda. (opcional)
-
-`subtitle=<CAPTIONS_TYPE>:<CAPTIONS_URL>`
+Os atributos de legenda não são obrigatórios:  
+`data-ht-subtitle-type="CAPTION_TYPE"`  
+`data-ht-subtitle="CAPTION_URL"`
 
 <h3 id='exemplo-com-tech-youtube'>Exemplo com Tech do Youtube</h3>
 
@@ -87,7 +112,11 @@ Em seguida, separando por ponto e virgula (`;`), defina o tipo e caminho da lege
  
 ```html
 <!-- Torna o vídeo https://www.youtube.com/watch?v=H2Io3y98FV4 acessivel -->
-<video data-ht="src=youtube:H2Io3y98FV4"></video>
+<video
+data-ht-src-type="youtube"
+data-ht-src="H2Io3y98FV4">
+</video>
+
 ```
 
 ```javascript
@@ -110,7 +139,8 @@ Caso o vídeo esteja definido como **não listado**, ou algum outro tipo de rest
 O exemplo ao lado *(Criando um vídeo com o tech youtube)* deve gerar o seguinte player:
 
 
-<video class='video-js' data-ht="src=youtube:H2Io3y98FV4"></video>
+<video class='video-js' data-ht-src-type="youtube" data-ht-src="H2Io3y98FV4"></video>
+
 
 <h3 id='exemplo-com-tech-do-vimeo'>Exemplo com Tech do Vimeo</h3>
 
@@ -118,7 +148,13 @@ O exemplo ao lado *(Criando um vídeo com o tech youtube)* deve gerar o seguinte
 
 ```html
 <!-- Cria um novo player com uma legenda estatica -->
-<video data-ht="src=vimeo:https://player.vimeo.com/video/259226390;subtitle=vtt:assets/HandTalk.vtt"></video>
+<video
+data-ht-src-type="vimeo"
+data-ht-src="https://player.vimeo.com/video/259226390"
+data-ht-subtitle-type="vtt"
+data-ht-subtitle="assets/HandTalk.vtt">
+</video>
+
 ```
 
 ```javascript
@@ -129,7 +165,9 @@ Para vídeos hospedados no Vimeo, você deve informar a legenda manualmente.
 Como no exemplo ao lado, o vídeo deve aparecer da seguinte forma:
 
 
-<video data-ht="src=vimeo:https://player.vimeo.com/video/259226390;subtitle=vtt:assets/HandTalk.vtt"></video>
+
+<video data-ht-src-type="vimeo" data-ht-src="https://player.vimeo.com/video/259226390" data-ht-subtitle-type="vtt" data-ht-subtitle="assets/HandTalk.vtt">
+</video>
 
   
 <h3 id='exemplo-com-tech-de-mp4-webm'>Exemplo com Tech de MP4/WEBM/OGG</h3>
@@ -138,7 +176,14 @@ Como no exemplo ao lado, o vídeo deve aparecer da seguinte forma:
 
 ```html
 <!-- Cria um novo player com uma legenda estatica -->
-<video data-ht="src=mp4:assets/HandTalk.mp4;subtitle=vtt:assets/HandTalk.vtt"></video>
+<video
+data-ht-src-type="mp4"
+data-ht-src="assets/HandTalk.mp4"
+data-ht-subtitle-type="vtt"
+data-ht-subtitle="assets/HandTalk.vtt">
+</video>
+
+
 ```
 
 ```javascript
@@ -147,7 +192,7 @@ Como no exemplo ao lado, o vídeo deve aparecer da seguinte forma:
 
 Utilize para vídeos e legendas hospedadas na internet com link direto - Exemplo ao lado.
 
-<video data-ht="src=mp4:assets/HandTalk.mp4;subtitle=vtt:assets/HandTalk.vtt"></video>
+<video data-ht-src-type="mp4" data-ht-src="assets/HandTalk.mp4" data-ht-subtitle-type="vtt" data-ht-subtitle="assets/HandTalk.vtt"></video>
 
 <h3 id='exemplo-com-tech-da-sambatech'>Exemplo com Tech da SambaTech</h3>
 
@@ -155,7 +200,12 @@ Utilize para vídeos e legendas hospedadas na internet com link direto - Exemplo
 
 ```html
 <!-- Cria um novo player com uma legenda estatica -->
-<video data-ht="src=sambatech:https://fast.player.liquidplatform.com/pApiv2/embed/c750c09d7d04891b7f3f5c9a9337d6b9/a40cc34d36f0ee05ae55a971b427888e;subtitle=vtt:assets/HandTalk.vtt"></video>
+<video
+data-ht-src-type="sambatech"
+data-ht-src="https://fast.player.liquidplatform.com/pApiv2/embed/c750c09d7d04891b7f3f5c9a9337d6b9/a40cc34d36f0ee05ae55a971b427888e"
+data-ht-subtitle-type="vtt"
+data-ht-subtitle="assets/HandTalk.vtt">
+</video>
 ```
 
 ```javascript
@@ -164,7 +214,9 @@ Utilize para vídeos e legendas hospedadas na internet com link direto - Exemplo
 
 Utilize para vídeos hospedados na SambaTech e legendas hospedadas na internet com link direto - Exemplo ao lado.
 
-<video data-ht="src=sambatech:https://fast.player.liquidplatform.com/pApiv2/embed/c750c09d7d04891b7f3f5c9a9337d6b9/a40cc34d36f0ee05ae55a971b427888e;subtitle=vtt:assets/HandTalk.vtt"></video>
+<video data-ht-src-type="sambatech" data-ht-src="https://fast.player.liquidplatform.com/pApiv2/embed/c750c09d7d04891b7f3f5c9a9337d6b9/a40cc34d36f0ee05ae55a971b427888e" data-ht-subtitle-type="vtt" data-ht-subtitle="assets/HandTalk.vtt" ></video>
+
+
 
 <h2 id='utilizando-apenas-o-tradutor-de-videos'>Utilizando Apenas o Tradutor de Vídeos</h2>
 
@@ -191,8 +243,14 @@ var ht = new HT({
 ```html
 <body>
 
-  <!-- Troque os campos <VIDEO_TYPE>, <VIDEO_URL>, <CAPTION_TYPE> e <CAPTION_URL>, pelos dados solicitados -->
-  <video data-ht="src=<VIDEO_TYPE>:<VIDEO_URL>;subtitle=<CAPTION_TYPE>:<CAPTION_URL>"></video>
+  <!-- Troque os campos VIDEO_TYPE, VIDEO_URL, CAPTION_TYPE e CAPTION_URL, pelos dados solicitados -->
+  <video
+  data-ht-src-type="VIDEO_TYPE"
+  data-ht-src="VIDEO_URL"
+  data-ht-subtitle-type="CAPTION_TYPE"
+  data-ht-subtitle="CAPTION_URL">
+  </video>
+
 
   <!-- Pega a ultima versão do plugin Hand Talk -->
   <script src="https://api.handtalk.me/plugin/latest/handtalk.min.js"></script>
@@ -227,6 +285,11 @@ Em alguns casos pode ser necessário adicionar apenas o tradutor de vídeos na p
 Caso o vídeo não possua legenda no idioma **pt-BR** ou **pt**, o mesmo ficará com a funcionalidade de Tradução para Libras bloqueada. Conforme a imagem abaixo
 
 ![Exemplo de vídeo sem legenda em português brasileiro com ícone de tradução para libras bloqueado.](images/screenshoots/tradutor-de-videos-fail.png)
+
+
+<aside class="notice">
+Ao usar o replace automático de vídeos você perderá a referência do seu player atual, caso precise manipular o player, recomendamos que verifique a sessão [Utilizando o Player Acessível](#utilizando-o-player-acessivel-tradutor-de-videos).
+</aside>
 
 <h2 id='replace-automatico-de-embeds-do-youtube'>Replace Automático de Embeds do Youtube</h2>
 
