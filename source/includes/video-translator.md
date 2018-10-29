@@ -74,10 +74,10 @@ Você pode tornar um vídeo acessível definindo o atributos abaixo:
 
 | Atributo                     | Descrição                                                       |
 |-----------------------------|------------------------------------------------------------------|
-| data-ht-src-type       | Define o tech do vídeo.|                                     | 
-| data-ht-src            | Define o caminho do vídeo.|                                  |
-| data-ht-subtitle-type  | Define o tipo da legenda(Opcional).|                         |
-| data-ht-subtitle       | Define o caminho da legenda(Opcional).       |                      | |
+| data-ht-src-type       | Define o tech do vídeo.|
+| data-ht-src            | Define o caminho do vídeo.|
+| data-ht-subtitle-type  | Define o tipo da legenda(Opcional).|
+| data-ht-subtitle       | Define o caminho da legenda(Opcional).|
  
 
 <aside class="info">
