@@ -72,17 +72,18 @@ Nota: Para utilizar o player acessível, certifique-se de estar com o plugin dev
 Você pode tornar um vídeo acessível definindo o atributos abaixo:  
 
 
-| Atributo                     | Descrição                                               | Observação      |
-|-----------------------------|---------------------------------------------------------|-----------------|
+| Atributo                     | Descrição                                                       |
+|-----------------------------|------------------------------------------------------------------|
 | data-ht-src-type       | Define o tech do vídeo.|                                     | 
 | data-ht-src            | Define o caminho do vídeo.|                                  |
-| data-ht-subtitle-type           | Define o tipo da legenda(Opcional).|  O tradutor de vídeos não funcionará caso não seja utilizado o atributo|
-| data-ht-subtitle       | Define o caminho da legenda(Opcional).|  O tradutor de vídeos não funcionará caso não seja utilizado o atributo|
+| data-ht-subtitle-type  | Define o tipo da legenda(Opcional).|                         |
+| data-ht-subtitle       | Define o caminho da legenda(Opcional).       |                      | |
  
 
 <aside class="info">
 
-Nota : O construtor de vídeos através de um único atributo está depreciado, e pode ser removido em futuras versões.
+Nota: O construtor de vídeos através de um único atributo `ht-data="src=<VIDEO_TECH>:<VIDEO_URL>;subtitle=<CAPTIONS_TYPE>:<CAPTIONS_URL>"` está depreciado, e pode ser removido em futuras versões.
+
 </aside>
 
 > Construtor do player Hand Talk
@@ -102,8 +103,8 @@ data-ht-subtitle="CAPTION_URL">
 ```
 
 Os atributos de legenda não são obrigatórios:  
-`data-ht-subtitle-type="CAPTION_TYPE"
-data-ht-subtitle="CAPTION_URL"`
+`data-ht-subtitle-type="CAPTION_TYPE"`  
+`data-ht-subtitle="CAPTION_URL"`
 
 <h3 id='exemplo-com-tech-youtube'>Exemplo com Tech do Youtube</h3>
 
@@ -287,7 +288,7 @@ Caso o vídeo não possua legenda no idioma **pt-BR** ou **pt**, o mesmo ficará
 
 
 <aside class="notice">
-Ao usar o Replace automático de vídeos você perderá a referência do seu player atual, caso precise manipular o player recomendamos que verifique essa sessão [Utilizando o Player Acessível](#utilizando-o-player-acessivel-tradutor-de-videos)
+Ao usar o replace automático de vídeos você perderá a referência do seu player atual, caso precise manipular o player, recomendamos que verifique a sessão [Utilizando o Player Acessível](#utilizando-o-player-acessivel-tradutor-de-videos).
 </aside>
 
 <h2 id='replace-automatico-de-embeds-do-youtube'>Replace Automático de Embeds do Youtube</h2>
