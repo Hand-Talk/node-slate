@@ -55,8 +55,8 @@ Abaixo o resultado de testes feitos em sistemas operacionais diferentes usando o
 | -------------------- | ------- | ----- | -------------- |
 |![Logotipo Chrome](images/icons/chrome.png)    | ✔       | ✔     | ✔             |
 |![Logotipo Firefox](images/icons/firefox.png)    | ✔       | ✔     | ✔             |
-|![Logotipo Opera](images/icons/opera.png)    | --      | ✔     | --             |
-|![Logotipo Safari](images/icons/safari.png)   | ✔       | ✔     | ✔             |
+|![Logotipo Opera](images/icons/opera.png)    | ✔      | ✔     | ✔             |
+|![Logotipo Safari](images/icons/safari.png)   | --       | ✔     | --             |
 |![Logotipo EDGE](images/icons/edge.png)   | ✔       | --    | --             |
 |![Logotipo Internet Explorer 11](images/icons/internet-explorer.png)<span style="margin-left: 15px;">**11**</span>   | ✔       | --    | --             |
 |![Logotipo Internet Explorer 10](images/icons/internet-explorer.png)<span style="margin-left: 15px;">**10**</span>   | ✖       | --    | --             |
