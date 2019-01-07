@@ -159,6 +159,12 @@ var ht = new HT({
 
 Você pode utilizar o parâmetro `customButtonStyle` para aplicar uma customização no botão de acessibilidade na versão mobile.
 
+<aside class="info">
+
+**Nota: Quando o parâmetro `customButtonStyle` estiver definido, as animações do botão de acessibilidade serão desativadas.**
+
+</aside>
+
 Ao invocar `HT`, no parâmetro `mobileConfig`, defina também o objeto `customButtonStyle`. Consulte os exemplos ao lado.
 
 > Exemplo de parâmetro de customização do botão de acessibilidade
