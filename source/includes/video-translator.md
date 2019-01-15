@@ -339,8 +339,8 @@ A ferramenta busca por embeds (iframes) do youtube, e substitui por players acce
 Você pode habilitar o replace automático passando o valor `true` a configuração `ytEmbedReplace` ao instanciar o plugin. Lembrando que você deve também habilitar a feature de vídeo passando `true` na configuração `videoEnabled`.
 
 
-Se embeds do Youtube forem inseridos após a inicialização do plugin, você deve chamar a função `ht.ytEmbedReplaceAll();` para que os novos vídeos tornem-se acessíveis.
-Também é possível efetuar o replace de um único embed com `ht.ytEmbedReplace(elem)`:
+Se embeds do Youtube forem inseridos após a inicialização do plugin, você deve chamar a função `ht.ytEmbedReplaceAll()` para que os novos vídeos tornem-se acessíveis.
+Também é possível efetuar o replace de um único embed com `ht.ytEmbedReplace(elem)`.
 
 <h2 id='replace-automatico-de-embeds-do-videojs'>Replace Automático de Embeds do Videojs</h2>
 
@@ -390,9 +390,56 @@ Você pode habilitar o replace automático passando com valor `true` a configura
 Veja o exemplo ao lado.
 
 
-Se os players do videojs forem inseridos após a inicialização do plugin, você deve chamar a função `ht.videojsReplaceAll();` para que os novos vídeos tornem-se acessíveis.
+Se os players do videojs forem inseridos após a inicialização do plugin, você deve chamar a função `ht.videojsReplaceAll()` para que os novos vídeos tornem-se acessíveis.
 
-Conforme o exemplo ao lado direito, também é possível efetuar o replace de um único  player com `ht.videojsReplace(vjsPlayer):`
+Conforme o exemplo ao lado direito, também é possível efetuar o replace de um único  player com `ht.videojsReplace(vjsPlayer)`.
+
+<h2 id='replace-automatico-de-embeds-do-vimeo'>Replace Automático de Embeds do Vimeo</h2>
+
+> Exemplo de Utilização de Embeds do Vimeo
+
+```javascript
+var ht = new HT({
+  // Troque por seu token de acesso
+  token: "<TOKEN>",
+  // Habilita o tradutor de vídeos
+  videoEnabled: true,
+  // Busca por embeds do vimeo ao inicializar a ferramenta
+  vimeoReplace: true
+});
+```
+
+```html
+<body>
+
+  <!-- Embed padrão do vimeo -->
+  <iframe width="560" height="315" src="https://player.vimeo.com/video/259226390" frameborder="0" allowfullscreen></iframe>
+
+  <!-- Pega a ultima versão do plugin Hand Talk -->
+  <script src="https://api.handtalk.me/plugin/latest/handtalk.min.js"></script>
+
+  <script>
+    var ht = new HT({
+      // Troque por seu token de acesso
+      token: "<TOKEN>",
+      // Habilita o tradutor de vídeos
+      videoEnabled: true,
+      // Busca por embeds do vimeo ao inicializar a ferramenta
+      vimeoReplace: true
+    });
+  </script>
+</body>
+```
+
+A ferramenta busca por embeds (iframes) do vimeo, e substitui por players accesíveis da Hand Talk.
+
+Você pode habilitar o replace automático passando o valor `true` a configuração `vimeoReplace` ao instanciar o plugin. Lembrando que você deve também habilitar a feature de vídeo passando `true` na configuração `videoEnabled`.
+
+
+Se os embeds do Vimeo forem inseridos após a inicialização do plugin, você deve chamar a função `ht.vimeoReplaceAll()` para que os novos vídeos tornem-se acessíveis.
+Também é possível efetuar o replace de um único embed com `ht.vimeoReplace(elem)`.
+
+Durante o processo, as legendas serão obtidas automaticamente. Caso o vídeo não possua legenda em `pt-BR` ou `pt`, a funcionalidade de Libras ficará bloqueada.
 
 <h2 id='videos-dinamicos'>Vídeos Dinâmicos</h2>
 
