@@ -218,7 +218,83 @@ Utilize para vídeos hospedados na SambaTech e legendas hospedadas na internet c
 
 
 
-<h2 id='utilizando-apenas-o-tradutor-de-videos'>Utilizando Apenas o Tradutor de Vídeos</h2>
+
+<h2 id="manipulando-player-acessivel">Manipulando Player Acessível</h2>
+
+
+Em alguns casos você pode precisar coletar dados do vídeo para saber se o mesmo foi assistido até o final, se foi iniciado, ou se está em reprodução.
+
+| Configurações  | Descrição
+| -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------ | 
+| play    | Evento disparado quando a reprodução do vídeo for iniciada.    |
+| pause   | Evento disparado quando reprodução do vídeo for pausado.                  |
+| timeupdate           | Evento disparado após ínicio do vídeo é responsável por contagem de tempo de execução do vídeo.         |
+| ended          | Evento disparado após o término da reprodução.
+
+**Nota: Caso você não possua as depedência do vídeo Js o nosso plugin irá adiciona-las automaticamente.**
+
+Caso deseje mais informações da documentação do vídeo Js segue o link abaixo:
+https://docs.videojs.com/docs/api/player.html
+
+> Exemplo de Utilização
+
+```html
+
+<body>
+
+  <!-- Caminho do vídeo-->
+  <video data-ht="src=youtube:H2Io3y98FV4"></video>
+
+  <!-- Pega a ultima versão do plugin Hand Talk -->
+  <script src="https://api.handtalk.me/plugin/latest/handtalk.min.js"></script>
+
+  <script>
+  var ht = new HT({
+    // Troque por seu token de acesso
+    token: "<TOKEN>",
+    // Habilita o Tradutor de Vídeos
+    videoEnabled: true
+    // Efetua replace de players existentes do videojs automaticamente ao ser inicializado.
+    videojsReplace: true
+  });
+  </script>
+  <script>
+
+  // Criando variavél para manipulação do vídeo JS 
+  var player= videojs('video');
+
+  // Cria evento para verificar se o vídeo iniciou a reprodução.
+  player.on('play', function () {
+    console.log('play');
+  });
+
+  // Cria evento para verificar se o vídeo foi pausado
+  player.on('pause', function () {
+    console.log('pause');
+  });
+
+  // Cria evento para verificar o tempo que o vídeo esta sendo reproduzido.
+  player.on('timeupdate', function () {
+    console.log(player.currentTime());
+  });
+
+  // Cria evento para verificar se o vídeo terminou a reprodução.
+  player.on('ended', function () {
+    console.log('FIM DO VIDEO');
+  });
+</script>
+</body>
+```
+
+```javascript
+
+
+
+
+
+```
+
+<h2 id="utilizando-apenas-o-tradutor-de-videos">Utilizando Apenas o Tradutor de Vídeos</h2>
 
 > Exemplo de Utilização
 
