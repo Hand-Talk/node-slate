@@ -55,6 +55,7 @@ Você pode pode preferir habilitar/desabilitar algumas funcionalidades do Tradut
 | exceptions     | Lista de queries que serão ignoradas pelo plugin, ex.: ```['a', 'form', '.main', '#site-title']```                                                    | array                          | [ ]       |
 | ytEmbedReplace | Quando verdadeiro substitui os embeds do Youtube por players acessíveis em língua de sinais.                                                          | false ou true                  | false     |
 | videojsReplace | Quando verdadeiro adiciona os componentes de acessibilidade em uma instancia atual do videojs                                                         | false ou true                  | false     |
+| vimeoReplace | Quando verdadeiro substitui os embeds do Vimeo por players acessíveis em língua de sinais.                                                         | false ou true                  | false     |
 | mobileEnabled  | Quando verdadeiro ativa o tradutor de sites em dispositivos móveis.                                                                                   | false ou true                  | true      |
 | mobileConfig   | Objeto de configuração para a plataforma mobile, quando definido, sobscreve as configurações padrões de HT.                                           | Object                         | { }       |
 
