@@ -236,9 +236,11 @@ var ht = new HT({
   // Use as linhas abaixo para replace automatico de vídeos
 
   // Efetua replace de embeds do youtube automaticamente ao ser inicializado.
-  //ytEmbedReplace: true,
+  // ytEmbedReplace: true,
   // Efetua replace de players existentes do videojs automaticamente ao ser inicializado.
-  //videojsReplace: true
+  // videojsReplace: true
+  // Efetua replace de players existentes do vimeo automaticamente ao ser inicializado.
+  // vimeoReplace: true
 });
 ```
 
@@ -269,9 +271,11 @@ var ht = new HT({
       // Use as linhas abaixo para replace automatico de vídeos
 
       // Efetua replace de embeds do youtube automaticamente ao ser inicializado.
-      //ytEmbedReplace: true,
+      // ytEmbedReplace: true,
       // Efetua replace de players existentes do videojs automaticamente ao ser inicializado.
-      //videojsReplace: true
+      // videojsReplace: true
+      // Efetua replace de players existentes do vimeo automaticamente ao ser inicializado.
+      // vimeoReplace: true
     });
   </script>
 </body>
@@ -282,7 +286,7 @@ Em alguns casos pode ser necessário adicionar apenas o tradutor de vídeos na p
 
 <h2 id='replace-automatico-de-videos'>Replace Automático de Vídeos</h2>
 
-É possível substituir automaticamente os embeds do Youtube e player existentes do Videojs pelo Player Acessível da HandTalk, sempre que uma legenda for encontrada.
+É possível substituir automaticamente os embeds do Youtube, Vimeo e player existentes do Videojs pelo Player Acessível da HandTalk, sempre que uma legenda for encontrada.
 
 Caso o vídeo não possua legenda no idioma **pt-BR** ou **pt**, o mesmo ficará com a funcionalidade de Tradução para Libras bloqueada. Conforme a imagem abaixo
 
@@ -307,8 +311,6 @@ var ht = new HT({
   ytEmbedReplace: true
 });
 ```
-
-<h3 id='replace-automatico-de-embeds-do-youtube'>Replace automático de embeds do Youtube</h3>
 
 ```html
 <body>
