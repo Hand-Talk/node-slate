@@ -106,6 +106,8 @@ Os atributos de legenda não são obrigatórios:
 `data-ht-subtitle-type="CAPTION_TYPE"`  
 `data-ht-subtitle="CAPTION_URL"`
 
+Sem eles, iremos pegar a legenda automáticamente, para mais detalhes leia o tópico abaixo,
+
 <h3 id='exemplo-com-tech-youtube'>Exemplo com Tech do Youtube</h3>
 
 > Exemplo: Criando um vídeo com o **tech** youtube
