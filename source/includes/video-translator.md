@@ -106,6 +106,8 @@ Os atributos de legenda não são obrigatórios:
 `data-ht-subtitle-type="CAPTION_TYPE"`  
 `data-ht-subtitle="CAPTION_URL"`
 
+Sem eles, iremos pegar a legenda automáticamente, para mais detalhes leia o tópico abaixo,
+
 <h3 id='exemplo-com-tech-youtube'>Exemplo com Tech do Youtube</h3>
 
 > Exemplo: Criando um vídeo com o **tech** youtube
@@ -234,9 +236,11 @@ var ht = new HT({
   // Use as linhas abaixo para replace automatico de vídeos
 
   // Efetua replace de embeds do youtube automaticamente ao ser inicializado.
-  //ytEmbedReplace: true,
+  // ytEmbedReplace: true,
   // Efetua replace de players existentes do videojs automaticamente ao ser inicializado.
-  //videojsReplace: true
+  // videojsReplace: true
+  // Efetua replace de players existentes do vimeo automaticamente ao ser inicializado.
+  // vimeoReplace: true
 });
 ```
 
@@ -267,9 +271,11 @@ var ht = new HT({
       // Use as linhas abaixo para replace automatico de vídeos
 
       // Efetua replace de embeds do youtube automaticamente ao ser inicializado.
-      //ytEmbedReplace: true,
+      // ytEmbedReplace: true,
       // Efetua replace de players existentes do videojs automaticamente ao ser inicializado.
-      //videojsReplace: true
+      // videojsReplace: true
+      // Efetua replace de players existentes do vimeo automaticamente ao ser inicializado.
+      // vimeoReplace: true
     });
   </script>
 </body>
@@ -280,7 +286,7 @@ Em alguns casos pode ser necessário adicionar apenas o tradutor de vídeos na p
 
 <h2 id='replace-automatico-de-videos'>Replace Automático de Vídeos</h2>
 
-É possível substituir automaticamente os embeds do Youtube e player existentes do Videojs pelo Player Acessível da HandTalk, sempre que uma legenda for encontrada.
+É possível substituir automaticamente os embeds do Youtube, Vimeo e player existentes do Videojs pelo Player Acessível da HandTalk, sempre que uma legenda for encontrada.
 
 Caso o vídeo não possua legenda no idioma **pt-BR** ou **pt**, o mesmo ficará com a funcionalidade de Tradução para Libras bloqueada. Conforme a imagem abaixo
 
@@ -305,8 +311,6 @@ var ht = new HT({
   ytEmbedReplace: true
 });
 ```
-
-<h3 id='replace-automatico-de-embeds-do-youtube'>Replace automático de embeds do Youtube</h3>
 
 ```html
 <body>
@@ -335,8 +339,8 @@ A ferramenta busca por embeds (iframes) do youtube, e substitui por players acce
 Você pode habilitar o replace automático passando o valor `true` a configuração `ytEmbedReplace` ao instanciar o plugin. Lembrando que você deve também habilitar a feature de vídeo passando `true` na configuração `videoEnabled`.
 
 
-Se embeds do Youtube forem inseridos após a inicialização do plugin, você deve chamar a função `ht.ytEmbedReplaceAll();` para que os novos vídeos tornem-se acessíveis.
-Também é possível efetuar o replace de um único embed com `ht.ytEmbedReplace(elem)`:
+Se embeds do Youtube forem inseridos após a inicialização do plugin, você deve chamar a função `ht.ytEmbedReplaceAll()` para que os novos vídeos tornem-se acessíveis.
+Também é possível efetuar o replace de um único embed com `ht.ytEmbedReplace(elem)`.
 
 <h2 id='replace-automatico-de-embeds-do-videojs'>Replace Automático de Embeds do Videojs</h2>
 
@@ -386,9 +390,56 @@ Você pode habilitar o replace automático passando com valor `true` a configura
 Veja o exemplo ao lado.
 
 
-Se os players do videojs forem inseridos após a inicialização do plugin, você deve chamar a função `ht.videojsReplaceAll();` para que os novos vídeos tornem-se acessíveis.
+Se os players do videojs forem inseridos após a inicialização do plugin, você deve chamar a função `ht.videojsReplaceAll()` para que os novos vídeos tornem-se acessíveis.
 
-Conforme o exemplo ao lado direito, também é possível efetuar o replace de um único  player com `ht.videojsReplace(vjsPlayer):`
+Conforme o exemplo ao lado direito, também é possível efetuar o replace de um único  player com `ht.videojsReplace(vjsPlayer)`.
+
+<h2 id='replace-automatico-de-embeds-do-vimeo'>Replace Automático de Embeds do Vimeo</h2>
+
+> Exemplo de Utilização de Embeds do Vimeo
+
+```javascript
+var ht = new HT({
+  // Troque por seu token de acesso
+  token: "<TOKEN>",
+  // Habilita o tradutor de vídeos
+  videoEnabled: true,
+  // Busca por embeds do vimeo ao inicializar a ferramenta
+  vimeoReplace: true
+});
+```
+
+```html
+<body>
+
+  <!-- Embed padrão do vimeo -->
+  <iframe width="560" height="315" src="https://player.vimeo.com/video/259226390" frameborder="0" allowfullscreen></iframe>
+
+  <!-- Pega a ultima versão do plugin Hand Talk -->
+  <script src="https://api.handtalk.me/plugin/latest/handtalk.min.js"></script>
+
+  <script>
+    var ht = new HT({
+      // Troque por seu token de acesso
+      token: "<TOKEN>",
+      // Habilita o tradutor de vídeos
+      videoEnabled: true,
+      // Busca por embeds do vimeo ao inicializar a ferramenta
+      vimeoReplace: true
+    });
+  </script>
+</body>
+```
+
+A ferramenta busca por embeds (iframes) do vimeo, e substitui por players accesíveis da Hand Talk.
+
+Você pode habilitar o replace automático passando o valor `true` a configuração `vimeoReplace` ao instanciar o plugin. Lembrando que você deve também habilitar a feature de vídeo passando `true` na configuração `videoEnabled`.
+
+
+Se os embeds do Vimeo forem inseridos após a inicialização do plugin, você deve chamar a função `ht.vimeoReplaceAll()` para que os novos vídeos tornem-se acessíveis.
+Também é possível efetuar o replace de um único embed com `ht.vimeoReplace(elem)`.
+
+Durante o processo, as legendas serão obtidas automaticamente. Caso o vídeo não possua legenda em `pt-BR` ou `pt`, a funcionalidade de Libras ficará bloqueada.
 
 <h2 id='videos-dinamicos'>Vídeos Dinâmicos</h2>
 
