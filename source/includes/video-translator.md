@@ -339,8 +339,8 @@ A ferramenta busca por embeds (iframes) do youtube, e substitui por players acce
 Você pode habilitar o replace automático passando o valor `true` a configuração `ytEmbedReplace` ao instanciar o plugin. Lembrando que você deve também habilitar a feature de vídeo passando `true` na configuração `videoEnabled`.
 
 
-Se embeds do Youtube forem inseridos após a inicialização do plugin, você deve chamar a função `ht.ytEmbedReplaceAll()` para que os novos vídeos tornem-se acessíveis.
-Também é possível efetuar o replace de um único embed com `ht.ytEmbedReplace(elem)`.
+Se embeds do Youtube forem inseridos após a inicialização do plugin, você deve chamar a função `ht.replaceYtEmbedAll()` para que os novos vídeos tornem-se acessíveis.
+Também é possível efetuar o replace de um único embed com `ht.replaceYtEmbed(elem)`.
 
 <h2 id='replace-automatico-de-embeds-do-videojs'>Replace Automático de Embeds do Videojs</h2>
 
@@ -390,9 +390,9 @@ Você pode habilitar o replace automático passando com valor `true` a configura
 Veja o exemplo ao lado.
 
 
-Se os players do videojs forem inseridos após a inicialização do plugin, você deve chamar a função `ht.videojsReplaceAll()` para que os novos vídeos tornem-se acessíveis.
+Se os players do videojs forem inseridos após a inicialização do plugin, você deve chamar a função `ht.replaceVideoJsAll()` para que os novos vídeos tornem-se acessíveis.
 
-Conforme o exemplo ao lado direito, também é possível efetuar o replace de um único  player com `ht.videojsReplace(vjsPlayer)`.
+Conforme o exemplo ao lado direito, também é possível efetuar o replace de um único  player com `ht.replaceVideoJs(vjsPlayer)`.
 
 <h2 id='replace-automatico-de-embeds-do-vimeo'>Replace Automático de Embeds do Vimeo</h2>
 
@@ -436,8 +436,8 @@ A ferramenta busca por embeds (iframes) do vimeo, e substitui por players acces�
 Você pode habilitar o replace automático passando o valor `true` a configuração `vimeoReplace` ao instanciar o plugin. Lembrando que você deve também habilitar a feature de vídeo passando `true` na configuração `videoEnabled`.
 
 
-Se os embeds do Vimeo forem inseridos após a inicialização do plugin, você deve chamar a função `ht.vimeoReplaceAll()` para que os novos vídeos tornem-se acessíveis.
-Também é possível efetuar o replace de um único embed com `ht.vimeoReplace(elem)`.
+Se os embeds do Vimeo forem inseridos após a inicialização do plugin, você deve chamar a função `ht.replaceVimeoAll()` para que os novos vídeos tornem-se acessíveis.
+Também é possível efetuar o replace de um único embed com `ht.replaceVimeo(elem)`.
 
 Durante o processo, as legendas serão obtidas automaticamente. Caso o vídeo não possua legenda em `pt-BR` ou `pt`, a funcionalidade de Libras ficará bloqueada.
 
