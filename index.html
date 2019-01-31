@@ -1089,7 +1089,7 @@
         <p>A ferramenta busca por embeds (iframes) do youtube, e substitui por players accesíveis da Hand Talk.</p>
         <p>Você pode habilitar o replace automático passando o valor <code>true</code> a configuração <code>ytEmbedReplace</code> ao instanciar o plugin. Lembrando que você deve também habilitar a feature de vídeo passando <code>true</code> na configuração
           <code>videoEnabled</code>.</p>
-        <p>Se embeds do Youtube forem inseridos após a inicialização do plugin, você deve chamar a função <code>ht.ytEmbedReplaceAll()</code> para que os novos vídeos tornem-se acessíveis. Também é possível efetuar o replace de um único embed com <code>ht.ytEmbedReplace(elem)</code>.</p>
+        <p>Se embeds do Youtube forem inseridos após a inicialização do plugin, você deve chamar a função <code>ht.replaceYtEmbedAll()</code> para que os novos vídeos tornem-se acessíveis. Também é possível efetuar o replace de um único embed com <code>ht.replaceYtEmbed(elem)</code>.</p>
         <h2 id='replace-automatico-de-embeds-do-videojs'>Replace Automático de Embeds do Videojs</h2>
         <blockquote>
           <p>Exemplo de Utilização de Embeds do Videojs</p>
@@ -1127,8 +1127,8 @@
         <p>Você pode habilitar o replace automático passando com valor <code>true</code> a configuração <code>videojsReplace</code> ao instanciar o plugin. Lembrando que você deve também habilitar a feature de vídeo passando <code>true</code> na configuração
           <code>videoEnabled</code>.</p>
         <p>Veja o exemplo ao lado.</p>
-        <p>Se os players do videojs forem inseridos após a inicialização do plugin, você deve chamar a função <code>ht.videojsReplaceAll()</code> para que os novos vídeos tornem-se acessíveis.</p>
-        <p>Conforme o exemplo ao lado direito, também é possível efetuar o replace de um único player com <code>ht.videojsReplace(vjsPlayer)</code>.</p>
+        <p>Se os players do videojs forem inseridos após a inicialização do plugin, você deve chamar a função <code>ht.replaceVideoJsAll()</code> para que os novos vídeos tornem-se acessíveis.</p>
+        <p>Conforme o exemplo ao lado direito, também é possível efetuar o replace de um único player com <code>ht.replaceVideoJs(vjsPlayer)</code>.</p>
         <h2 id='replace-automatico-de-embeds-do-vimeo'>Replace Automático de Embeds do Vimeo</h2>
         <blockquote>
           <p>Exemplo de Utilização de Embeds do Vimeo</p>
@@ -1161,7 +1161,7 @@
         <p>A ferramenta busca por embeds (iframes) do vimeo, e substitui por players accesíveis da Hand Talk.</p>
         <p>Você pode habilitar o replace automático passando o valor <code>true</code> a configuração <code>vimeoReplace</code> ao instanciar o plugin. Lembrando que você deve também habilitar a feature de vídeo passando <code>true</code> na configuração
           <code>videoEnabled</code>.</p>
-        <p>Se os embeds do Vimeo forem inseridos após a inicialização do plugin, você deve chamar a função <code>ht.vimeoReplaceAll()</code> para que os novos vídeos tornem-se acessíveis. Também é possível efetuar o replace de um único embed com <code>ht.vimeoReplace(elem)</code>.</p>
+        <p>Se os embeds do Vimeo forem inseridos após a inicialização do plugin, você deve chamar a função <code>ht.replaceVimeoAll()</code> para que os novos vídeos tornem-se acessíveis. Também é possível efetuar o replace de um único embed com <code>ht.replaceVimeo(elem)</code>.</p>
         <p>Durante o processo, as legendas serão obtidas automaticamente. Caso o vídeo não possua legenda em <code>pt-BR</code> ou <code>pt</code>, a funcionalidade de Libras ficará bloqueada.</p>
         <h2 id='videos-dinamicos'>Vídeos Dinâmicos</h2>
         <p>Caso o elemento do vídeo seja adicionado ao HTML dinâmicamente depois do carregamento do plugin, você precisa chamar a função de busca para renderizar os players novos.</p>
