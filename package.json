@@ -4,10 +4,10 @@
   "description": "Node port of tripit/slate",
   "main": "index.js",
   "scripts": {
-    "start": "npm run clear-build & gulp serve",
-    "clear-build": "rm -r build/",
+    "start": "gulp serve",
+    "prebuild": "rm -rf build/",
     "build": "gulp",
-    "deploy": "npm run clear-build && ./deploy.sh"
+    "deploy": "./deploy.sh"
   },
   "repository": {
     "type": "git",
@@ -35,8 +35,11 @@
     "gulp-uglify": "^3.0.0",
     "gulp-util": "^3.0.7",
     "highlight.js": "^9.2.0",
-    "js-yaml": "^3.5.5",
-    "marked": "^0.3.5",
-    "node-sass": "^4.5.3"
+    "js-yaml": "^3.13.1",
+    "marked": "^0.6.2",
+    "node-sass": "^4.12.0"
+  },
+  "dependencies": {
+    "natives": "^1.1.6"
   }
 }

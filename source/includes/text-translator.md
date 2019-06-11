@@ -398,7 +398,7 @@ window.setTimeout(function() {
       var iframe = document.createElement("iframe");
       document.body.appendChild(iframe);
       
-      //Define o conteúdo do iframe
+      // Define o conteúdo do iframe
       iframe.contentDocument.write("<div>Olá mundo!</div>");
       
       // Adiciona os listeners no iframe
@@ -410,6 +410,8 @@ window.setTimeout(function() {
 </body>
 ```
 
-Ao ser carregado, o plugin Hand Talk faz uma varredura na página buscando iframes e adicionando os listeners necessários para identificar o conteúdo de um elemento. Em casos de iframes que são atualizados dinâmicamente, deve ser utilizada a função `addIframesListenersAll()` para buscar novamente por iframes, ou `addListenersToIframe(iframe)` para um iframe especifico.
+Ao ser carregado, o plugin Hand Talk faz uma varredura na página buscando iframes e adicionando os listeners necessários para identificar o conteúdo de um elemento. Em casos de iframes que são construídos dinâmicamente, deve ser utilizada a função `addIframesListenersAll()` para buscar novamente por iframes, ou `addListenersToIframe(iframe)` para um iframe especifico.
 
 Veja o exemplo ao lado.
+
+Caso esteja atualizando o `src` de um iframe que ja possui os listeners de clique, considere remover os listeners com os métodos `removeIframesListenersAll()` ou `removeListenersFromIframe(iframe)`para um iframe especifico. Após o carregamento do novo conteúdo, adicione os listeners novamente. 
