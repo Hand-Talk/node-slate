@@ -414,4 +414,4 @@ Ao ser carregado, o plugin Hand Talk faz uma varredura na página buscando ifram
 
 Veja o exemplo ao lado.
 
-Caso esteja atualizando o `src` de um iframe que ja possui os listeners de clique, considere remover os listeners com os métodos `removeIframesListenersAll()` ou `removeListenersFromIframe(iframe)`para um iframe especifico. E após o carregamento do novo conteúdo, adicionar os listeners novamente. 
+Caso esteja atualizando o `src` de um iframe que ja possui os listeners de clique, considere remover os listeners com os métodos `removeIframesListenersAll()` ou `removeListenersFromIframe(iframe)`para um iframe especifico. Após o carregamento do novo conteúdo, adicione os listeners novamente. 
