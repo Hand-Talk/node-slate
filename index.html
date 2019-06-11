@@ -182,14 +182,10 @@
         <h2 id='mensagens-de-erro'>Mensagens de Erro</h2>
         <p>Algumas mensagens de erro podem surgir por má configuração da ferramenta, são elas:</p>
         <p>Sem um token válido, a ferramenta não irá funcionar, emitindo o erro:</p>
-        <aside class="warning">
-          <strong>406 - O serviço está desabilitado temporariamente para este website.</strong>
-        </aside>
+        <aside class="warning"> **406 - O serviço está desabilitado temporariamente para este website.** </aside>
         <p>O Tradutor de vídeos está disponível no plano
           <strong>Gold 2</strong> ou superior. Caso a sua assinatura não suporte a funcionalidade de vídeos e a flag <code>videoEnabled</code> estiver habilitada, receberá o erro:</p>
-        <aside class="warning">
-          <strong>406 - A funcionalidade de vídeo não está habilitada para a sua assinatura.</strong>
-        </aside>
+        <aside class="warning"> **406 - A funcionalidade de vídeo não está habilitada para a sua assinatura.** </aside>
         <h2 id='eventos-introducao'>Eventos</h2>
         <blockquote>
           <p>Exemplo de Listener de Eventos</p>
@@ -522,7 +518,9 @@
         </p>
         <p>Você pode utilizar o parâmetro <code>customButtonStyle</code> para aplicar uma customização no botão de acessibilidade na versão mobile.</p>
         <aside class="info">
-          <strong>Nota: Quando o parâmetro <code>customButtonStyle</code> estiver definido, as animações do botão de acessibilidade serão desativadas.</strong>
+          <p>
+            <strong>Nota: Quando o parâmetro <code>customButtonStyle</code> estiver definido, as animações do botão de acessibilidade serão desativadas.</strong>
+          </p>
         </aside>
         <p>Ao invocar <code>HT</code>, no parâmetro <code>mobileConfig</code>, defina também o objeto <code>customButtonStyle</code>. Consulte os exemplos ao lado.</p>
         <blockquote>
@@ -593,7 +591,9 @@
           </tbody>
         </table>
         <aside class="info">
-          <strong>Nota: Para todos os casos, especifique a unidade de medida com os sufixos <code>em</code>, <code>%</code>, <code>px</code>, <code>vh</code>, <code>vw</code>.</strong>
+          <p>
+            <strong>Nota: Para todos os casos, especifique a unidade de medida com os sufixos <code>em</code>, <code>%</code>, <code>px</code>, <code>vh</code>, <code>vw</code>.</strong>
+          </p>
         </aside>
         <p>Você pode definir apenas o parâmetro que deseja aplicar. Com o exemplo ao lado, apenas a borda arredondada será aplicada ao botão. Os demais parâmetros ficarão com os valores padrões da Hand Talk.</p>
         <h2 id='alinhamento-botoes-acao-mobile'>Alinhamento dos botões de ação na versão mobile</h2>
@@ -656,80 +656,80 @@
           <thead>
             <tr>
               <th>Eventos</th>
-              <th style="text-align:center">Descrição</th>
-              <th style="text-align:right">Retorno</th>
+              <th align="center">Descrição</th>
+              <th align="right">Retorno</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td>authenticating</td>
-              <td style="text-align:center">Autenticando</td>
-              <td style="text-align:right">undefined</td>
+              <td align="center">Autenticando</td>
+              <td align="right">undefined</td>
             </tr>
             <tr>
               <td>errorOnAuth</td>
-              <td style="text-align:center">Erro ao autenticar</td>
-              <td style="text-align:right">undefined</td>
+              <td align="center">Erro ao autenticar</td>
+              <td align="right">undefined</td>
             </tr>
             <tr>
               <td>authenticated</td>
-              <td style="text-align:center">Autenticado</td>
-              <td style="text-align:right">undefined</td>
+              <td align="center">Autenticado</td>
+              <td align="right">undefined</td>
             </tr>
             <tr>
               <td>notCompatible</td>
-              <td style="text-align:center">Navegador ou hardware não compatível</td>
-              <td style="text-align:right">string: &#39;withoutCanvas&#39; ou &#39;withoutWebGL&#39; ou &#39;hardwareDoesNotSupport&#39;</td>
+              <td align="center">Navegador ou hardware não compatível</td>
+              <td align="right">string: &#39;withoutCanvas&#39; ou &#39;withoutWebGL&#39; ou &#39;hardwareDoesNotSupport&#39;</td>
             </tr>
             <tr>
               <td>customizing</td>
-              <td style="text-align:center">Customizando</td>
-              <td style="text-align:right">undefined</td>
+              <td align="center">Customizando</td>
+              <td align="right">undefined</td>
             </tr>
             <tr>
               <td>customized</td>
-              <td style="text-align:center">Customizado</td>
-              <td style="text-align:right">undefined</td>
+              <td align="center">Customizado</td>
+              <td align="right">undefined</td>
             </tr>
             <tr>
               <td>hugoLoaded</td>
-              <td style="text-align:center">Hugo carregado</td>
-              <td style="text-align:right">undefined</td>
+              <td align="center">Hugo carregado</td>
+              <td align="right">undefined</td>
             </tr>
             <tr>
               <td>activated</td>
-              <td style="text-align:center">Feature de texto ou vídeo ativada</td>
-              <td style="text-align:right">string: &#39;textManager&#39; ou &#39;videoManager&#39;</td>
+              <td align="center">Feature de texto ou vídeo ativada</td>
+              <td align="right">string: &#39;textManager&#39; ou &#39;videoManager&#39;</td>
             </tr>
             <tr>
               <td>translate</td>
-              <td style="text-align:center">Dispara quando um texto é capturado e enviado para tradução pela feature de tradução de texto</td>
-              <td style="text-align:right">string: texto capturado</td>
+              <td align="center">Dispara quando um texto é capturado e enviado para tradução pela feature de tradução de texto</td>
+              <td align="right">string: texto capturado</td>
             </tr>
             <tr>
               <td>translating</td>
-              <td style="text-align:center">Traduzindo texto no servidor da Hand Talk</td>
-              <td style="text-align:right">undefined</td>
+              <td align="center">Traduzindo texto no servidor da Hand Talk</td>
+              <td align="right">undefined</td>
             </tr>
             <tr>
               <td>errorOnTranslate</td>
-              <td style="text-align:center">Erro ao traduzir texto no servidor da Hand Talk</td>
-              <td style="text-align:right">undefined</td>
+              <td align="center">Erro ao traduzir texto no servidor da Hand Talk</td>
+              <td align="right">undefined</td>
             </tr>
             <tr>
               <td>translated</td>
-              <td style="text-align:center">Texto traduzido corretamente no Servidor da Hand Talk</td>
-              <td style="text-align:right">undefined</td>
+              <td align="center">Texto traduzido corretamente no Servidor da Hand Talk</td>
+              <td align="right">undefined</td>
             </tr>
             <tr>
               <td>signalized</td>
-              <td style="text-align:center">Sentença sinalizada por completo</td>
-              <td style="text-align:right">undefined</td>
+              <td align="center">Sentença sinalizada por completo</td>
+              <td align="right">undefined</td>
             </tr>
             <tr>
               <td>videoManagerReady</td>
-              <td style="text-align:center">Disparado quando o assistente de vídeo esta pronto, utilize para chamar as funções de replace manualmente</td>
-              <td style="text-align:right">undefined</td>
+              <td align="center">Disparado quando o assistente de vídeo esta pronto, utilize para chamar as funções de replace manualmente</td>
+              <td align="right">undefined</td>
             </tr>
           </tbody>
         </table>
@@ -820,7 +820,7 @@
       <span class="hljs-keyword">var</span> iframe = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">"iframe"</span>);
       <span class="hljs-built_in">document</span>.body.appendChild(iframe);
 
-      <span class="hljs-comment">//Define o conteúdo do iframe</span>
+      <span class="hljs-comment">// Define o conteúdo do iframe</span>
       iframe.contentDocument.write(<span class="hljs-string">"&lt;div&gt;Olá mundo!&lt;/div&gt;"</span>);
 
       <span class="hljs-comment">// Adiciona os listeners no iframe</span>
@@ -830,9 +830,11 @@
     }, <span class="hljs-number">3000</span>);
   </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span></code></pre>
-        <p>Ao ser carregado, o plugin Hand Talk faz uma varredura na página buscando iframes e adicionando os listeners necessários para identificar o conteúdo de um elemento. Em casos de iframes que são atualizados dinâmicamente, deve ser utilizada a função
+        <p>Ao ser carregado, o plugin Hand Talk faz uma varredura na página buscando iframes e adicionando os listeners necessários para identificar o conteúdo de um elemento. Em casos de iframes que são construídos dinâmicamente, deve ser utilizada a função
           <code>addIframesListenersAll()</code> para buscar novamente por iframes, ou <code>addListenersToIframe(iframe)</code> para um iframe especifico.</p>
         <p>Veja o exemplo ao lado.</p>
+        <p>Caso esteja atualizando o <code>src</code> de um iframe que ja possui os listeners de clique, considere remover os listeners com os métodos <code>removeIframesListenersAll()</code> ou <code>removeListenersFromIframe(iframe)</code>para um iframe
+          especifico. Após o carregamento do novo conteúdo, adicione os listeners novamente. </p>
         <h1 id='tradutor-de-videos'>Tradutor de Vídeos</h1>
         <h2 id='comecando-tradutor-de-videos'>Começando</h2>
         <blockquote>
@@ -887,8 +889,10 @@
           <li>VTT;</li>
           <li>SRT.</li>
         </ul>
-        <aside class="info"> Nota: Para utilizar o player acessível, certifique-se de estar com o plugin devidamente configurado de acordo com a sessão
-          <a href="index.html?html#comecando-tradutor-de-videos">Tradutor de Vídeos &gt; Começando</a>. </aside>
+        <aside class="info">
+          <p>Nota: Para utilizar o player acessível, certifique-se de estar com o plugin devidamente configurado de acordo com a sessão
+            <a href="index.html?html#comecando-tradutor-de-videos">Tradutor de Vídeos &gt; Começando</a>.</p>
+        </aside>
         <p>Você pode tornar um vídeo acessível definindo o atributos abaixo: </p>
         <table>
           <thead>
@@ -916,7 +920,9 @@
             </tr>
           </tbody>
         </table>
-        <aside class="info"> Nota: O construtor de vídeos através de um único atributo <code>ht-data=&quot;src=&lt;VIDEO_TECH&gt;:&lt;VIDEO_URL&gt;;subtitle=&lt;CAPTIONS_TYPE&gt;:&lt;CAPTIONS_URL&gt;&quot;</code> está depreciado, e pode ser removido em futuras versões. </aside>
+        <aside class="info">
+          <p>Nota: O construtor de vídeos através de um único atributo <code>ht-data=&quot;src=&lt;VIDEO_TECH&gt;:&lt;VIDEO_URL&gt;;subtitle=&lt;CAPTIONS_TYPE&gt;:&lt;CAPTIONS_URL&gt;&quot;</code> está depreciado, e pode ser removido em futuras versões.</p>
+        </aside>
         <blockquote>
           <p>Construtor do player Hand Talk</p>
         </blockquote> <pre class="highlight html"><code><span class="hljs-tag">&lt;<span class="hljs-name">video</span>
@@ -941,13 +947,17 @@
 <span class="hljs-tag">&lt;/<span class="hljs-name">video</span>&gt;</span>
 </code></pre><pre class="highlight javascript"><code><span class="hljs-comment">// Confira o exemplo em html</span></code></pre>
         <p>Caso o campo subtitle fique em branco em um src do tipo Youtube, a legenda será obtida automaticamente. Como no exemplo ao lado.</p>
-        <aside class="info"> Nota: No source do tipo Youtube, você pode optar por adicionar o link do vídeo, ou apenas o ID. Conforme exemplo ao lado. </aside>
+        <aside class="info">
+          <p>Nota: No source do tipo Youtube, você pode optar por adicionar o link do vídeo, ou apenas o ID. Conforme exemplo ao lado.</p>
+        </aside>
         <p>Caso o vídeo esteja definido como
           <strong>não listado</strong>, ou algum outro tipo de restrição no Youtube&quot;, não conseguiremos acessar a legenda, restornando o erro:</p>
         <aside class="warning"> 404 - Legenda não encontrada. </aside>
         <p>O exemplo ao lado
           <em>(Criando um vídeo com o tech youtube)</em> deve gerar o seguinte player:</p>
-        <video class='video-js' data-ht-src-type="youtube" data-ht-src="H2Io3y98FV4"></video>
+        <p>
+          <video class='video-js' data-ht-src-type="youtube" data-ht-src="H2Io3y98FV4"></video>
+        </p>
         <h3 id='exemplo-com-tech-do-vimeo'>Exemplo com Tech do Vimeo</h3>
         <blockquote>
           <p>Exemplo: Criando um vídeo com o
@@ -977,7 +987,9 @@
 
 </code></pre><pre class="highlight javascript"><code><span class="hljs-comment">// Confira o exemplo em html</span></code></pre>
         <p>Utilize para vídeos e legendas hospedadas na internet com link direto - Exemplo ao lado.</p>
-        <video data-ht-src-type="mp4" data-ht-src="assets/HandTalk.mp4" data-ht-subtitle-type="vtt" data-ht-subtitle="assets/HandTalk.vtt"></video>
+        <p>
+          <video data-ht-src-type="mp4" data-ht-src="assets/HandTalk.mp4" data-ht-subtitle-type="vtt" data-ht-subtitle="assets/HandTalk.vtt"></video>
+        </p>
         <h3 id='exemplo-com-tech-da-sambatech'>Exemplo com Tech da SambaTech</h3>
         <blockquote>
           <p>Exemplo: Criando um vídeo com o
@@ -990,8 +1002,9 @@
 <span class="hljs-attr">data-ht-subtitle</span>=<span class="hljs-string">"assets/HandTalk.vtt"</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">video</span>&gt;</span></code></pre><pre class="highlight javascript"><code><span class="hljs-comment">// Confira o exemplo em html</span></code></pre>
         <p>Utilize para vídeos hospedados na SambaTech e legendas hospedadas na internet com link direto - Exemplo ao lado.</p>
-        <video data-ht-src-type="sambatech" data-ht-src="https://fast.player.liquidplatform.com/pApiv2/embed/c750c09d7d04891b7f3f5c9a9337d6b9/a40cc34d36f0ee05ae55a971b427888e"
-          data-ht-subtitle-type="vtt" data-ht-subtitle="assets/HandTalk.vtt"></video>
+        <p>
+          <video data-ht-src-type="sambatech" data-ht-src="https://fast.player.liquidplatform.com/pApiv2/embed/c750c09d7d04891b7f3f5c9a9337d6b9/a40cc34d36f0ee05ae55a971b427888e" data-ht-subtitle-type="vtt" data-ht-subtitle="assets/HandTalk.vtt"></video>
+        </p>
         <h2 id='utilizando-apenas-o-tradutor-de-videos'>Utilizando Apenas o Tradutor de Vídeos</h2>
         <blockquote>
           <p>Exemplo de Utilização</p>
@@ -1055,8 +1068,7 @@
         <p>
           <img src="images/screenshoots/tradutor-de-videos-fail.png" alt="Exemplo de vídeo sem legenda em português brasileiro com ícone de tradução para libras bloqueado.">
         </p>
-        <aside class="notice"> Ao usar o replace automático de vídeos você perderá a referência do seu player atual, caso precise manipular o player, recomendamos que verifique a sessão
-          <a href="#utilizando-o-player-acessivel-tradutor-de-videos">Utilizando o Player Acessível</a>. </aside>
+        <aside class="notice"> Ao usar o replace automático de vídeos você perderá a referência do seu player atual, caso precise manipular o player, recomendamos que verifique a sessão [Utilizando o Player Acessível](#utilizando-o-player-acessivel-tradutor-de-videos). </aside>
         <h2 id='replace-automatico-de-embeds-do-youtube'>Replace Automático de Embeds do Youtube</h2>
         <blockquote>
           <p>Exemplo de Utilização de Embeds do Youtube</p>
@@ -1165,8 +1177,10 @@
         <p>Durante o processo, as legendas serão obtidas automaticamente. Caso o vídeo não possua legenda em <code>pt-BR</code> ou <code>pt</code>, a funcionalidade de Libras ficará bloqueada.</p>
         <h2 id='videos-dinamicos'>Vídeos Dinâmicos</h2>
         <p>Caso o elemento do vídeo seja adicionado ao HTML dinâmicamente depois do carregamento do plugin, você precisa chamar a função de busca para renderizar os players novos.</p>
-        <aside class="info"> Nota: Para realizar esse procedimento, certifique-se de estar com o plugin devidamente configurado de acordo com a sessão
-          <a href="index.html?html#comecando-tradutor-de-videos">Tradutor de Vídeos &gt; Começando</a>. </aside>
+        <aside class="info">
+          <p>Nota: Para realizar esse procedimento, certifique-se de estar com o plugin devidamente configurado de acordo com a sessão
+            <a href="index.html?html#comecando-tradutor-de-videos">Tradutor de Vídeos &gt; Começando</a>.</p>
+        </aside>
         <blockquote>
           <p>Exemplo de Utilização de Embeds dinâmicos do youtube</p>
         </blockquote> <pre class="highlight javascript"><code><span class="hljs-keyword">var</span> ht = <span class="hljs-keyword">new</span> HT({
