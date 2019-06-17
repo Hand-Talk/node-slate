@@ -58,7 +58,7 @@ Você pode pode preferir habilitar/desabilitar algumas funcionalidades do Tradut
 | vimeoReplace | Quando verdadeiro substitui os embeds do Vimeo por players acessíveis em língua de sinais.                                                         | false ou true                  | false     |
 | mobileEnabled  | Quando verdadeiro ativa o tradutor de sites em dispositivos móveis.                                                                                   | false ou true                  | true      |
 | mobileConfig   | Objeto de configuração para a plataforma mobile, quando definido, sobscreve as configurações padrões de HT.                                           | Object                         | { }       |
-
+| parentElement   | Elemento que receberá o plugin Hand Talk.                                           | Element                         | document.body       |
 
 <h2 id='parametros-para-versao-mobile'>Parâmetros para versão mobile</h2>
 

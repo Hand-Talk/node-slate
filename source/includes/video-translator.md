@@ -165,12 +165,8 @@ data-ht-subtitle="assets/HandTalk.vtt">
 
 Para vídeos hospedados no Vimeo, você deve informar a legenda manualmente.
 Como no exemplo ao lado, o vídeo deve aparecer da seguinte forma:
-
-
-
-<video data-ht-src-type="vimeo" data-ht-src="https://player.vimeo.com/video/259226390" data-ht-subtitle-type="vtt" data-ht-subtitle="assets/HandTalk.vtt">
+<video data-ht-src-type="vimeo" data-ht-src="https://player.vimeo.com/video/259226390">
 </video>
-
   
 <h3 id='exemplo-com-tech-de-mp4-webm'>Exemplo com Tech de MP4/WEBM/OGG</h3>
  
@@ -184,8 +180,6 @@ data-ht-src="assets/HandTalk.mp4"
 data-ht-subtitle-type="vtt"
 data-ht-subtitle="assets/HandTalk.vtt">
 </video>
-
-
 ```
 
 ```javascript
