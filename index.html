@@ -415,6 +415,12 @@
               <td>Object</td>
               <td>{ }</td>
             </tr>
+            <tr>
+              <td>parentElement</td>
+              <td>Elemento que receberá o plugin Hand Talk.</td>
+              <td>Element</td>
+              <td>document.body</td>
+            </tr>
           </tbody>
         </table>
         <h2 id='parametros-para-versao-mobile'>Parâmetros para versão mobile</h2>
@@ -970,9 +976,9 @@
 <span class="hljs-attr">data-ht-subtitle</span>=<span class="hljs-string">"assets/HandTalk.vtt"</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">video</span>&gt;</span>
 </code></pre><pre class="highlight javascript"><code><span class="hljs-comment">// Confira o exemplo em html</span></code></pre>
-        <p>Para vídeos hospedados no Vimeo, você deve informar a legenda manualmente. Como no exemplo ao lado, o vídeo deve aparecer da seguinte forma:</p>
-        <video data-ht-src-type="vimeo" data-ht-src="https://player.vimeo.com/video/259226390" data-ht-subtitle-type="vtt"
-          data-ht-subtitle="assets/HandTalk.vtt"> </video>
+        <p>Para vídeos hospedados no Vimeo, você deve informar a legenda manualmente. Como no exemplo ao lado, o vídeo deve aparecer da seguinte forma:
+          <video data-ht-src-type="vimeo" data-ht-src="https://player.vimeo.com/video/259226390"> </video>
+        </p>
         <h3 id='exemplo-com-tech-de-mp4-webm'>Exemplo com Tech de MP4/WEBM/OGG</h3>
         <blockquote>
           <p>Exemplo: Criando um vídeo com o
@@ -983,9 +989,7 @@
 <span class="hljs-attr">data-ht-src</span>=<span class="hljs-string">"assets/HandTalk.mp4"</span>
 <span class="hljs-attr">data-ht-subtitle-type</span>=<span class="hljs-string">"vtt"</span>
 <span class="hljs-attr">data-ht-subtitle</span>=<span class="hljs-string">"assets/HandTalk.vtt"</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">video</span>&gt;</span>
-
-</code></pre><pre class="highlight javascript"><code><span class="hljs-comment">// Confira o exemplo em html</span></code></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">video</span>&gt;</span></code></pre><pre class="highlight javascript"><code><span class="hljs-comment">// Confira o exemplo em html</span></code></pre>
         <p>Utilize para vídeos e legendas hospedadas na internet com link direto - Exemplo ao lado.</p>
         <p>
           <video data-ht-src-type="mp4" data-ht-src="assets/HandTalk.mp4" data-ht-subtitle-type="vtt" data-ht-subtitle="assets/HandTalk.vtt"></video>
