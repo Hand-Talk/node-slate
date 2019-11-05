@@ -11,7 +11,6 @@ toc_footers:
 includes:
   - introduction
   - text-translator
-  - video-translator
   
 search: true
 
