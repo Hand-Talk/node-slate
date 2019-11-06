@@ -63,7 +63,7 @@ Sem um token válido, a ferramenta não irá funcionar, emitindo o erro:
 > Exemplo de Listener de Eventos
 
 ```javascript
-ht.on('translated', function () {
+ht.on('signalized', function () {
   console.log('Nova frase traduzida!');
 });
 ```
@@ -71,7 +71,7 @@ ht.on('translated', function () {
 ```html
 <body>
   <!-- Pega a ultima versão do plugin Hand Talk -->
-  <script src="https://api.handtalk.me/plugin/latest/handtalk.min.js"></script>
+  <script src="https://plugin.handtalk.me/web/latest/handtalk.min.js"></script>
 
   <script>
     var ht = new HT({
@@ -79,8 +79,8 @@ ht.on('translated', function () {
       token: '<SEU TOKEN>'
     });
 
-    // Escuta o evento translated
-    ht.on('translated', function () {
+    // Escuta o evento signalized
+    ht.on('signalized', function () {
       console.log('Nova frase traduzida!');
     });
   </script>
@@ -94,7 +94,7 @@ Os eventos disparados por `HT` são:
 
 | Evento | Descrição | Retorno |
 |---|---|---|
-| coreReady | Avatar carregado | ```undefined``` |
+| coreReady | Avatar carregado | ```true``` |
 | activated | Tradutor de texto foi ativada | ```undefined``` |
 | deactivated | Tradutor de texto foi desativada | ```undefined``` |
 | signalized | Dispara quando o texto é sinalizado por completo | ```undefined``` |

@@ -19,7 +19,7 @@ var ht = new HT({
   <p>Oferecemos tradução digital para acessibilidade em Libras, a Língua Brasileira de Sinais.</p>
 
   <!-- Pega a ultima versão do plugin Hand Talk -->
-  <script src="https://api.handtalk.me/plugin/latest/handtalk.min.js"></script>
+  <script src="https://plugin.handtalk.me/web/latest/handtalk.min.js"></script>
 
   <script>
   var ht = new HT({
@@ -30,9 +30,9 @@ var ht = new HT({
 </body>
 ```
 
-Para a instalação do plugin, deve-se inserir o script da Hand Talk e instanciar a classe HT passando por argumento um dicionário com o token e demais configurações.
+Para a instalação do plugin, deve-se inserir o script da Hand Talk e instanciar a classe HT passando por argumento um objeto com o token e demais configurações.
 
-No exemplo de instalação à direita, utilizamos a última versão do script hospedado em https://api.handtalk.me/plugin/latest/handtalk.min.js, após inserir o script da Hand Talk instanciamos a classe `HT` passando por parâmetro um dicionário com o token.
+No exemplo de instalação à direita, utilizamos a última versão do script hospedado em https://plugin.handtalk.me/web/latest/handtalk.min.js, após inserir o script da Hand Talk instanciamos a classe `HT` passando por parâmetro um objeto com o token.
 
 Sem um token válido, a ferramenta não irá funcionar, emitindo o erro  ***O serviço está desabilitado temporariamente para este website***, após clicar no botão de ativação da ferramenta.
 
@@ -41,21 +41,17 @@ Ou fale com um de nossos consultores em [handtalk.me/sites](http://handtalk.me/s
 
 <h2 id='parametros'>Parâmetros</h2>
 
-Você pode pode preferir habilitar/desabilitar algumas funcionalidades do Tradutor de Sites, para isso utilize os parâmetros abaixo:
+Você pode preferir habilitar/desabilitar algumas funcionalidades do Tradutor de Sites, para isso utilize os parâmetros abaixo:
 
 | Configurações  | Descrição                                                                                                                                             | Valores                        | Padrão    |
 | -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------ | --------- |
 | textEnabled    | Quando verdadeiro: exibe o tradutor de sites para textos.                                                                                             | false ou true                  | true      |
-| videoEnabled   | Quando verdadeiro: monta os players acessíveis em língua de sinais.                                                                                   | false ou true                  | false     |
 | side           | Define o posicionamento da janela do tradutor no site. O Tradutor de Sites pode ser inicializado do lado esquerdo ou do lado direito da tela.         | "right" ou "left"              | "right"   |
 | align          | Define o alinhamento vertical da janela do tradutor no site.                                                                                        | "default" ou "top" ou "bottom" | "default" |
 | zIndex         | Define o posicionamento da profundidade do tradutor no site, ou seja, determinar se o Tradutor de Sites estará mais próximo ou mais afastado da tela. | Inteiros                       | 1000000   |
 | maxTextSize    | Define o tamanho máximo de caracteres para captura de texto em um elemento.                                                                           | Inteiros                       | 500       |
 | doNotTrack     | Se o valor desta propriedade for verdadeiro, as frases traduzidas não serão armazenadas ou utilizada para a melhoria do sistema de tradução.          | false ou true                  | false     |
 | exceptions     | Lista de queries que serão ignoradas pelo plugin, ex.: ```['a', 'form', '.main', '#site-title']```                                                    | array                          | [ ]       |
-| ytEmbedReplace | Quando verdadeiro substitui os embeds do Youtube por players acessíveis em língua de sinais.                                                          | false ou true                  | false     |
-| videojsReplace | Quando verdadeiro adiciona os componentes de acessibilidade em uma instancia atual do videojs                                                         | false ou true                  | false     |
-| vimeoReplace | Quando verdadeiro substitui os embeds do Vimeo por players acessíveis em língua de sinais.                                                         | false ou true                  | false     |
 | mobileEnabled  | Quando verdadeiro ativa o tradutor de sites em dispositivos móveis.                                                                                   | false ou true                  | true      |
 | mobileConfig   | Objeto de configuração para a plataforma mobile, quando definido, sobscreve as configurações padrões de HT.                                           | Object                         | { }       |
 | parentElement   | Elemento que receberá o plugin Hand Talk.                                           | Element                         | document.body       |
@@ -85,7 +81,7 @@ var ht = new HT({
   <p>Oferecemos tradução digital para acessibilidade em Libras, a Língua Brasileira de Sinais.</p>
 
   <!-- Pega a ultima versão do plugin Hand Talk -->
-  <script src="https://api.handtalk.me/plugin/latest/handtalk.min.js"></script>
+  <script src="https://plugin.handtalk.me/web/latest/handtalk.min.js"></script>
 
   <script>
   var ht = new HT({
@@ -119,7 +115,7 @@ Consulte o exemplo ao lado.
 <body>
 
   <!-- Pega a ultima versão do plugin Hand Talk -->
-  <script src="https://api.handtalk.me/plugin/latest/handtalk.min.js"></script>
+  <script src="https://plugin.handtalk.me/web/latest/handtalk.min.js"></script>
 
   <script>
   var ht = new HT({
@@ -174,7 +170,7 @@ Ao invocar `HT`, no parâmetro `mobileConfig`, defina também o objeto `customBu
 <body>
 
   <!-- Pega a ultima versão do plugin Hand Talk -->
-  <script src="https://api.handtalk.me/plugin/latest/handtalk.min.js"></script>
+  <script src="https://plugin.handtalk.me/web/latest/handtalk.min.js"></script>
 
   <script>
   var ht = new HT({
@@ -230,7 +226,7 @@ Você pode definir apenas o parâmetro que deseja aplicar. Com o exemplo ao lado
 <body>
 
   <!-- Pega a ultima versão do plugin Hand Talk -->
-  <script src="https://api.handtalk.me/plugin/latest/handtalk.min.js"></script>
+  <script src="https://plugin.handtalk.me/web/latest/handtalk.min.js"></script>
 
   <script>
   var ht = new HT({
@@ -278,20 +274,14 @@ Os eventos que podem ser disparados pela instancia de HT são:
 
 | Eventos           | Descrição                                                                                                 | Retorno                                                               |
 | ----------------- | :-------------------------------------------------------------------------------------------------------: | --------------------------------------------------------------------: |
-| authenticating    | Autenticando                                                                                              | undefined                                                             |
-| errorOnAuth       | Erro ao autenticar                                                                                        | undefined                                                             |
-| authenticated     | Autenticado                                                                                               | undefined                                                             |
-| notCompatible     | Navegador ou hardware não compatível                                                                      | string: 'withoutCanvas' ou 'withoutWebGL' ou 'hardwareDoesNotSupport' |
-| customizing       | Customizando                                                                                              | undefined                                                             |
-| customized        | Customizado                                                                                               | undefined                                                             |
-| hugoLoaded        | Hugo carregado                                                                                            | undefined                                                             |
-| activated         | Feature de texto ou vídeo ativada                                                                         | string: 'textManager' ou 'videoManager'                               |
-| translate         | Dispara quando um texto é capturado e enviado para tradução pela feature de tradução de texto             | string: texto capturado                                               |
-| translating       | Traduzindo texto no servidor da Hand Talk                                                                 | undefined                                                             |
-| errorOnTranslate  | Erro ao traduzir texto no servidor da Hand Talk                                                           | undefined                                                             |
-| translated        | Texto traduzido corretamente no Servidor da Hand Talk                                                     | undefined                                                             |
-| signalized        | Sentença sinalizada por completo                                                                          | undefined                                                             |
-| videoManagerReady | Disparado quando o assistente de vídeo esta pronto, utilize para chamar as funções de replace manualmente | undefined                                                             |
+| coreReady | Avatar carregado | ```true``` |
+| activated | Tradutor de texto foi ativada | ```undefined``` |
+| deactivated | Tradutor de texto foi desativada | ```undefined``` |
+| signalized | Dispara quando o texto é sinalizado por completo | ```undefined``` |
+| errorOnAuth | Erro ao autenticar | ```string: mensagem referente ao erro ocorrido``` |
+| errorOnTranslate | Erro ao traduzir texto no servidor da Hand Talk | ```undefined``` |
+| notCompatible | Navegador ou hardware não compatível | string: ```'withoutCanvas'``` ou ```'withoutWebGL'``` |
+
 
 <h2 id='adicionando-excecoes'>Adicionando Exceções</h2>
 
@@ -325,7 +315,7 @@ var ht = new HT({
   </div>
 
   <!-- Pega a ultima versão do plugin Hand Talk -->
-  <script src="https://api.handtalk.me/plugin/latest/handtalk.min.js"></script>
+  <script src="https://plugin.handtalk.me/web/latest/handtalk.min.js"></script>
 
   <script>
   var ht = new HT({
@@ -353,65 +343,3 @@ No exemplo ao lado, colocamos na exceção um ID de elemento HTML e uma classe C
 **Atenção**: Ao adicionar o conteúdo como uma exceção, ele não será traduzido pela Hand Talk.
 
 **Importante**: Dependendo da linguagem e/ou lógica de programação aplicada no desenvolvimento do website, para possibilitar o pleno funcionamento ou aprimorar os resultados obtidos pelo serviço, pode ser necessária a realização de outras customizações no código da Hand Talk, que deverão ser feitas pelo cliente.
-
-<h2 id='iframes-dinamicos'>Iframes Dinâmicos</h2>
-
-> Exemplo de Compatibilidade com Iframes Dinâmicos
-
-```javascript
-var ht = new HT({
-  // Troque por seu token de acesso
-  token: "<TOKEN>"
-});
-
-// Aguarda 3 segundos e insere um iframe na página
-window.setTimeout(function() {
-  // Cria o iframe e adiciona na pagina
-  var iframe = document.createElement("iframe");
-  document.body.appendChild(iframe);
-    
-  //Define o conteúdo do iframe
-  iframe.contentDocument.write("<div>Olá mundo!</div>");
-  
-  // Adiciona os listeners no iframe
-  ht.addListenersToIframe(iframe);
-  // Ou utilize
-  // ht.addListenersToIframeAll();
-  // Para fazer a varredura na página inteira novamente
-}, 3000);
-```
-
-```html
-<body>
-  <!-- Pega a ultima versão do plugin Hand Talk -->
-  <script src="https://api.handtalk.me/plugin/latest/handtalk.min.js"></script>
-
-  <script>
-    var ht = new HT({
-      // Troque por seu token de acesso
-      token: "<TOKEN>"
-    )};
-
-    // Após 3 segundos cria um iframe
-    window.setTimeout(function() {
-      // Cria o iframe e adiciona na pagina
-      var iframe = document.createElement("iframe");
-      document.body.appendChild(iframe);
-      
-      // Define o conteúdo do iframe
-      iframe.contentDocument.write("<div>Olá mundo!</div>");
-      
-      // Adiciona os listeners no iframe
-      ht.addListenersToIframe(iframe);
-      // Para buscar iframes e adicionar os listeners, utilize:
-      // ht.addListenersToIframeAll();
-    }, 3000);
-  </script>
-</body>
-```
-
-Ao ser carregado, o plugin Hand Talk faz uma varredura na página buscando iframes e adicionando os listeners necessários para identificar o conteúdo de um elemento. Em casos de iframes que são construídos dinâmicamente, deve ser utilizada a função `addIframesListenersAll()` para buscar novamente por iframes, ou `addListenersToIframe(iframe)` para um iframe especifico.
-
-Veja o exemplo ao lado.
-
-Caso esteja atualizando o `src` de um iframe que ja possui os listeners de clique, considere remover os listeners com os métodos `removeIframesListenersAll()` ou `removeListenersFromIframe(iframe)`para um iframe especifico. Após o carregamento do novo conteúdo, adicione os listeners novamente. 
