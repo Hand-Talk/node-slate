@@ -632,3 +632,20 @@ html, body {
   width: 100%;
   height: 500px;
 }
+
+#version-select {
+  height: 30px;
+  width: 100%;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  background: transparent;
+  margin-bottom: 10px;
+}
+
+#version-select option {
+  color: white;
+  background: #393939;
+  font-weight: bold;
+  font-size: 15px;
+}

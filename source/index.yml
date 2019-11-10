@@ -5,6 +5,7 @@ language_tabs:
   - html
 
 toc_footers:
+  - <select id="version-select" onchange="onSelectVersion(event)"> <option value="">Plugin - Versão 3</option> <option value="https://next.handtalk.me/">Plugin - Versão 4</option> </select>
   - <a href='https://account.handtalk.me/'>Crie sua conta</a>
   - © 2018 Hand Talk
 
