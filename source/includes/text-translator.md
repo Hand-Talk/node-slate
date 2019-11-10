@@ -343,3 +343,65 @@ No exemplo ao lado, colocamos na exceção um ID de elemento HTML e uma classe C
 **Atenção**: Ao adicionar o conteúdo como uma exceção, ele não será traduzido pela Hand Talk.
 
 **Importante**: Dependendo da linguagem e/ou lógica de programação aplicada no desenvolvimento do website, para possibilitar o pleno funcionamento ou aprimorar os resultados obtidos pelo serviço, pode ser necessária a realização de outras customizações no código da Hand Talk, que deverão ser feitas pelo cliente.
+
+<h2 id='iframes-dinamicos'>Iframes Dinâmicos</h2>
+
+> Exemplo de Compatibilidade com Iframes Dinâmicos
+
+```javascript
+var ht = new HT({
+  // Troque por seu token de acesso
+  token: "<TOKEN>"
+});
+
+// Aguarda 3 segundos e insere um iframe na página
+window.setTimeout(function() {
+  // Cria o iframe e adiciona na pagina
+  var iframe = document.createElement("iframe");
+  document.body.appendChild(iframe);
+    
+  //Define o conteúdo do iframe
+  iframe.contentDocument.write("<div>Olá mundo!</div>");
+  
+  // Adiciona os listeners no iframe
+  ht.addListenersToIframe(iframe);
+  // Ou utilize
+  // ht.addListenersToIframes();
+  // Para fazer a varredura na página inteira novamente
+}, 3000);
+```
+
+```html
+<body>
+  <!-- Pega a ultima versão do plugin Hand Talk -->
+  <script src="https://plugin.handtalk.me/web/latest/handtalk.min.js"></script>
+
+  <script>
+    var ht = new HT({
+      // Troque por seu token de acesso
+      token: "<TOKEN>"
+    )};
+
+    // Após 3 segundos cria um iframe
+    window.setTimeout(function() {
+      // Cria o iframe e adiciona na pagina
+      var iframe = document.createElement("iframe");
+      document.body.appendChild(iframe);
+      
+      // Define o conteúdo do iframe
+      iframe.contentDocument.write("<div>Olá mundo!</div>");
+      
+      // Adiciona os listeners no iframe
+      ht.addListenersToIframe(iframe);
+      // Para buscar iframes e adicionar os listeners, utilize:
+      // ht.addListenersToIframes();
+    }, 3000);
+  </script>
+</body>
+```
+
+Ao ser carregado, o plugin Hand Talk faz uma varredura na página buscando iframes e adicionando os listeners necessários para identificar o conteúdo de um elemento. Em casos de iframes que são construídos dinâmicamente, deve ser utilizada a função `addListenersToIframes()` para buscar novamente por iframes, ou `addListenersToIframe(iframe)` para um iframe especifico.
+
+Veja o exemplo ao lado.
+
+Caso esteja atualizando o `src` de um iframe que ja possui os listeners de clique, considere remover os listeners com os métodos `removeListenersFromIframes()` ou `removeListenersFromIframe(iframe)`para um iframe especifico. Após o carregamento do novo conteúdo, adicione os listeners novamente. 
